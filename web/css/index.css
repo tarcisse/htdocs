@@ -13,7 +13,7 @@ footer
 #footer-slide
 {
  height: 400px;
- background: red;
+ background: #e9eaea;
 
 }
 #footer-social
@@ -150,6 +150,9 @@ footer
 	float:left;
 	bottom:0;
 	
+}
+.nav-title{
+    font-size: smaller;
 }
 #nav ul
 {
