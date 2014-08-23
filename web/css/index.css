@@ -1,0 +1,216 @@
+
+header
+{
+    width: 100%;
+    height: 80vh;
+    background-image: url();
+}
+footer
+{
+    width: 100%;
+    background: blue;
+}
+#footer-slide
+{
+ height: 400px;
+ background: red;
+
+}
+#footer-social
+{
+ height: 150px;
+ background: yellow;
+
+}
+#footer-information
+{
+ height: 25px;
+ background: #cdcdcd;
+ 
+}
+
+
+/* SOCIAL --------------------------------------------------------*/
+#social{
+  padding:05px;
+  width:10
+    0%;
+  -webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	-ms-transition: background .5s;
+	-o-transition: background .5s;
+	transition: background .5s;
+}
+#social ul{
+  text-align: center;
+  padding-right: 3%;
+  margin:40px auto;
+}
+#social p{
+  text-align:center;
+  font-family:Arial;
+  font-weight:bold;
+  opacity:.4;
+  padding:10px;
+}
+#social ul > li {
+	display: inline-block;
+	margin: 0 15px;
+	background-image: url(../images/sprite2.png);
+	opacity: .4;
+	-webkit-transition: opacity .4s;
+	-moz-transition: opacity .4s;
+	-ms-transition: opacity .4s;
+	-o-transition: opacity .4s;
+	transition: opacity .4s;
+}
+#social ul > li > a {
+	display: block;
+	text-indent: -9999px;
+	width: 36px;
+	height: 36px;
+}
+#social ul > li.facebook { background-position:0 0; }
+#social ul > li.twitter  { background-position:0 -36px; }
+#social ul >  li.tumblr 
+{ 
+	background-image:url(../images/tumblr.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	
+ }
+#social ul >  li.youtube { background-position:0 -144px; }
+#social ul  > li.facebook:hover 
+{ 
+	background-position:0 0;
+	opacity:.7 !important;
+}
+#social ul > li.twitter:hover 
+{ 
+	background-position:0 -36px; 
+	opacity:.7 !important;
+}
+#social ul > li.tumblr:hover 
+{ 
+	background-image:url(../images/tumblr.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	opacity:.7 !important;
+ }
+#social ul > li.youtube:hover 
+{ 
+	background-position:0 -144px; 
+	opacity:.7 !important;
+}
+.facebook.active{
+  /*background-color:#3B5998  !important;*/
+}
+.twitter.active{
+  /*background-color:#2094CA !important;*/
+}
+.tumblr.active{
+  /*background-color:#d85b4b !important;*/
+}
+.youtube.active{
+	/*background-color:#C92228 !important;*/
+}
+.active h1{
+	opacity:.7 !important;
+ 	color:#000;
+}
+.active p{
+  opacity:.7 !important;
+  color:#000;
+}
+
+/*SOCIAL*/
+
+
+
+
+/*MAIN-NAV --------------------------------------*/
+#main-nav
+{
+	background-image:url(../images/bg4.jpg);
+	background-position:right top;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	/*transition-property:all;
+			transition-duration: 0.2s;
+			transition-timing-function:  ease-in-out;*/
+}
+#nav
+{
+	height:20%;
+  	list-style: none none;
+    margin: 70px 0px 70px 70px;
+    padding-top: 30vh;
+    line-height: 1;
+	float:left;
+	bottom:0;
+	
+}
+#nav ul
+{
+	height:140%;
+	font-family:'AbadiMT';
+  	display: block;
+    padding: 20px 20px 0px 0;
+    color: #FFF;
+    text-decoration: none;
+	list-style:none;
+}
+
+#nav ul > li 
+{
+	height:40%;
+	width:150px;
+    float: left; /* Pour que les liens s’affichent horizontalement */
+    position: relative; /* Crée un contexte de positionnement pour les sous-listes */
+	padding-left:0px;
+	margin-top:0px;
+}
+#nav ul > li > a {
+	
+    text-decoration: none;
+    color: #fff;
+}
+#nav ul > li > a : hover {
+    text-decoration: none;
+
+}
+#nav ul > li.subnav a 
+{ 
+	opacity:.5;
+	text-transform:uppercase;
+}
+
+#nav ul  > li.subnav:hover a 
+{ 
+	opacity: 0.9;
+}
+
+#nav ul > li.subnav > ul li
+{
+	font-family:'abadiMTBold';
+	 
+}
+
+#nav ul > li.subnav > ul li:hover a
+{
+	opacity: 1;
+	
+}
+.active h1{
+	opacity:.7 !important;
+ 	
+}
+.active p{
+  opacity:.7 !important;
+
+}
+.subsub li a
+{
+}
+/*EO MAIN-NAV*/

@@ -1,0 +1,50 @@
+
+/* debut-Font*/
+@font-face {
+font-family: 'MinionPro_r';
+src: url("../fonts/MinionPro-Regular.otf");
+}
+/*bold version*/
+@font-face {
+	font-family: 'MinionPro_s';
+	src: url('../fonts/MinionPro-Semibold.otf'); 
+	font-weight: bold;
+}
+/*Regular version*/
+@font-face {
+font-family: 'AbadiMT';
+src: url('../fonts/Abadi%20MT%20Condensed%20Light.ttf');
+}
+/*bold version*/
+@font-face {
+	font-family: 'AbadiMTBold';
+	src: url('../fonts/AbadiBold.ttf'); 
+	font-weight: bold;
+}
+/*cmunorm.otf*/
+@font-face {
+	font-family: 'cmunorm';
+	src: url('../fonts/cmunorm.otf'); 
+	font-weight: bold;
+}
+
+/*fin-Font*/
+
+body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+ul,li,h1
+{
+    margin: 0px;
+}
+h1,h2,h3,h4,h5,h6{ 
+	text-transform:uppercase;
+	font-family: 'MinionPro-Regular';
+	line-height: 1.4em;
+	font-weight: lighter;
+}
+
