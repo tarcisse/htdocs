@@ -28,6 +28,13 @@ src: url('../fonts/Abadi%20MT%20Condensed%20Light.ttf');
 	font-weight: bold;
 }
 
+/*logo*/
+@font-face {
+	font-family: 'logo';
+	src: url('../fonts/ufonts.com_avantgardeextlititctt.ttf'); 
+	font-weight: bold;
+}
+
 /*fin-Font*/
 
 body
@@ -35,7 +42,6 @@ body
     width: 100%;
     margin: 0px;
     padding: 0px;
-    
 }
 ul,li,h1
 {

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang=en class=''>
+	<head>
+	<meta charset=utf-8>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/pygments.css">
+	<link rel="canonical" href="http://www.jacklmoore.com/notes/css3-ribbon-menu">
+	<link rel="alternate" type="application/rss+xml" href="/rss.xml">
+	<!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]-->
+	<title> CSS Ribbon Menu </title>
+	</head>
+	<body>
+		<header>
+			<a class='me' rel='author' href='/'>Jack Moore</a>
+			<a class='twitter' href='http://twitter.com/jacklmoore' rel='me'><i class='icon-twitter'></i></a>
+			<a class='github' href='http://github.com/jackmoore' rel='me'>Github</a>
+			<nav>
+				<a href='/notes'><span>Archive</span></a>
+				<a href='/rss.xml'><span><i class='icon-rss'></i> RSS</span></a>
+			</nav>
+		</header>
+		<div class='main'>
+			<article>
+<h1>CSS Ribbon Menu</h1>
+
+
+<hr>
+<p class='date'><span class='icon-calendar icon--inline'></span>February  1, 2012</p>
+
+
+<p class='description'>This uses CSS3 transitions and CSS2 pseudo-elements to create an animated navigation ribbon with minimal markup.</p>
+
+<hr>
+<iframe class='demo' src='/demo/ribbon.html?reload=3' style='height:130px' frameborder='0'></iframe>
+
+<h2>Browser Support</h2>
+
+<p>IE8 and IE9 do not support CSS3 transitions, so the hover state will not be animated for those browsers.  Otherwise it looks and functions the same, which I think is a very acceptable fallback.  IE7 lacks support the <code>:before</code> and <code>:after</code> pseudo-elements, so the ribbon will not have the forked ends or display folds while hovering.  The pseudo-elements could be replaced with actual markup IE7 support is needed.</p>
+
+<h2>The HTML</h2>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&#39;ribbon&#39;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;#&#39;</span><span class="nt">&gt;&lt;span&gt;</span>Home<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;#&#39;</span><span class="nt">&gt;&lt;span&gt;</span>About<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;#&#39;</span><span class="nt">&gt;&lt;span&gt;</span>Services<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;#&#39;</span><span class="nt">&gt;&lt;span&gt;</span>Contact<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>The forked ends and folds are created with CSS pseudo-elements, allowing for very clean HTML.</p>
+
+<h2>The CSS</h2>
+
+<h3>Forked ends</h3>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><span class="nc">.ribbon</span><span class="nd">:after</span><span class="o">,</span> <span class="nc">.ribbon</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="o">:</span><span class="m">0.5em</span><span class="p">;</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span>
+    <span class="k">border</span><span class="o">:</span><span class="m">1.5em</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.ribbon</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="k">border-right</span><span class="o">-</span><span class="k">color</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.ribbon</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">border-left-color</span><span class="o">:</span><span class="k">transparent</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Here the <code>:before</code> and <code>:after</code> pseudo-elements are used to create empty elements with a thick border. The border has one edge set to transparent.  This leaves the element looking like it had a triangular section removed, creating the forked look.</p>
+
+<h3>Links</h3>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><span class="nc">.ribbon</span> <span class="nt">a</span><span class="nd">:link</span><span class="o">,</span> <span class="nc">.ribbon</span> <span class="nt">a</span><span class="nd">:visited</span> <span class="p">{</span> 
+    <span class="k">color</span><span class="o">:</span><span class="m">#000</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+    <span class="k">float</span><span class="o">:</span><span class="k">left</span><span class="p">;</span>
+    <span class="k">height</span><span class="o">:</span><span class="m">3.5em</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="o">:</span><span class="k">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The links and the forked ends are all floated left so that they fit flush against each other.  The hidden overflow hides the folds that are positioned beneath the span elements.</p>
+
+<h3>Animated Folds</h3>
+<div class="highlight"><pre><code class="css language-css" data-lang="css"><span class="nc">.ribbon</span> <span class="nt">span</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span><span class="m">#fff</span><span class="p">;</span>
+    <span class="k">display</span><span class="o">:</span><span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span><span class="m">3em</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span><span class="m">0</span> <span class="m">1em</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="o">:</span><span class="m">0.5em</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span><span class="k">relative</span><span class="p">;</span>
+
+    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">background-color</span> <span class="m">0.2s</span><span class="o">,</span> <span class="k">margin-top</span> <span class="m">0.2s</span><span class="p">;</span>  <span class="c">/* Saf3.2+, Chrome */</span>
+    <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">background-color</span> <span class="m">0.2s</span><span class="o">,</span> <span class="k">margin-top</span> <span class="m">0.2s</span><span class="p">;</span>  <span class="c">/* FF4+ */</span>
+    <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">background-color</span> <span class="m">0.2s</span><span class="o">,</span> <span class="k">margin-top</span> <span class="m">0.2s</span><span class="p">;</span>  <span class="c">/* IE10 */</span>
+    <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span> <span class="k">background-color</span> <span class="m">0.2s</span><span class="o">,</span> <span class="k">margin-top</span> <span class="m">0.2s</span><span class="p">;</span>  <span class="c">/* Opera 10.5+ */</span>
+    <span class="n">transition</span><span class="o">:</span> <span class="k">background-color</span> <span class="m">0.2s</span><span class="o">,</span> <span class="k">margin-top</span> <span class="m">0.2s</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.ribbon</span> <span class="nt">a</span><span class="nd">:hover</span> <span class="nt">span</span> <span class="p">{</span>
+    <span class="k">background</span><span class="o">:</span><span class="m">#FFD204</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.ribbon</span> <span class="nt">span</span><span class="nd">:before</span> <span class="p">{</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span><span class="k">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span><span class="m">3em</span><span class="p">;</span>
+    <span class="k">left</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
+    <span class="k">border-right</span><span class="o">:</span><span class="m">0.5em</span> <span class="k">solid</span> <span class="m">#9B8651</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">:</span><span class="m">0.5em</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.ribbon</span> <span class="nt">span</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="k">position</span><span class="o">:</span><span class="k">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="o">:</span><span class="m">3em</span><span class="p">;</span>
+    <span class="k">right</span><span class="o">:</span><span class="m">0</span><span class="p">;</span>
+    <span class="k">border-left</span><span class="o">:</span><span class="m">0.5em</span> <span class="k">solid</span> <span class="m">#9B8651</span><span class="p">;</span>
+    <span class="k">border-bottom</span><span class="o">:</span><span class="m">0.5em</span> <span class="k">solid</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>A nifty trick for vertically centering text inside of an element is to set the line-height to be the desired height of the element, and remove any vertical padding. This will keep the height fixed and the text centered, even if the font-face, font-size, or font-weight changes.</p>
+
+<p>The top-margin gives the span space to be animated while staying within the anchor element. The span is given a relative position so that it will be the positioning reference for it&#39;s absolutely positioned <code>:before</code> and <code>:after</code> pseudo-elements.</p>
+
+<p>A CSS3 transition animates the transition between the span&#39;s normal state and it&#39;s hover state. Transitions are an experimental feature and are not yet part of the CSS3 specification.  As such, each browser has implemented transitions using their respective vendor prefix. The non-prefixed transition property is used under the assumption that, in the future, the property will be a part of the CSS specification.</p>
+
+<p>The :before and :after pseudo-elements create the folded edges when hovering a link.  They are absolutely positioned underneath the span element, and will normally be hidden due to the anchor element having a hidden overflow.  The pseudo-elements contain only a bottom border and a left or right border. Since the borders are as thick as they are long (0.5 x 0.5) and are adjacent, it creates two triangles for us to apply a color to.  The bottom borders will be the same color as the ribbon, and the left or right borders will have the color of the folded edge.</p>
+
+<h3>See The <a href="/demo/ribbon.html">Demo</a></h3>
+
+<hr>
+<h2>Hey,</h2>
+<p>Follow me on <a href="http://twitter.com/jacklmoore" rel='me'>Twitter</a> and <a href="http://github.com/jackmoore" rel='me'>Github</a>, that's where I'm most active these days.  I welcome email (<span class='email'></span>), but I'm afraid I no longer have time to answer personal requests for help regarding my plugins or posts.  Thanks!</p>
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=jackmoore&amp;type=follow&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="20"></iframe>
+<a href="https://twitter.com/jacklmoore" class="twitter-follow-button" data-show-count="true">Follow @jacklmoore</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+
+			</article>
+			<aside>
+				<h3>jQuery Plugins</h3>
+				<ul>
+					<li>
+						<a href='/colorbox'>Colorbox</a> &raquo; jQuery lightbox. Need the <a href='/colorbox/faq/'>FAQ</a>?
+					</li>
+					<li>
+						<a href='/autosize'>Autosize</a> &raquo; auto-sizing for textarea elements.
+					</li>
+					<li>
+						<a href='/zoom'>Zoom</a> &raquo; enlarge images on mouseover.
+					</li>
+					<li>
+						<a href='/wheelzoom'>Wheelzoom</a> &raquo; enlarge images on mousewheel.
+					</li>
+				</ul>
+
+				<div class='recent-posts'>
+				<h3>Recent Posts</h3>
+				<ul>
+					
+					<li>
+						<a href="/notes/mouse-position">Cross-browser mouse positioning</a>
+					</li>
+					
+					<li>
+						<a href="/notes/development">Web Development Using Virtual Machines</a>
+					</li>
+					
+					<li>
+						<a href="/notes/css3-ribbon-menu">CSS Ribbon Menu</a>
+					</li>
+					
+					<li>
+						<a href="/notes/jquery-modal-tutorial">jQuery Modal Tutorial</a>
+					</li>
+					
+					<li>
+						<a href="/notes/jquery-accordion-tutorial">A Better jQuery Accordion</a>
+					</li>
+					
+					<li>
+						<a href="/notes/ie-opacity-inheritance">Fixing IE's Opacity Inheritance</a>
+					</li>
+					
+					<li>
+						<a href="/notes/jquery-tabs">jQuery Tabs Tutorial</a>
+					</li>
+					
+					<li>
+						<a href="/notes/form-placeholder-text">HTML5 Placeholder Attribute</a>
+					</li>
+					
+					<li>
+						<a href="/notes/naturalwidth-and-naturalheight-in-ie">NaturalWidth and NaturalHeight in IE</a>
+					</li>
+					
+					<li>
+						<a href="/notes/colorbox-with-json-or-flickr">Colorbox with Flickr Feed</a>
+					</li>
+					
+					<li>
+						<a href="/notes/tragedy-struck-on-threadless">Tragedy Struck On Threadless</a>
+					</li>
+					
+					<li>
+						<a href="/notes/click-events">Working with JavaScript click events</a>
+					</li>
+					
+					<li>
+						<a href="/notes/javascript-url-querystring-get">JavaScript: working with URLs and GET</a>
+					</li>
+					
+					<li>
+						<a href="/notes/ie-transparency-problems">Solving IE7 &amp; IE8 PNG Opacity Problems</a>
+					</li>
+					
+					<li>
+						<a href="/notes/substring-substr-slice-javascript">JavaScript: Slice, Substring, or Substr?</a>
+					</li>
+					
+				</ul>
+				</div>
+
+				<h3>Tags</h3>
+				<ul class='tags'>
+					 
+					<li>
+						<a href='/notes/#tag-javascript' class='tag-javascript'>JavaScript <span>x8</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-internet-explorer' class='tag-internet-explorer'>Internet Explorer <span>x3</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-css' class='tag-css'>CSS <span>x4</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-jquery' class='tag-jquery'>jQuery <span>x7</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-illustration' class='tag-illustration'>Illustration <span>x1</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-colorbox' class='tag-colorbox'>Colorbox <span>x1</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-html5' class='tag-html5'>HTML5 <span>x2</span></a>
+					</li>
+					 
+					<li>
+						<a href='/notes/#tag-development' class='tag-development'>Development <span>x1</span></a>
+					</li>
+					
+				</ul>
+			</aside>
+		</div>
+		<script src="/js/main.js"></script>
+	</body>
+</html>

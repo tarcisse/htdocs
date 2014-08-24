@@ -11,5 +11,11 @@ $(function(){
 			$("#social h1").html("Follow us");
 		}
 	);
+	
+	$('.subnav').hover(function(){
+		a=this.id;
+		$('#main-nav').css('background-image','url(web/images/'+a+'.jpg)');
+	});
 		
+	
 });
