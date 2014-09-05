@@ -35,6 +35,11 @@ src: url('../fonts/Abadi%20MT%20Condensed%20Light.ttf');
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: 'infos';
+	src: url('../fonts/HelveticaNeueLTStd-LtCn.otf'); 
+	font-weight: bold;
+}
 /*fin-Font*/
 
 body
@@ -42,6 +47,10 @@ body
     width: 100%;
     margin: 0px;
     padding: 0px;
+    transition-property: all;
+    transition-duration: 3s;
+    -webkit-transition-timing-function: ease-out;
+    background: #000;
 }
 ul,li,h1
 {
@@ -53,4 +62,18 @@ h1,h2,h3,h4,h5,h6{
 	line-height: 1.4em;
 	font-weight: lighter;
 }
+/*body:hover
+{
+background-color:#000;
+padding:0; font-family: Arial, Helvetica, sans-serif;
+margin:0px auto auto auto;
+color:#424849;
+font-size:12px;
+-moz-transform: scale(0.3);
+-webkit-transform: scale(0.3);
+transition-property: all;
+     -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease-out;
+}
+*/
 

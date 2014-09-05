@@ -6,12 +6,11 @@
 <head>
 	
     <title>{{title}}</title>
-    <link rel='stylesheet' href='web/css/bootstrap.css'>
+ <link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
-	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-	<!--<script src='web/script/jquery.js'></script>-->
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 	<script src='web/script/index.js'></script>
 
 		
@@ -27,17 +26,29 @@
 
 <body>
 	
-	
+	<div id='page_pricipale' class='page-transition'>
+		  
     <header>
+	
+	<div id='support'>
 	<div id="logo">
 		
-		<div>
-			<div id='imgd'><img src='web/images/logo.png'><span id='titre_logo'>My S&B</span></div></div>
-	</div>
+	<div id='logo_haut'>
+		<img src='web/images/logo.png'>
+			<div id='titre_logo'>My S&B</div>
+	</div><!--logo_bas-->
+	<div  id='logo_bas'>
+	<p>Excitavit hic ardor milites per municipia plurima, quae isdem conterminant, dispositos et castella, sed quisque serpentes
+	latius pro viribus repellere moliens, nunc globis confertos, aliquotiens et dispersos multitudine superabatur ingenti,
+	quae nata et educata inter editos recurvosque ambitus montium eos ut loca plana persultat et mollia, missilibus obvios
+	eminus lacessens et ululatu truci perterrens.</p>
+	</div><!--logo_haut-->
+	</div><!--logo-->
 	
 	
 	<nav id='main-nav'><!--debut du corps principale---//2d-->
-        
+        </nav><!--fin du corps principale---//2f-->
+	
       <!-- Navigation -->
       <div id="nav" class="miniWidth">
       <ul >
@@ -75,11 +86,14 @@
       
    
  
-</nav><!--fin du corps principale---//2f-->
+
 	
 	
 	
+    
 	
+	</div><!--support-->
+    
     </header><!--fin header-->
     
     <footer>
@@ -89,17 +103,12 @@
 	</div><!--footer-slide-->
 	
 	<div id='footer-social'>
-		<center>
+		<center style='margin: 0px;padding: 0px'>
 		<div id="social" >
 			
-        <h1 >NOUS SUIVRE</h1>
-        <ul >
-              <li class="facebook" data-text="Like us on Facebook" data-network="facebook"><a href="#">Facebook</a></li>
-              <li class="twitter" data-text="Tweet us on Twiiter" data-network="twitter"><a href="#">Twitter</a></li>
-              <li class="tumblr" data-text="Subscribe you & like our Tumblr" data-network="google"><a href="#">Tumbler</a></li>
-              <li class="youtube" data-text="Subscribe you on our channel" data-network="pinterest"><a href="#">Youtube</a></li>
-        </ul>
-	
+      <h4 style='font-family: logo;margin: 0px;padding: 0px'>Suivre S&B sur </h4>
+   
+	<div id='scenter'>{% include 'web/plugin/socialeicone2/icones.html'%}</div>
         </div>
 
               </center>
@@ -109,10 +118,49 @@
 	</div><!--footer-social-->
 	
 	<div id='footer-information'>
-		
+		<ul>
+<li>
+<a href="#" class="arial-narrow">
+Boutiques 
+</a>
+</li>
+<li>
+<a href="#" class="arial-narrow">
+Contact
+</a>
+</li>
+<li>
+<a href="#" class="arial-narrow">
+Mentions légales
+</a>
+</li>
+<li>
+<a href="#" class="arial-narrow" target="">
+Carrières
+</a>
+</li>
+<li>
+<a href="#" class="arial-narrow" target="">
+Newsletter
+</a>
+</li>
+<li>
+<a href="http://google.fr" class="arial-narrow" target="" data-chargement='ajax' data-page=''>
+Aide
+</a>
+</li>
+<li>
+<a href="http://yahoo.fr" class="arial-narrow" target="">
+Langue
+</a>
+</li>
+</ul>
 	</div><!--footer-information-->
 	
     </footer>
+
+   
+  </div>
 </body>
 
 

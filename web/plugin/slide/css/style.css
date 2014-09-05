@@ -21,8 +21,9 @@
 	width:1050px;
 	overflow:hidden;
 	position:relative;
-	height:450px;
+	height:375px;
 	margin:0 auto;
+	
 	
 }
 #footer-slide .rm_container h2{
@@ -40,6 +41,7 @@
 #footer-slide  .rm_container ul{
 	width:1170px;
 	
+	
 }
 #footer-slide .rm_container ul li{
 	float:left;
@@ -51,6 +53,7 @@
 	border:30px solid  #e9eaea;
 	border-width:50px 30px 0px 30px;
 	background-color: #e9eaea;
+	
 	
 }
 #footer-slide .rm_container ul li img{
