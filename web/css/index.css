@@ -14,29 +14,12 @@ header
 	background-repeat: no-repeat;
 	background-size: 100%;
 			  /*opacity: .7;*/
-   -webkit-transform: scale(1.05,1.07);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 3000ms;
-    -moz-transform: scale(1.05,1.07);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 3000ms;
+ 
     position: relative;
     z-index: 0;
 			
 }
-#support:hover
-{
-     /*opacity: .7;*/
-   -webkit-transform: scale(1.05,1.07);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 3000ms;
-    -moz-transform: scale(1.05,1.07);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 3000ms;
-    position: relative;
-    z-index: 0;
-   background-size: 105%;
-}
+
 #support:
 footer
 {
