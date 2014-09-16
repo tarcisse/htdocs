@@ -150,7 +150,18 @@ footer
 	background-position:0 -144px; 
 	opacity:.7 !important;
 }
-
+.facebook.active{
+  /*background-color:#3B5998  !important;*/
+}
+.twitter.active{
+  /*background-color:#2094CA !important;*/
+}
+.tumblr.active{
+  /*background-color:#d85b4b !important;*/
+}
+.youtube.active{
+	/*background-color:#C92228 !important;*/
+}
 .active h1{
 	opacity:.7 !important;
  	color:#000;
