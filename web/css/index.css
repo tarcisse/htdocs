@@ -229,7 +229,6 @@ footer
 #titre_logo {
 font-family: logo;
 color: #ffffff;
-background: red;
 display: inline-block;
 position: relative;
 }
@@ -243,6 +242,73 @@ position: absolute;
 width: 25vw;
 height: 50vw;
 color: #ffffff;
-background: red;
 position: relative;
+}
+/*Connect FORMS ------------------------------*/
+#connect-form{
+	width: 50%;
+    height: 80vh;
+    position: absolute;
+    right: 0px;
+	background-color: blue;
+}
+
+.connect-form h5
+{
+	font-family: logo;
+	color: #ffffff;
+	display: inline-block;
+	position: relative;
+	
+}
+#fieldset {
+	border:none;
+}
+#connect-form input
+{
+	width: 165px;
+	font-family: 'MinionPro';
+	padding: 10px 15px;
+	background: #e9eaea;
+	border: 1px solid #FFF;
+	float:left;
+}
+.connect-form textArea
+{
+	padding: 10px 15px;
+	background: #e9eaea;
+	border: 1px solid #e9eaea;
+	color: #6d7273;
+	position:relative;
+	float:left;
+}
+.button
+{
+	float:left;
+	background: #3a3b3c !important;
+	border: 1px solid #e9eaea;
+	color:#FFF;
+	position:relative;
+}
+.button a
+{
+	text-decoration:underline;
+}
+.button a:hover
+{
+	background: #6d7273 !important;
+	border: 1px solid #e9eaea;
+	color:#C03;
+	cursor:pointer;
+}
+.warning 
+{
+	color: #000;
+}
+.warning a{
+	color: #8a8e8f;
+	text-decoration:none;
+}
+.warning a:hover{
+	text-decoration:underline;
 }
