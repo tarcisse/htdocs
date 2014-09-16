@@ -45,12 +45,17 @@ $(function(){
   
    $('#logo').click(function(){
 		$('#logo').hide();
-		$('#form').fadeIn(500);
+		$('#form-new').fadeIn(1000);
 	});
 	
 	$('#connect').click(function(){
 		$('#form').hide();
 		$('#logo').fadeIn(200);
+	});
+	
+	$("#new-count").click(function(){
+		$('#form').hide();
+		$('#form-new').fadeIn(200);
 	});
 	
 

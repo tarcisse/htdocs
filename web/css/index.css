@@ -350,6 +350,13 @@ left: 10vh;
     right: 0px;
 	display:none;
 }
+#form-new{
+	width: 50%;
+    height: 80vh;
+    position: absolute;
+    right: 0px;
+	display:none;
+}
 .connect-form{
 	padding:100px;
 	width: 50%;
