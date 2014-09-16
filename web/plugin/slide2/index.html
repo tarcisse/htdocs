@@ -1,7 +1,7 @@
 <style>
     #sb-slide
     {
-        width: 100vw;
+        width: 100%;
         height: 55vh;
         background: red;
         padding:2vh 0 2vh 0;
@@ -20,7 +20,7 @@
     }
     .sb-aide
     {
-        
+        position: 
        
     }
     .sb-groupe
@@ -32,22 +32,48 @@
     {
         background: blue;
          height: 40vh;
+         overflow: hidden;
     }
     .sb-c
     {
         background: yellow;
          height: 15vh;
     }
-    
+    .sb-img
+    {
+     overflow: hidden;
+     height: 40vh;
+     display: none;
+    }
+    .sb-img img
+    {
+        /*width change*/
+     width:  100%
+    }
 </style>
+<script>
+    $(document).ready(function(){
+       $i=0;
+       setInterval(function(){
+        $('')
+       },4000);
+    });
+</script>
 <div id='sb-slide'>
     
     <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g1'></div>
-        <div class='sb-groupe sb-c' id='c1'></div>
+        <div class='sb-groupe sb-g' id='g1'>
+            <div class='sb-img' class='sb-im1'><img src='web/images/slide/4.jpg'></div>
+            <div class='sb-img' class='sb-im2'><img src='web/images/slide/3.jpg'></div>
+            <div class='sb-img' class='sb-im3'><img src='web/images/slide/2.jpg'></div>
+            <div class='sb-img' class='sb-im4'><img src='web/images/slide/1.jpg'></div>
+        </div>
+        <div class='sb-groupe sb-c' id='c1'>
+            
+        </div>
     </div></div>
     
-     <div class='sb-slide'><div class='sb-aide'>
+  <!--   <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g2'></div>
         <div class='sb-groupe sb-c' id='c2'></div>
     </div></div>
@@ -60,7 +86,7 @@
        <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g4'></div>
         <div class='sb-groupe sb-c' id='c4'></div>
-    </div></div>
+    </div></div>-->
     
     
 </div>
