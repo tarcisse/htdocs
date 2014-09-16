@@ -224,28 +224,53 @@ footer
     height: 80vh;
     position: absolute;
     right: 0px;
+    /*background: red;*/
 	
 }
+#logo_haut
+{
+    width: 80%;
+    height: 45vh;
+}
+#logo_bas
+{
+    width: 80%;
+  /* background: red;*/
+}
+#logo_bas p{
+    margin-top: 20px;
+    color: #fff;
+    font-family:AbadiMT;
+    font-weight: normal;
+    opacity: 0.4;
+    text-transform: uppercase;
+    line-height: 20px;
+}
 #titre_logo {
-	padding:325px 0 0 0;
 font-family: logo;
 color: #ffffff;
 display: inline-block;
 position: absolute;
+top: 40vh;
+display: none;
+cursor: pointer;
+
 }
-#logo img{
-width: 100%;
-position: absolute;
+#logo_haut img{
+   height: 45vh;
+position:relative;
+opacity: 0.4;
+/*transition-property: all;
+transition-duration: 2s;*/
+cursor: pointer;
+opacity: 0;
+left: 10vh;
 }
-#imgd
+#logo_haut img:hover
 {
-    font-family: logo;
-	padding:2vw;
-	width: 25vw;
-	height: 50vw;
-	color: #ffffff;
-	position: relative;
+    opacity: 1;
 }
+
 /*Connect FORMS ------------------------------*/
 #form{
 	width: 50%;
