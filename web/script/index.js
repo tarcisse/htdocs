@@ -17,6 +17,11 @@ $(function(){
 		$('#support').css('background-image','url(web/images/'+a+'.jpg)');
 	});
 	
+	$('#form').mouseleave(function(){
+		$('#form').hide();
+		$('#logo').show();
+	});
+	
 	
 		
 		$('#logo_haut img').css('transition-property','all');
