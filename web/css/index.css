@@ -6,6 +6,19 @@ header
  overflow: hidden;
 	
 }
+@-webkit-keyframes pulse {
+	from {
+   background-size: 105%;
+	}
+	50% {
+	
+   background-size: 110%;
+	}
+	to {
+	
+  background-size: 100%;
+	}
+}
 #support
 {
       background-image:url(../images/nav2.jpg);
@@ -13,6 +26,10 @@ header
 	transition-property:all;
 	background-repeat: no-repeat;
 	background-size: 100%;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 30s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
 			  /*opacity: .7;*/
  
     position: relative;
@@ -346,8 +363,6 @@ left: 10vh;
 	margin-top: 20px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
-
-	float:left;
 
 }
 .connect-form textArea
