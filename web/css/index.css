@@ -162,9 +162,6 @@ footer
 
 /*SOCIAL*/
 
-
-
-
 /*MAIN-NAV --------------------------------------*/
 #main-nav
 {
@@ -253,7 +250,6 @@ footer
 {
 }
 
-
 /*EO MAIN-NAV*/
 
 #logo{
@@ -309,9 +305,6 @@ left: 10vh;
     opacity: 1;
 }
 
-<<<<<<< HEAD
-
-
 #footer-information li
 {
     display: inline-block;
@@ -338,8 +331,6 @@ left: 10vh;
     color:  #000;
 }
 
-=======
->>>>>>> 5aef30671451c7f3f54563ae1cda27dc5099c823
 /*Connect FORMS ------------------------------*/
 #form{
 	width: 50%;
@@ -364,10 +355,7 @@ left: 10vh;
 #fieldset {
 	border:none;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5aef30671451c7f3f54563ae1cda27dc5099c823
 #connect-form input
 {
 	width: 165px;
@@ -376,11 +364,7 @@ left: 10vh;
 	margin-top: 20px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
-<<<<<<< HEAD
-	
-=======
 	float:left;
->>>>>>> 5aef30671451c7f3f54563ae1cda27dc5099c823
 }
 .connect-form textArea
 {
@@ -397,10 +381,9 @@ left: 10vh;
 	background: #d2d2d3 !important;
 	border: 1px solid #d2d2d3;
 	color:#3a3b3c;
-<<<<<<< HEAD
+
 	cursor: pointer;
-=======
->>>>>>> 5aef30671451c7f3f54563ae1cda27dc5099c823
+
 }
 .warning 
 {
@@ -408,10 +391,6 @@ left: 10vh;
 	display:inline-block;
 	margin-top: 20px;
 	opacity:.8;
-<<<<<<< HEAD
-	
-=======
->>>>>>> 5aef30671451c7f3f54563ae1cda27dc5099c823
 }
 .warning a{
 	color: #FFF;
@@ -419,8 +398,7 @@ left: 10vh;
 }
 .warning a:hover{
 	text-decoration:underline;
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 5aef30671451c7f3f54563ae1cda27dc5099c823
+
+
