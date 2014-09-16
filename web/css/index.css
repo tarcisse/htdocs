@@ -227,10 +227,11 @@ footer
 	
 }
 #titre_logo {
+	padding:325px 0 0 0;
 font-family: logo;
 color: #ffffff;
 display: inline-block;
-position: relative;
+position: absolute;
 }
 #logo img{
 width: 100%;
@@ -239,13 +240,22 @@ position: absolute;
 #imgd
 {
     font-family: logo;
-width: 25vw;
-height: 50vw;
-color: #ffffff;
-position: relative;
+	padding:2vw;
+	width: 25vw;
+	height: 50vw;
+	color: #ffffff;
+	position: relative;
 }
 /*Connect FORMS ------------------------------*/
+#form{
+	width: 50%;
+    height: 80vh;
+    position: absolute;
+    right: 0px;
+	display:none;
+}
 .connect-form{
+	padding:100px;
 	width: 50%;
     height: 80vh;
     position: absolute;
@@ -283,20 +293,8 @@ position: relative;
 {
 	float:left;
 	background: #d2d2d3 !important;
-	border: 1px solid #e9eaea;
+	border: 1px solid #d2d2d3;
 	color:#3a3b3c;
-	position:relative;
-}
-.button a
-{
-	text-decoration:underline;
-}
-.button a:hover
-{
-	background: #6d7273 !important;
-	border: 1px solid #e9eaea;
-	color:#C03;
-	cursor:pointer;
 }
 .warning 
 {

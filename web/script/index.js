@@ -16,6 +16,15 @@ $(function(){
 		a=this.id;
 		$('#main-nav').css('background-image','url(web/images/'+a+'.jpg)');
 	});
-		
+	
+	$('#logo').click(function(){
+		$('#logo').hide();
+		$('#form').show();
+	});
+	
+	$('#connect').click(function(){
+		$('#form').hide();
+		$('#logo').show();
+	});
 	
 });
