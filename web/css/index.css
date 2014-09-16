@@ -359,6 +359,7 @@ left: 10vh;
 }
 
 .connect-form h4{
+	padding-left: 15px;
 	color: white;
 	opacity:.8;
 }
