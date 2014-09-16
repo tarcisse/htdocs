@@ -44,11 +44,10 @@
 	
 }
 #footer-slide .rm_container ul li{
-	/*float:left;*/
-	/*margin-left:-80px;*/
-	/*position:relative;*/
+	float:left;
+	margin-left:-80px;
+	position:relative;
 	overflow:hidden;
-	display: inline-block;
 	width:310px;
 	height:465px;
 	border:30px solid  #e9eaea;
