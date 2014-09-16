@@ -361,6 +361,7 @@ left: 10vh;
 #fieldset {
 	border:none;
 }
+
 #connect-form input
 {
 	width: 165px;
@@ -369,7 +370,7 @@ left: 10vh;
 	margin-top: 20px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
-	float:left;
+	
 }
 .connect-form textArea
 {
@@ -386,6 +387,7 @@ left: 10vh;
 	background: #d2d2d3 !important;
 	border: 1px solid #d2d2d3;
 	color:#3a3b3c;
+	cursor: pointer;
 }
 .warning 
 {
@@ -393,6 +395,7 @@ left: 10vh;
 	display:inline-block;
 	margin-top: 20px;
 	opacity:.8;
+	
 }
 .warning a{
 	color: #FFF;
