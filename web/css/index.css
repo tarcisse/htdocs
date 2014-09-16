@@ -363,7 +363,7 @@ left: 10vh;
 	margin-top: 20px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
-	float:left;
+	
 }
 .connect-form textArea
 {
@@ -372,7 +372,7 @@ left: 10vh;
 	border: 1px solid #e9eaea;
 	color: #6d7273;
 	position:relative;
-	float:left;
+
 }
 .button
 {
