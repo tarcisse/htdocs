@@ -1,0 +1,2257 @@
+
+    <!DOCTYPE html>
+<html id="html-container" lang="fr" xml:lang="fr" class="pas_surlignable">
+    <head>
+        <meta charset="utf-8" />
+<link rel="icon" type="image/png" href="squelettes/images/favicon.png" />
+<link rel="author" href="https://plus.google.com/109110310055687711031?rel=author" />
+<link rel="stylesheet" href="squelettes/css3.css?v=15" type="text/css" media="projection, screen, tv" />
+<link rel="stylesheet" href="squelettes/prism.css" type="text/css" />
+<!--W8 specific-->
+<meta name="application-name" content="CSS3Create"/> 
+<meta name="msapplication-TileColor" content="#51c3fa"/> 
+<meta name="msapplication-TileImage" content="http://www.css3create.com/IMG/newLogoCSS3create2.png.png"/>
+
+
+<!-- CS vide -->
+
+
+<script src="squelettes/javascript/jquery.js" type="text/javascript"></script>
+
+<script src="squelettes/javascript/jquery.form.js" type="text/javascript"></script>
+
+<script src="squelettes/javascript/ajaxCallback.js" type="text/javascript"></script>
+
+<script src="squelettes/javascript/jquery.cookie.js" type="text/javascript"></script>
+<!-- insert_head --><!--[if lt IE 7]>
+	<script src='extensions/msie_compat/javascript/jquery.ifixpng.js'></script>
+	<script type='text/javascript'>//<![CDATA[
+		jQuery.ifixpng('rien.gif');		
+		function fixie() {
+			jQuery('img').ifixpng();
+		}
+		$(document).ready(function() { fixie(); });
+		onAjaxLoad(fixie);	
+	//]]></script>
+<![endif]-->
+
+<!-- Debut CS -->
+<script type="text/javascript"><!--
+var cs_prive=window.location.pathname.match(/\/ecrire\/$/)!=null;
+jQuery.fn.cs_todo=function(){return this.not('.cs_done').addClass('cs_done');};
+if(window.jQuery) {
+var cs_sel_jQuery=typeof jQuery(document).selector=='undefined'?'@':'';
+var cs_CookiePlugin="squelettes/javascript/jquery.cookie.js";
+}
+// --></script>
+
+<!-- Fin CS -->
+
+<link rel="stylesheet" href="plugins/notation/css/notation.v2.css" type="text/css" media="all" />
+<script type="text/javascript">
+document.createElement("header");
+document.createElement("nav");
+document.createElement("section");
+document.createElement("article");
+document.createElement("footer");
+</script>
+<script type="text/javascript" src="squelettes/javascript/css3-1.js"></script>
+<script type="text/javascript" src="squelettes/javascript/prism.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17376769-4']);
+  _gaq.push(['_setDomainName', 'css3create.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- gplus -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+        <title>Rotation d&#8217;un menu en CSS3 - Créer ce menu rotatif avec les Animations CSS - CSS3 Create</title>
+        <meta name="description" content="Full CSS. Création des animations en CSS3 pour créer un effet sympa de rotation sur un menu. Utilisation des gradients CSS.">
+        
+        <meta property="og:title" content="Rotation d&#8217;un menu en CSS3 - Créer ce menu rotatif avec les Animations CSS"/>
+        <meta property="og:image" content="http://www.css3create.com/IMG/arton16.png"/>
+        <meta property="og:description" content="Full CSS. Création des animations en CSS3 pour créer un effet sympa de rotation sur un menu. Utilisation des gradients CSS."/>
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="http://www.css3create.com/Rotation-d-un-menu-en-CSS3" />
+        <meta name="twitter:site" content="@css3create" />
+        <meta name="twitter:creator" content="@iamvdo" />
+        
+        
+<style type="text/css">
+/* CSS3 Create
+
+Styles CSS liés à la démo:
+-> Rotation d&#8217;un menu en CSS3
+
+*/
+#article16{
+height:360px;
+font-family:"TeXGyreReg",sans-serif;
+font-size:1.05em;
+background:#627878;
+}
+
+#article16 dl{
+position:relative;
+top:15px;
+left:50%;margin-left:-75px;
+width:150px;
+height:155px;
+color:#324040;
+text-align:center;
+background:#04b3d2;
+background:-webkit-linear-gradient(#04b3d2,#48dfff);
+background:-moz-linear-gradient(#04b3d2,#48dfff);
+background:-ms-linear-gradient(#04b3d2,#48dfff);
+background:-o-linear-gradient(#04b3d2,#48dfff);
+background:linear-gradient(#04b3d2,#48dfff);
+border-radius:4px;
+-webkit-box-shadow:0px 0px 6px rgba(0,0,0,0.7);
+box-shadow:0px 0px 6px rgba(0,0,0,0.7);
+-webkit-transform-origin:50% 120px;
+-moz-transform-origin:50% 120px;
+-ms-transform-origin:50% 120px;
+-o-transform-origin:50% 120px;
+transform-origin:50% 120px; 
+-webkit-animation:bounceOut 0.7s ease-in-out;
+-moz-animation:bounceOut 0.7s ease-in-out;
+-ms-animation:bounceOut 0.7s ease-in-out;
+-o-animation:bounceOut 0.7s ease-in-out;
+animation:bounceOut 0.7s ease-in-out;
+}
+
+#article16 dt{
+position:absolute;
+bottom:0px;
+width:100%;
+height:30px;
+padding-top:5px;
+}
+
+#article16 dd{
+-webkit-transform:rotate(180deg);
+-moz-transform:rotate(180deg);
+-ms-transform:rotate(180deg);
+-o-transform:rotate(180deg);
+transform:rotate(180deg);
+}
+
+#article16 dd a{
+display:block;
+height:24px;
+padding:3px 0px;
+color:#324040;
+text-decoration:none;
+}
+
+#article16 dd a:hover{
+background:rgba(255,255,255,0.1);
+}
+#article16 dl:hover{
+-webkit-transform:rotate(-180deg);
+-moz-transform:rotate(-180deg);
+-mstransform:rotate(-180deg);
+-o-transform:rotate(-180deg);
+transform:rotate(-180deg);
+-webkit-animation:bounceIn 0.7s ease-in-out;
+-moz-animation:bounceIn 0.7s ease-in-out;
+-ms-animation:bounceIn 0.7s ease-in-out;
+-o-animation:bounceIn 0.7s ease-in-out;
+animation:bounceIn 0.7s ease-in-out;
+}
+
+@-webkit-keyframes bounceIn {
+from {-webkit-transform:rotate(0deg);}
+75%{-webkit-transform:rotate(-200deg);}
+90%{-webkit-transform:rotate(-175deg);}
+to {-webkit-transform:rotate(-180deg);}
+}
+@-webkit-keyframes bounceOut {
+from {-webkit-transform:rotate(-360deg);}
+0% {-webkit-transform:rotate(-180deg);}
+10%{-webkit-transform:rotate(-160deg);}
+to {-webkit-transform:rotate(-360deg);}
+}
+@-moz-keyframes bounceIn {
+from {-moz-transform:rotate(0deg);}
+75%{-moz-transform:rotate(-200deg);}
+90%{-moz-transform:rotate(-175deg);}
+to {-moz-transform:rotate(-180deg);}
+}
+@-moz-keyframes bounceOut {
+from {-moz-transform:rotate(-360deg);}
+0% {-moz-transform:rotate(-180deg);}
+10%{-moz-transform:rotate(-160deg);}
+to {-moz-transform:rotate(-360deg);}
+}
+@-ms-keyframes bounceIn {
+from {-ms-transform:rotate(0deg);}
+75%{-ms-transform:rotate(-200deg);}
+90%{-ms-transform:rotate(-175deg);}
+to {-ms-transform:rotate(-180deg);}
+}
+@-ms-keyframes bounceOut {
+from {-ms-transform:rotate(-360deg);}
+0% {-ms-transform:rotate(-180deg);}
+10%{-ms-transform:rotate(-160deg);}
+to {-ms-transform:rotate(-360deg);}
+}
+@-o-keyframes bounceIn {
+from {-o-transform:rotate(0deg);}
+75%{-o-transform:rotate(-200deg);}
+90%{-o-transform:rotate(-175deg);}
+to {-o-transform:rotate(-180deg);}
+}
+@-o-keyframes bounceOut {
+from {-o-transform:rotate(-360deg);}
+0% {-o-transform:rotate(-180deg);}
+10%{-o-transform:rotate(-160deg);}
+to {-o-transform:rotate(-360deg);}
+}
+@keyframes bounceIn {
+from {transform:rotate(0deg);}
+75%{transform:rotate(-200deg);}
+90%{transform:rotate(-175deg);}
+to {transform:rotate(-180deg);}
+}
+@keyframes bounceOut {
+from {transform:rotate(-360deg);}
+0% {transform:rotate(-180deg);}
+10%{transform:rotate(-160deg);}
+to {transform:rotate(-360deg);}
+}
+
+#article16 .masque{
+position:absolute;
+z-index:50;
+width:585px;
+height:135px;
+top:0;left:0;
+background:#627878;
+background:-webkit-linear-gradient(#324040,#627878);
+background:-moz-linear-gradient(#324040,#627878);
+background:-ms-linear-gradient(#324040,#627878);
+background:-o-linear-gradient(#324040,#627878);
+background:linear-gradient(#324040,#627878);
+
+}
+
+#article16 .ombre{
+position:absolute;
+z-index:40;
+width:300px;
+height:6px;
+top:133px;
+margin-top:-103px;
+left:142px;
+-webkit-box-shadow:0px 100px 3px black;
+box-shadow:0px 100px 3px black;
+border-radius:75px 75px 75px 75px / 3px 3px 3px 3px;
+}
+</style>
+
+    <script src='plugins/notation/javascript/jquery.MetaData.js' type='text/javascript'></script>
+<script src='plugins/notation/javascript/jquery.rating.js' type='text/javascript'></script>
+<script src='plugins/notation/javascript/notation.js' type='text/javascript'></script>
+</head>
+    <body>
+        <div id="wrapAll">
+            <header id="header">
+    <div class="wrapLeft">
+          <div id="evitement"><a href="#evitRecherche">Rechercher</a><a href="#evitNavigation">Navigation</a><a href="#evitApprendre">Apprendre CSS</a><a href="#evitContenu">Contenu</a></div>
+          <h1 id="logoSite" ><a href="/"><img src="IMG/siteon0.png" alt="CSS3 Create - Démos, tutoriels et expériences CSS : menus, galerie photos, interfaces web." /></a></h1>
+          <div id="prefixmycss"><a href="http://prefixmycss.com">Préfixez vos CSS3</a></div>
+     </div>
+     <div class="wrapRight">
+          
+          <nav id="navMotCle">
+               
+               
+               <div class="motCle">
+               <h2><a href="/Categories">Catégories</a></h2>
+               <ul>
+                    
+                         <li><a href="Galeries-Photos">Galeries Photos</a></li>
+                    
+                         <li><a href="Just-for-Fun">Just for Fun</a></li>
+                    
+                         <li><a href="La-Typographie">La Typographie</a></li>
+                    
+                         <li><a href="Les-Animations">Les Animations</a></li>
+                    
+                         <li><a href="Les-filtres">Les Filtres</a></li>
+                    
+                         <li><a href="Les-Formulaires">Les Formulaires</a></li>
+                    
+                         <li><a href="Les-Menus">Les Menus</a></li>
+                    
+                         <li><a href="Les-Transformations">Les Transformations</a></li>
+                    
+                         <li><a href="Les-Transitions">Les Transitions</a></li>
+                    
+                         <li><a href="User-Interface">User Interface</a></li>
+                    
+               </ul>
+               </div>
+               
+               
+               <a href="#" id="evitApprendre"></a>
+               
+               
+               <div class="motCle">
+               <h2><a href="Proprietes">Propriétés</a></h2>
+               		
+               		<ul>
+               		
+                    	<li><a href="font-face">@font-face</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="animation">Animations CSS</a>
+                         	
+                         	<ul>
+                         	
+                                   <li><a href="animation-name">animation-name</a></li>
+                              
+                                   <li><a href="animation-duration">animation-duration</a></li>
+                              
+                                   <li><a href="animation-timing-function">animation-timing-function</a></li>
+                              
+                                   <li><a href="animation-iteration-count">animation-iteration-count</a></li>
+                              
+                                   <li><a href="animation-direction">animation-direction</a></li>
+                              
+                                   <li><a href="animation-delay">animation-delay</a></li>
+                              
+                                   <li><a href="animation-fill-mode">animation-fill-mode</a></li>
+                              
+                              </ul>
+                              
+                         </li>
+                         
+                    	<li><a href="background-clip">background-clip</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="border-radius">border-radius</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="box-shadow">box-shadow</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="counters">counters</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="Degrades-CSS">Dégradés CSS</a>
+                         	
+                         	<ul>
+                         	
+                                   <li><a href="linear-gradient">linear-gradient</a></li>
+                              
+                                   <li><a href="radial-gradient">radial-gradient</a></li>
+                              
+                              </ul>
+                              
+                         </li>
+                         
+                    	<li><a href="element">element()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="Filtres-CSS">Filtres CSS</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="rgba">rgba()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="text-shadow">text-shadow</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="Transformations-2D">Transformations 2D</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="Transformations-3D">Transformations 3D</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="transition">Transitions CSS</a>
+                         	
+                         	<ul>
+                         	
+                                   <li><a href="transition-property">transition-property</a></li>
+                              
+                                   <li><a href="transition-duration">transition-duration</a></li>
+                              
+                                   <li><a href="transition-timing-function">transition-timing-function</a></li>
+                              
+                                   <li><a href="transition-delay">transition-delay</a></li>
+                              
+                              </ul>
+                              
+                         </li>
+                         
+               		</ul>
+               		
+               </div>
+               
+               <div class="motCle">
+               <h2><a href="Selecteurs">Sélecteurs</a></h2>
+               		
+               		<ul>
+               		
+                    	<li><a href="Selecteurs-+-et-&gt;-CSS2-1"> <code class='spip_code' dir='ltr'>+</code> et <code class='spip_code' dir='ltr'>&gt;</code> (CSS2.1)</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="Selecteur-~-CSS3"> <code class='spip_code' dir='ltr'>~</code> (CSS3)</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="after-before">&nbsp;::after,&nbsp;::before</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="first-child">:first-child</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="first-of-type">:first-of-type</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="last-child">:last-child</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="last-of-type">:last-of-type</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="not">:not()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="nth-child">:nth-child()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="nth-last-child">:nth-last-child()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="nth-last-of-type">:nth-last-of-type()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="nth-of-type">:nth-of-type()</a>
+                         	
+                         </li>
+                         
+                    	<li><a href="target">:target</a>
+                         	
+                         </li>
+                         
+               		</ul>
+               		
+               </div>
+               
+               
+               <div class="motCle voirTous"><a href="/Demos/">Toutes les demos</a></div>
+          </nav>
+     </div>
+</header>
+            <section id="wrapContent">
+                <section id="bandeau" class="wrapLeft">
+                    <p class="gplus"><!--<g:plusone size="small" href="http://www.css3create.com"></g:plusone>--></p>
+<a href="#" id="evitRecherche"></a>
+<div class="formulaire_spip formulaire_recherche" id="formulaire_recherche">
+<form action="http://www.css3create.com/spip.php?page=recherche" method="get"><div>
+	<input name="page" value="recherche" type="hidden" />
+	
+	<label for="recherche">Rechercher&nbsp;:</label>
+	<input type="text" class="text" name="recherche" id="recherche" accesskey="4" /><input type="submit" class="submit" value="OK" title="Rechercher" />
+</div></form>
+</div>            
+
+    
+        <div id="rubDemo" class="rubMenu">
+           <h2 class="btn">Démos</h2>
+            <p class="btn2"><a href="/Demos/" title="Voir toutes les démos" class="on backBlue radius3">Toutes les démos</a></p>
+            <p class="pagination"><a href="/Demos/" class="off" rel="nofollow">&lt;</a><a href="/Demos/" class="on" rel="nofollow">&gt;</a></p>
+                
+                <nav id="navDemo">
+                    <a href="#" id="evitNavigation"></a>
+                    <ul class="menuDemo">
+                    
+                    	
+					<li>
+					
+                                <a href="Ombre-interne-sur-du-texte">
+                                    <img class="spip_logos" alt="" src="IMG/arton94.jpg?1385415490" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Ombre interne sur du texte
+                                </a>
+                         </li>
+                         
+					<li>
+					
+                                <a href="Simuler-background-clip-text">
+                                    <img class="spip_logos" alt="" src="IMG/arton93.jpg?1385129361" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Simuler background-clip : text
+                                </a>
+                         </li>
+                         
+                        
+                        
+                        	
+                            <li>
+                            
+                                <a href="Creer-le-nouveau-menu-Mac-Apple-en-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton28.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Créer le nouveau menu Mac Apple en CSS3
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Creer-un-bouton-en-CSS3-sans-images">
+                                    <img class="spip_logos" alt="" src="IMG/arton30.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Créer un bouton en CSS3 sans images
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Animation-CSS-et-effet-typographique-3D">
+                                    <img class="spip_logos" alt="" src="IMG/arton38.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Animation CSS et effet typographique&nbsp;(...)
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Un-iPhone-4-en-Full-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton7.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Un iPhone 4 en Full CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Navigation-slide-CSS3-avec-target-et-transitions">
+                                    <img class="spip_logos" alt="" src="IMG/arton27.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Navigation slide CSS3 avec :target et&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li class="on">
+                            
+                                <a href="Rotation-d-un-menu-en-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton16.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Rotation d’un menu en CSS3
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-avec-slider-effet-transition">
+                                    <img class="spip_logos" alt="" src="IMG/arton18.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu avec slider effet transition
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Barre-de-progression-avec-l-element-HTML5-progress">
+                                    <img class="spip_logos" alt="" src="IMG/arton79.png?1348492383" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Barre de progression avec l’élément HTML5&nbsp;(...)
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Hover-avec-transitions">
+                                    <img class="spip_logos" alt="" src="IMG/arton19.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Hover avec transitions
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Astuce-Utiliser-les-transitions-CSS-avec-height-auto">
+                                    <img class="spip_logos" alt="" src="IMG/arton36.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    (Astuce) Utiliser les transitions CSS avec&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Effet-accordeon-sur-une-image-en-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton87.jpg?1360111893" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Effet accordéon sur une image en CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-Slides-avec-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton15.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu Slides avec CSS3
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Navigation-a-onglets-fluides-avec-les-transitions-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton80.png?1351159598" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Navigation à onglets fluides avec les&nbsp;(...)
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Formulaire-design-et-accessible-en-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton25.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Formulaire design et accessible en CSS3
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Effet-de-brillance-en-CSS-et-SVG">
+                                    <img class="spip_logos" alt="" src="IMG/arton86.png?1358431549" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Effet de brillance en CSS et SVG
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Galerie-photo-hover-avec-transition-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton21.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Galerie photo hover avec transition&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Effet-coverflow-en-full-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton82.png?1349769677" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Effet coverflow en full CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-avec-coins-arrondis-et-degrades">
+                                    <img class="spip_logos" alt="" src="IMG/arton12.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu avec coins arrondis et dégradés
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Carte-de-voeux-en-Full-CSS3-sans-Flash">
+                                    <img class="spip_logos" alt="" src="IMG/arton24.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Carte de voeux en Full CSS3, sans Flash
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Infobulle-avec-effet-de-transparence-en-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton34.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Infobulle avec effet de transparence en&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Effets-de-survol-avec-transitions-et-filtres-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton78.png?1340790185" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Effets de survol avec transitions et&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Animations-chargement-et-lecture-audio">
+                                    <img class="spip_logos" alt="" src="IMG/arton29.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Animations chargement et lecture audio
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-en-full-CSS-style-Lavalamp">
+                                    <img class="spip_logos" alt="" src="IMG/arton40.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu en full CSS style Lavalamp
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Animation-effet-bounce-en-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton33.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Animation « effet bounce » en CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Astuce-Empecher-le-scroll-avec-l-utilisation-de-target">
+                                    <img class="spip_logos" alt="" src="IMG/arton35.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    (Astuce) Empêcher le scroll avec l’utilisation de
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="CSS-3D-Panorama">
+                                    <img class="spip_logos" alt="" src="IMG/arton39.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    CSS 3D Panorama
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Icone-de-prechargement-en-Full-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton20.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Icone de préchargement en Full CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Flip-card-avec-les-transformations-3D-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton37.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Flip-card avec les transformations 3D&nbsp;(...)
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Slider-Galerie-photos-en-boucle-en-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton17.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Slider Galerie photos "en boucle" en&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Effet-de-degrade-sur-texte-style-Twitter">
+                                    <img class="spip_logos" alt="" src="IMG/arton26.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Effet de dégradé sur texte style Twitter
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-design-avec-rgba-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton9.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu design avec rgba CSS3
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-sans-images">
+                                    <img class="spip_logos" alt="" src="IMG/arton3.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu sans images
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Boutons-Suivant-Precedent">
+                                    <img class="spip_logos" alt="" src="IMG/arton10.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Boutons Suivant Précédent
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Slider-Galerie-photos-en-CSS3">
+                                    <img class="spip_logos" alt="" src="IMG/arton8.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Slider Galerie photos en CSS3
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Typo-facon-Apple">
+                                    <img class="spip_logos" alt="" src="IMG/arton5.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Typo façon Apple
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-effet-Jquery-en-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton14.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu effet jQuery en CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Reflection-en-CSS-sur-une-image">
+                                    <img class="spip_logos" alt="" src="IMG/arton88.jpg?1367242243" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Reflection en CSS sur une image
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Menu-a-onglets-avec-border-radius-et-box-shadow">
+                                    <img class="spip_logos" alt="" src="IMG/arton4.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Menu à onglets avec border-radius et&nbsp;(...)
+                                </a>
+                            </li>
+                            </ul><ul class="menuDemo"> 
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Hierarchiser-ses-titres-avec-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton31.png?1335340303" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Hiérarchiser ses titres avec CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Effet-soft-focus-en-CSS">
+                                    <img class="spip_logos" alt="" src="IMG/arton90.jpg?1369990136" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Effet « soft-focus » en CSS
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Filtre-CSS-flou-localise-ou-flou-progressif">
+                                    <img class="spip_logos" alt="" src="IMG/arton91.png?1371734508" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Filtre CSS « flou localisé » ou « flou&nbsp;(...)
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Simuler-background-clip-text">
+                                    <img class="spip_logos" alt="" src="IMG/arton93.jpg?1385129361" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Simuler background-clip : text
+                                </a>
+                            </li>
+                            
+                            
+                        
+                        	
+                            <li>
+                            
+                                <a href="Ombre-interne-sur-du-texte">
+                                    <img class="spip_logos" alt="" src="IMG/arton94.jpg?1385415490" width="150" height="50" />
+                                    <span class="nouvTuto"></span>
+                                    Ombre interne sur du texte
+                                </a>
+                            </li>
+                             
+                            
+                        
+                    </ul>
+                </nav>
+            
+        </div>
+        <div id="livre">
+            <div>
+                <a href="http://www.amazon.fr/gp/product/2100578669/ref=as_li_tf_tl?ie=UTF8&tag=css3create-21&linkCode=as2&camp=1642&creative=6746&creativeASIN=2100578669"><img src="squelettes/images/livreCSS3.png" alt="Couverture du livre CSS3 Le design web moderne" /></a>
+            </div>
+            <div>
+                <p class="livreTitre"><a href="http://livre-css3.fr">Livre CSS3</a></p>
+                <p class="livreSSTitre">Le design web moderne</p>
+                <p class="livreAmazon">Plus d'infos sur <a href="http://livre-css3.fr">le site officiel</a></p>
+                <p>En vente sur <a href="http://www.amazon.fr/gp/product/2100578669/ref=as_li_tf_tl?ie=UTF8&tag=css3create-21&linkCode=as2&camp=1642&creative=6746&creativeASIN=2100578669">Amazon</a>, <a href="http://livre.fnac.com/a4103280/Vincent-de-Oliveira-CSS-3">FNAC</a>, <a href="http://www.dunod.com/informatique-multimedia/graphisme-et-web-design/web-design-et-animation-web/css3-le-design-web-moderne">Dunod</a></p>
+                
+            </div>
+        </div>
+        <div id="rubTuto" class="rubMenu">
+            
+            <h2 class="btn">Tutoriels</h2>
+            
+            <p class="btn2"><a href="/Tutos/" title="Voir tous les tutoriels" class="on backBlue radius3">Tous les tutoriels</a></p>
+            
+                    <nav id="navTuto">
+                        <ul class="menuTuto">
+                              
+                           	<li>
+                           		<a href="Filtre-CSS-flou-localise-ou-flou-progressif">
+                                   
+                                	<span class="tut20" title="Difficile"><span></span></span>
+                                   
+                                   <strong>Créer de la profondeur de champ avec les filtres et les masques</strong>
+                                   </a>
+                            	</li>
+                              
+                           	<li>
+                           		<a href="Effet-soft-focus-en-CSS">
+                                   
+                                	<span class="tut18" title="Facile"><span></span></span>
+                                   
+                                   <strong>Réaliser un flou artistique avec les filtres CSS</strong>
+                                   </a>
+                            	</li>
+                              
+                           	<li>
+                           		<a href="Reflection-en-CSS-sur-une-image">
+                                   
+                                	<span class="tut19" title="Moyen"><span></span></span>
+                                   
+                                   <strong>Créer un reflet avec <code class='spip_code' dir='ltr'>element()</code> et <code class='spip_code' dir='ltr'>-webkit-box-reflect</code></strong>
+                                   </a>
+                            	</li>
+                              
+                           	<li>
+                           		<a href="Effet-accordeon-sur-une-image-en-CSS">
+                                   
+                                	<span class="tut20" title="Difficile"><span></span></span>
+                                   
+                                   <strong>Créer un effet de pliage avec les transformations CSS 3D</strong>
+                                   </a>
+                            	</li>
+                              
+                           	<li>
+                           		<a href="Navigation-a-onglets-fluides-avec-les-transitions-CSS">
+                                   
+                                	<span class="tut18" title="Facile"><span></span></span>
+                                   
+                                   <strong>Créer un menu avec <code class='spip_code' dir='ltr'>display: table-cell</code></strong>
+                                   </a>
+                            	</li>
+                              
+                           	<li>
+                           		<a href="Effet-coverflow-en-full-CSS">
+                                   
+                                	<span class="tut20" title="Difficile"><span></span></span>
+                                   
+                                   <strong>Utiliser les sélecteurs avancés, les transitions et les transformations CSS.</strong>
+                                   </a>
+                            	</li>
+                              
+                         </ul>
+                    </nav>
+            
+        </div>
+        <div id="rubApprendre" class="rubMenu">
+       <h2 class="btn">Apprendre</h2>
+       <p class="btn2"><a href="/Apprendre/" title="Voir tous les les sélecteurs/propriétés" class="on backBlue radius3">Tous les sélecteurs/propriétés</a></p>
+       
+               <nav id="navApp">
+                   <ul class="menuApp">
+                         
+                              <li><a href="animation-name" class="radius3">animation-name</a> &middot;</li>
+                      	
+                              <li><a href="target" class="radius3">:target</a> &middot;</li>
+                      	
+                              <li><a href="nth-of-type" class="radius3">:nth-of-type()</a> &middot;</li>
+                      	
+                              <li><a href="nth-child" class="radius3">:nth-child()</a> &middot;</li>
+                      	
+                              <li><a href="counters" class="radius3">counters</a> &middot;</li>
+                      	
+                              <li><a href="last-child" class="radius3">:last-child</a> &middot;</li>
+                      	
+                              <li><a href="first-child" class="radius3">:first-child</a> &middot;</li>
+                      	
+                              <li><a href="animation" class="radius3">Animations CSS</a> &middot;</li>
+                      	
+                              <li><a href="nth-last-of-type" class="radius3">:nth-last-of-type()</a> &middot;</li>
+                      	
+                              <li><a href="rgba" class="radius3">rgba()</a> &middot;</li>
+                      	
+                              <li><a href="transition-timing-function" class="radius3">transition-timing-function</a> &middot;</li>
+                      	
+                              <li><a href="not" class="radius3">:not()</a> &middot;</li>
+                      	
+                              <li><a href="Transformations-3D" class="radius3">Transformations 3D</a> &middot;</li>
+                      	
+                              <li><a href="linear-gradient" class="radius3">linear-gradient</a> &middot;</li>
+                      	
+                              <li><a href="Selecteur-~-CSS3" class="radius3"> <code class='spip_code' dir='ltr'>~</code> (CSS3)</a> &middot;</li>
+                      	
+                              <li><a href="Transformations-2D" class="radius3">Transformations 2D</a> &middot;</li>
+                      	
+                              <li><a href="transition" class="radius3">Transitions CSS</a> &middot;</li>
+                      	
+                              <li><a href="Selecteurs-+-et-&gt;-CSS2-1" class="radius3"> <code class='spip_code' dir='ltr'>+</code> et <code class='spip_code' dir='ltr'>&gt;</code> (CSS2.1)</a> &middot;</li>
+                      	
+                              <li><a href="animation-timing-function" class="radius3">animation-timing-function</a> &middot;</li>
+                      	
+                              <li><a href="box-shadow" class="radius3">box-shadow</a></li>
+                      	
+                    </ul>
+               </nav>
+           
+</div>        
+
+
+     <div id="rubSuivre" class="rubMenu">
+          <h2 class="btn">Suivre</h2>
+               <div class="lesGens">
+                    <p>Actualités du site CSS3Create</p>
+                    <div class="">
+                         <p class="tw"><a href="https://twitter.com/css3create" class="twitter-follow-button" data-lang="fr" data-link-color="000000">Suivre @css3create</a></p>
+                         <p class="rssfb"><a href="http://feeds.feedburner.com/css3create" class="rss">Souscrire RSS</a> <a href="http://www.facebook.com/css3create" class="fb">Page facebook</a></p>
+                    </div>
+                    <p>Actualités sur CSS et le web en général</p>
+                    <div class="">
+                         <p class="tw"><a href="https://twitter.com/iamvdo" class="twitter-follow-button" data-lang="fr" data-link-color="000000">Suivre @iamvdo</a></p>
+                         <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+                         <p><a href="http://iamvdo.me"><img src="squelettes/images/iamvdo.png" alt="Logo du blog iamvdo.me"/>Blog iamvdo.me</a></p>
+                    </div>
+               </div>
+	</div>
+                </section>
+                <section id="content" class="wrapRight">
+                    <article id="article" class="language-css">
+                        <header>
+                              <a href="#" id="evitContenu"></a>
+						<h1 class="crayon article-titre-16 "><span>Rotation </span> d&#8217;un menu en CSS3</h1>
+						<h2 class="crayon article-soustitre-16 ">Créer ce menu rotatif avec les Animations CSS</h2>
+						<p id="datesArticle">Création: <span>juillet 2010</span>Modifié: <span><time datetime="2013-02-03">3 f&eacute;vrier 2013</time></span></p>
+                        </header>
+                        <section id="article16" class="crayon article-css-16 demoTime">
+                            <dl class="menu">
+     
+     <dt class="btnRot">Partagez</dt>
+     
+     <dd><a href="">...</a></dd>
+     <dd><a href="">Delicious</a></dd>
+     <dd><a href="">Facebook</a></dd>
+     <dd><a href="">Twitter</a></dd>
+     
+</dl>
+
+<div class="masque"></div>
+<div class="ombre"></div>
+                        </section>
+                        <section id="infosArticle">
+                            <div class="grd">
+                                <h5>Contenu</h5>
+                                
+                                    <span class="btnVert no_link">Full CSS</span>
+                                
+                                    <span class="btnVert no_link">Pas de JavaScript</span>
+                                
+                                    <span class="btnVert no_link">Pas d&#8217;images</span>
+                                
+                                <h5>Navigateurs</h5>
+                                
+                                    <a href="Firefox" class="btnVert brow7">Firefox</a>
+                                
+                                    <a href="Safari" class="btnVert brow8">Safari</a>
+                                
+                                    <a href="Chrome" class="btnVert brow9">Chrome</a>
+                                
+                                    <a href="Opera" class="btnVert brow10">Opera</a>
+                                
+                                    <a href="Internet-Explorer" class="btnVert brow11">Internet Explorer</a>
+                                
+                            </div><!--
+                         --><div class="grd">
+                                <h5>CSS3...</h5>
+                                
+                                    
+                                        <a href="text-shadow" class="btnVert">text-shadow</a>
+                                    
+                                
+                                    
+                                        <a href="box-shadow" class="btnVert">box-shadow</a>
+                                    
+                                
+                                    
+                                        <a href="animation" class="btnVert">Animations CSS</a>
+                                    
+                                
+                                    
+                                        <a href="Transformations-2D" class="btnVert">Transformations 2D</a>
+                                    
+                                
+                                    
+                                        <a href="Degrades-CSS" class="btnVert">Dégradés CSS</a>
+                                    
+                                
+                                    
+                                        <a href="border-radius" class="btnVert">border-radius</a>
+                                    
+                                
+                            </div><!--
+                         --><div class="pet">
+                                <h5>Partagez</h5>
+                                <a rel="nofollow" class="btnVert" href="http://www.facebook.com/sharer.php?u=http://www.css3create.com/Rotation-d-un-menu-en-CSS3&amp;t=Rotation%20d&#8217;un%20menu%20en%20CSS3" >Facebook</a>
+                                <a rel="nofollow" class="btnVert" href="http://twitter.com/share?text=Rotation%20d&#8217;un%20menu%20en%20CSS3&amp;url=http://www.css3create.com/Rotation-d-un-menu-en-CSS3&amp;via=css3create">Twitter</a></p>
+                                <h5>Votez</h5>
+				<!--formulaire_notation-->
+
+
+<div class="formulaire_notation ajax">
+ 
+    <form action="Rotation-d-un-menu-en-CSS3" method="post" id="notation-articles16" enctype="multipart/form-data" style="display:block;width:90px;height:24px;float:left;padding:0px; spacing:0; border:0">
+		<div><input name='formulaire_action' type='hidden'
+		value='notation' /><input name='formulaire_action_args' type='hidden'
+		value='+pGNWZCFepzBzzJ7Bg3774TWn9bMYv+pTanBRafAiUtD+yFhsxvdNr8HngQnLl58QKrG1csnBUHDnsUnL7Kc+5T9NZR8NbTkBu1e/MS7+Tyz1rI1igJ5' /></div><div style="display:inline">
+			<div class='notation_note notation_note_on_load'><input name='notation-articles16' type='radio' class='auto-submit-star' value='1' />
+<input name='notation-articles16' type='radio' class='auto-submit-star' value='2' />
+<input name='notation-articles16' type='radio' class='auto-submit-star' value='3' />
+<input name='notation-articles16' type='radio' class='auto-submit-star' value='4' />
+<input name='notation-articles16' type='radio' class='auto-submit-star' value='5' checked='checked' />
+</div>
+			
+			<input type="hidden" name="notation_id_donnees" id="id_donnees-articles16" value="16" />
+			<input type="hidden" name="content" id="content-articles16" value="" />
+			<input type="submit" class="access" value="Voter"/>
+			
+		</div>
+	</form>
+	<p class="note"><span class="note"><span class="rating">218</span> votes</span><span class="nbVote">4.63</span></p>
+
+
+
+</div>
+                            </div>
+                        </section>
+                        <section id="content_article">
+                            <section class="content_texte">
+                                <blockquote class="intro crayon article-descriptif-16 ">
+                                    <q><strong>Full CSS</strong>. Création des animations en CSS3 pour créer un effet sympa de rotation sur un menu. Utilisation des <a href="Degrades-CSS" class='spip_in'>gradients CSS</a>.
+</q>
+                                </blockquote>
+                                <div class="tuto crayon article-texte-16 ">
+                                    <h2 class="spip">Etape 1&nbsp;:  Gérer les transformations</h2>
+<p>On utilise tout d&#8217;abord les transformations CSS pour gérer la rotation avec <a href="Transformations-2D" class='spip_in'>transform&nbsp;: rotate(angle)</a>. La rotation se fait par rapport à un axe qui n&#8217;est pas le centre de l&#8217;élément avec <a href="Transformations-2D" class='spip_in'>transform-origin&nbsp;: x y&nbsp;;</a>.</p>
+
+<p>Voici le code HTML utilisé&nbsp;:</p>
+<div style='text-align: left;' class='spip_code' dir='ltr'><code class="language-markup">&lt;dl class=&quot;menu&quot;&gt;<br />
+ &nbsp;&lt;dt class=&quot;btnRot&quot;&gt;Partagez&lt;/dt&gt;<br />
+ &nbsp; &nbsp;&lt;dd&gt;&lt;a href=&quot;&quot;&gt;...&lt;/a&gt;&lt;/dd&gt;<br />
+ &nbsp; &nbsp;&lt;dd&gt;&lt;a href=&quot;&quot;&gt;Delicious&lt;/a&gt;&lt;/dd&gt;<br />
+ &nbsp; &nbsp;&lt;dd&gt;&lt;a href=&quot;&quot;&gt;Facebook&lt;/a&gt;&lt;/dd&gt;<br />
+ &nbsp; &nbsp;&lt;dd&gt;&lt;a href=&quot;&quot;&gt;Twitter&lt;/a&gt;&lt;/dd&gt;<br />
+&lt;/dl&gt;<br />
+<br />
+&lt;div class=&quot;masque&quot;&gt;&lt;/div&gt;<br />
+&lt;div class=&quot;ombre&quot;&gt;&lt;/div&gt;</code></div>
+<p>Tout d&#8217;abord, positionnement du menu en haut, et positionnement des liens masqués à l&#8217;envers&nbsp;:</p>
+
+<div style='text-align: left;' class='spip_code' dir='ltr'><code class="css">dl.menu{<br />
+ &nbsp; &nbsp; position: absolute;<br />
+ &nbsp; &nbsp; top: 20px;<br />
+ &nbsp; &nbsp; transform-origin: 50% 115px;<br />
+}<br />
+dl.menu dd{<br />
+ &nbsp; &nbsp; transform: rotate(180deg);<br />
+}</code></div>
+<p>Puis au hover, on pivote le menu de 180 degrés&nbsp;:</p>
+
+<div style='text-align: left;' class='spip_code' dir='ltr'><code class="css">dl.menu:hover{<br />
+ &nbsp; &nbsp; transform: rotate(-180deg);<br />
+}</code></div>
+<h2 class="spip">Etape 2&nbsp;: ajout des animations </h2>
+<p>Ensuite, les <a href="animation" class='spip_in'>animations</a> permettent de faire pivoter le menu avec un effet de balancier&nbsp;: le menu bascule deux fois avant de s&#8217;arrêter en bas.</p>
+
+<p>Tout d&#8217;abord le menu descend (animation bounceIn)</p>
+
+<div style='text-align: left;' class='spip_code' dir='ltr'><code class="css">dl.menu:hover{<br />
+ &nbsp; &nbsp; animation: bounceIn 0.7s ease-in-out ;<br />
+}<br />
+@keyframes bounceIn {<br />
+ &nbsp; &nbsp; from {transform: rotate(0deg);}<br />
+ &nbsp; &nbsp; 75% &nbsp;{transform: rotate(-200deg);}<br />
+ &nbsp; &nbsp; 90% &nbsp;{transform: rotate(-175deg);}<br />
+ &nbsp; &nbsp; to &nbsp; {transform: rotate(-180deg);}<br />
+}</code></div>
+<p>Puis remonte (animation bounceOut)&nbsp;:</p>
+
+<div style='text-align: left;' class='spip_code' dir='ltr'><code class="css">div.menu{<br />
+ &nbsp; &nbsp; animation: bounceOut 0.7s ease-in-out;<br />
+}<br />
+@keyframes bounceOut {<br />
+ &nbsp; &nbsp; from {transform: rotate(-360deg);}<br />
+ &nbsp; &nbsp; 0% &nbsp; {transform: rotate(-180deg);}<br />
+ &nbsp; &nbsp; 10% &nbsp;{transform: rotate(-160deg);}<br />
+ &nbsp; &nbsp; to &nbsp; {transform: rotate(-360deg);}<br />
+}</code></div>
+<p>Enfin, une <code class='spip_code' dir='ltr'>div id=&quot;masque&quot;</code>  et une <code class='spip_code' dir='ltr'>div id=&quot;ombre&quot;</code> sont nécessaires pour créer l&#8217;effet de superposition des éléments et ainsi permettre au menu d&#8217;être caché. À vous d&#8217;adapter ensuite ce code pour vos designs. Regardez le code source dans la partie <code class='spip_code' dir='ltr'>&lt;head&gt;</code> pour le code complet.</p>
+
+<p>Note&nbsp;: n&#8217;oubliez pas non plus l&#8217;ajout de tous les préfixes propriétaires pour un fonctionnement dans la majorité des navigateurs du marché.</p>
+                                </div>
+                            </section>
+
+                            <section id="relDemo" class="blocSite">
+                                <h3>Envie d'une nouvelle démo?</h3>
+                                <div id="artsRel">
+                                    <ul>
+                                        
+                                            <li class="artRel">
+                                                <a href="Animation-effet-bounce-en-CSS">
+								          <img class="spip_logos" alt="" src="IMG/arton33.png?1335340303" width="150" height="50" />
+								          <br/>
+								          
+								          
+                                                <span class="nouvTuto"></span>
+                                                Animation &#171;&nbsp;effet bounce&nbsp;&#187; en CSS</a>
+                                        </li>
+                                    
+                                            <li class="artRel">
+                                                <a href="Slider-Galerie-photos-en-CSS3">
+								          <img class="spip_logos" alt="" src="IMG/arton8.png?1335340303" width="150" height="50" />
+								          <br/>
+								          
+								          
+                                                <span class="nouvTuto"></span>
+                                                Slider Galerie photos en CSS3</a>
+                                        </li>
+                                    
+                                            <li class="artRel">
+                                                <a href="Astuce-Empecher-le-scroll-avec-l-utilisation-de-target">
+								          <img class="spip_logos" alt="" src="IMG/arton35.png?1335340303" width="150" height="50" />
+								          <br/>
+								          
+								          	
+                                          
+								          
+                                                <span class="nouvTuto"><span class="nouv tutoIcon">TUTO</span></span>
+                                                (Astuce) Empêcher le scroll avec l&#8217;utilisation de :target </a>
+                                        </li>
+                                    
+                                </ul>
+                                </div>
+                            </section>
+                       
+                       <section id="forum" class="blocSite">
+                       <h3>Un p'tit mot...</h3>
+                       
+                       <div id="comments">
+                       <div class="row">
+                       
+                            
+                              
+                            
+                               <div class="comment" id="forum3">
+                               <p class="idF">#1<em class="nomDate">par <span class="nomPers">simon</span>, le 20 f&eacute;vrier 2011</em></p>
+                               <div class="texteF"><p>Un gros merci pour le tutoriel. Simon</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum8">
+                               <p class="idF">#2<em class="nomDate">par <span class="nomPers">css3create</span>, le 20 f&eacute;vrier 2011</em></p>
+                               <div class="texteF"><p>De rien&nbsp;! Content que ça puisse servir. N&#8217;hésitez pas à posez vos questions.</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum14">
+                               <p class="idF">#3<em class="nomDate">par <span class="nomPers">Roland</span>, le 1er mars 2011</em></p>
+                               <div class="texteF"><p>C&#8217;est un très bon tutoriel, intéressant à mettre en pratique justement pour tout se qui est partage social.
+<br />Bonne continuation
+<br />ps&nbsp;: je vous empreinte l&#8217;idée&nbsp;;)</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum35">
+                               <p class="idF">#4<em class="nomDate">par <span class="nomPers">LCProd</span>, le 19 avril 2011</em></p>
+                               <div class="texteF"><p>Vraiment très bon&nbsp;! beau boulot&nbsp;:) je suis fan et je tweet&nbsp;:)</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum43">
+                               <p class="idF">#5<em class="nomDate">par <span class="nomPers">SolidSnake</span>, le 12 mai 2011</em></p>
+                               <div class="texteF"><p>Très très bon, je suis de plus en plus impressionné avec le CSS. Je préfère même l&#8217;animation sous Opera, ça fait plus "propre" je trouve sans le rebond. En tout cas, merci pour le tuto.</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum52">
+                               <p class="idF">#6<em class="nomDate">par <span class="nomPers">G.Crofte</span>, le 18 mai 2011</em></p>
+                               <div class="texteF"><p>Excellent effet&nbsp;:)
+<br />Bien joué&nbsp;!</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum59">
+                               <p class="idF">#7<em class="nomDate">par <span class="nomPers">Malik</span>, le 27 juin 2011</em></p>
+                               <div class="texteF"><p>Le plus cool c&#8217;est qu&#8217;il y a même pas de licence&nbsp;!
+<br />Merci beaucoup&nbsp;!!!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum60">
+                               <p class="idF">#8<em class="nomDate">par <span class="nomPers">Almux</span>, le 27 juin 2011</em></p>
+                               <div class="texteF"><p>Immense merci pour cette démo&nbsp;!
+<br />Je vais tenter de l&#8217;utiliser... si je trouve un bon "ersatz" CSS pour IE 7, 8, 9... Ce qui n&#8217;est pas gagné&nbsp;!
+<br />Mais qui ne tente rien, n&#8217;a rien&nbsp;!</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum61">
+                               <p class="idF">#9<em class="nomDate">par <span class="nomPers">Malik</span>, le 27 juin 2011</em></p>
+                               <div class="texteF"><p>Qu&#8217;est ce que tu appelle Ersatz&nbsp;?</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum66">
+                               <p class="idF">#10<em class="nomDate">par <span class="nomPers">maldives59</span>, le 5 juillet 2011</em></p>
+                               <div class="texteF"><p>J&#8217;aime vraiment&nbsp;:)
+<br />Mais je trouve dommage que vous ne donniez pas tout le code source, pour que cela puisses être plus facile a comprendre et a adapter.
+<br />Dommage que le div "masque" et "ombre" ne soit pas espliqué...
+<br />Sinon je trouve que vous avez beaucoup d&#8217;idées&nbsp;:)</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                             
+                             
+                            <div class="row">
+                               <div class="comment" id="forum67" style="width:550px">
+                               <p class="idF">#11<em class="nomDate">par <span class="nomPers">maldives59</span>, le 5 juillet 2011</em></p>
+                               <div class="texteF"><p>Désoler pour le double post,
+<br />Lorsque je dis "tout le code", ce n&#8217;est pas tout le code d&#8217;affilé mais par exemple, les parties pour la couleur etc....
+<br />Je pense que cela serais mieux si vous détalliez plus vos tuto.
+<br />Sinon, j&#8217;aime vraiment cette partie de menu, et j&#8217;aimerais bien l&#8217;utiliser pour en faire un menu complet.
+<br />J&#8217;ai malheureusement beaucoup de difficultés a mettre en application le tuto (même en regardant le code CSS du site je n&#8217;arrive pas a m&#8217;en sortir.
+<br />Vous serez T-il possible de m&#8217;aider a débugger&nbsp;? Et si oui, comment&nbsp;?
+<br />Je le redis, J&#8217;aime beaucoup votre travail et votre créativité&nbsp;:)
+<br />Continuez comme ça&nbsp;!</p></div>      
+                               </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum74">
+                               <p class="idF">#12<em class="nomDate">par <span class="nomPers">css3create</span>, le 7 juillet 2011</em></p>
+                               <div class="texteF"><p>@maldives59&nbsp;: Je peut vous aider à débugger, oui&nbsp;! Pour cela, envoyer moi l&#8217;adresse d&#8217;une démo en ligne.</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum80">
+                               <p class="idF">#13<em class="nomDate">par <span class="nomPers">maldives59</span>, le 12 juillet 2011</em></p>
+                               <div class="texteF"><p>Merci pour m&#8217;aider&nbsp;:)
+<br />Vous pouvez trouver le début de mon travail ici&nbsp;: <a href="http://ip-net.tk/menuretournant/index.html" class="spip_url spip_out" rel="nofollow external">http://ip-net.tk/menuretournant/ind...</a>
+<br />A bientot</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum93">
+                               <p class="idF">#14<em class="nomDate">par <span class="nomPers">bysmo</span>, le 17 ao&ucirc;t 2011</em></p>
+                               <div class="texteF"><p>Cool. Bravo, à nous donc de jouer aussi.</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum105">
+                               <p class="idF">#15<em class="nomDate">par <span class="nomPers">Fllan</span>, le 30 ao&ucirc;t 2011</em></p>
+                               <div class="texteF"><p>ça marche sous Firefox 6.0</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum109">
+                               <p class="idF">#16<em class="nomDate">par <span class="nomPers">rafmax</span>, le 7 septembre 2011</em></p>
+                               <div class="texteF"><p>Bonjour bon tuto, mais moi aussi, sa ne marche pas&nbsp;! pourquoi donc&nbsp;? si vous trouvez la solution, auriez vous la gentillesse de m&#8217;envoyer votre solution s&#8217;il vous plait&nbsp;? merci&nbsp;!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum110">
+                               <p class="idF">#17<em class="nomDate">par <span class="nomPers">ryuran</span>, le 9 septembre 2011</em></p>
+                               <div class="texteF"><p>c&#8217;est Joli et original mais il y a un gros soucis niveaux navigation au clavier</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum125">
+                               <p class="idF">#18<em class="nomDate">par <span class="nomPers">epizod</span>, le 11 octobre 2011</em></p>
+                               <div class="texteF"><p>Salut, super demo, BRAVO&nbsp;!!!!
+<br />j&#8217;ai essayé de le refaire pour tester malheureusement, je n&#8217;ai pas d&#8217;effet qui se reproduit dans mon navigateur&nbsp;??? Firefox 7.0.1</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum126">
+                               <p class="idF">#19<em class="nomDate">par <span class="nomPers">dem</span>, le 11 octobre 2011</em></p>
+                               <div class="texteF"><p>c&#8217;es de la merde tuto est nul</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum136">
+                               <p class="idF">#20<em class="nomDate">par <span class="nomPers">altair</span>, le 22 octobre 2011</em></p>
+                               <div class="texteF"><p>très beau à voir (tout comme le reste du site)
+<br />par contre je suis un peut septique pour l&#8217;utilisation d&#8217;un tel menu dans un site web. A mon avis question usabilité, c&#8217;est pas super.</p>
+
+<p>Mais à part ce fait j&#8217;adore&nbsp;!!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum143">
+                               <p class="idF">#21<em class="nomDate">par <span class="nomPers">Fred</span>, le 13 novembre 2011</em></p>
+                               <div class="texteF"><p>Gros fan de ce site depuis que je l&#8217;ai decouvert, travail impressionnant...de + en + bluffé par CSS3. Il me tarde le jour ou enfin tous les navigateurs interpretrons ces commandes...foutu IE&nbsp;!</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum145">
+                               <p class="idF">#22<em class="nomDate">par <span class="nomPers">Kikimagik</span>, le 16 novembre 2011</em></p>
+                               <div class="texteF"><p>Une question me reste sans réponse&nbsp;: comment créer t-on cet effet de fente ou ce cache le menu&nbsp;?? Impossible à reproduire ou alors avec beaucoup trop de "bidouillages". Serais t&#8217;il possible de m&#8217;en dire un peu plus. Merci</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum146">
+                               <p class="idF">#23<em class="nomDate">par <span class="nomPers">css3create</span>, le 16 novembre 2011</em></p>
+                               <div class="texteF"><p>@Kikimagik&nbsp;: une div masque le menu à l&#8217;envers (Cette div a un background), et une div crée l&#8217;ombre. Les 2 divs sont en positionnement absolute avec un z-index de 40 et 50. (regardes dans le code source ligne 143-168...)</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum159">
+                               <p class="idF">#24<em class="nomDate">par <span class="nomPers">Kikimagik</span>, le 24 novembre 2011</em></p>
+                               <div class="texteF"><p>@css3create&nbsp;: Merci de ton aide&nbsp;! Effectivement ceci est bien un chevauchement de DIV comme je le pensais. Simplement oublié les positions absolute... du coup sa fonctionne beaucoup moins bien. Merci encore pour tes supers tutos&nbsp;!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum232">
+                               <p class="idF">#25<em class="nomDate">par <span class="nomPers">lepingouin</span>, le 5 janvier 2012</em></p>
+                               <div class="texteF"><p>salut, 
+<br />Merci beaucoup,
+<br />je suis débutant et je comprend pas tout, j&#8217;ai seulement des lien basic mais rien d&#8217;autre.
+<br />quelqu&#8217;un pourrais poster son code css en entier&nbsp;? ce serait super pour mieux comprendre.</p>
+
+<p>Merci</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum240">
+                               <p class="idF">#26<em class="nomDate">par <span class="nomPers">Maiki</span>, le 14 janvier 2012</em></p>
+                               <div class="texteF"><p>Utiliser l&#8217;élément dl pour un menu.. bizarre et surtout inutile vu que ul ou nav (html5) sont fait pour ça</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum243">
+                               <p class="idF">#27<em class="nomDate">par <span class="nomPers">css3create</span>, le 14 janvier 2012</em></p>
+                               <div class="texteF"><p>@Maiki&nbsp;: Tu estimes que <code class="spip_code" dir="ltr">ul</code> est fait pour ça&nbsp;! <code class="spip_code" dir="ltr">ul</code> défini juste une liste non ordonnée, alors que <code class="spip_code" dir="ltr">dl</code> défini une liste de définition, qui est plus sémantique dans ce cas. <code class="spip_code" dir="ltr">nav</code> est simplement un conteneur, pas une liste.</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                             
+                             
+                            <div class="row">
+                               <div class="comment" id="forum266" style="width:550px">
+                               <p class="idF">#28<em class="nomDate">par <span class="nomPers">ernest</span>, le 28 janvier 2012</em></p>
+                               <div class="texteF"><p>Très bon tuto (très bon site d’une manière générale). L’effet de fente est très sympa et la transition plutôt "smooth". Malheuresement pas utilisable en vrai a cause du bug (si on met la souris tout en bas du menu il y a un effet de tremblement. C’est pourquio je prefere utiliser un effet comme celui là&nbsp;:<a href="http://www.alsacreations.com/tuto/lire/1234-creer-volet-coulissant-CSS3-target-transition.html" class="spip_url spip_out" rel="nofollow external">http://www.alsacreations.com/tuto/l...</a>
+<br />Par rapport aux balises je suis pas sur que dl soit très adaptée ici&nbsp;: puisque vous definissez une liste avec un seul item, qui a trois "definitions" différentes qui ne sont même pas des definitions. J’utilise pour tous ce qui est media sociaux une structure
+<br />aside>ul>li>a. De ce que j’ai compris aside peut etre utilisée pour ça.</p></div>      
+                               </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum290">
+                               <p class="idF">#29<em class="nomDate">par <span class="nomPers">Ch4d</span>, le 20 f&eacute;vrier 2012</em></p>
+                               <div class="texteF"><p>moi je comprend pas parce qu&#8217;il ne s&#8217;affiche pas alors que j&#8217;ai copier le site et fais des retouche bizarre
+<br />lien&nbsp;: <a href="http://ch4d.kyronet.com/include/menu.inc.php" class="spip_url spip_out" rel="nofollow external">http://ch4d.kyronet.com/include/men...</a></p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum323">
+                               <p class="idF">#30<em class="nomDate">par <span class="nomPers">Justine</span>, le 19 mars 2012</em></p>
+                               <div class="texteF"><p>Il marche sous Firefox&nbsp;!&nbsp;:)</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum330">
+                               <p class="idF">#31<em class="nomDate">par <span class="nomPers">phenus</span>, le 27 mars 2012</em></p>
+                               <div class="texteF"><p>svp pouvez vous publier le code integrale du menu deroulanrt svp cela nous aidera vraiment a comprendre j&#8217;attend svp et merci d&#8217;avance</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum331">
+                               <p class="idF">#32<em class="nomDate">par <span class="nomPers">sika</span>, le 27 mars 2012</em></p>
+                               <div class="texteF"><p>excuze nous mais moi egalement je suis d&#8217;accord avec phenus svp publier le code en entier pour la rotation de menu.vous trop fort merci</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum352">
+                               <p class="idF">#33<em class="nomDate">par <span class="nomPers">DAvid</span>, le 18 avril 2012</em></p>
+                               <div class="texteF"><p>Moi je l&#8217;ai à l&#8217;envers&nbsp;:-)  c bizarre</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum367">
+                               <p class="idF">#34<em class="nomDate">par <span class="nomPers">Ehmnesia</span>, le 3 mai 2012</em></p>
+                               <div class="texteF"><p>J&#8217;ai testé, et ça marche pas, j&#8217;ai aucun CSS</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum369">
+                               <p class="idF">#35<em class="nomDate">par <span class="nomPers">Yorgo</span>, le 5 mai 2012</em></p>
+                               <div class="texteF"><p>Bonjour, comment faites-vous l&#8217;ombre au dessus du menu&nbsp;? j&#8217;ai essayé de la reproduire avec un box-shadow mais je n&#8217;y arrive pas&nbsp;!</p>
+
+<p>Merci&nbsp;!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum438">
+                               <p class="idF">#36<em class="nomDate">par <span class="nomPers">Xophis</span>, le 28 juin 2012</em></p>
+                               <div class="texteF"><p>Bonjour, lors du :hover sur un dd a <i></i> la nouvelle couleur n&#8217;est pas applique sur 100% de la largeur&nbsp;! Une idee de l&#8217;endroit ou modifier ca&nbsp;? Merci&nbsp;!</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum439">
+                               <p class="idF">#37<em class="nomDate">par <span class="nomPers">Xophis</span>, le 28 juin 2012</em></p>
+                               <div class="texteF"><p>Probleme regle avec un float:right&nbsp;; sur dd<i></i></p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum485">
+                               <p class="idF">#38<em class="nomDate">par <span class="nomPers">teste</span>, le 2 ao&ucirc;t 2012</em></p>
+                               <div class="texteF"><p>où est la class btnRot, vous avez oubliez de publier, verifier votre site</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum493">
+                               <p class="idF">#39<em class="nomDate">par <span class="nomPers">Hello</span>, le 11 ao&ucirc;t 2012</em></p>
+                               <div class="texteF"><p>Un petit bug 4 étoiles&nbsp;: survoler très rapidement de haut en bas.</p>
+
+<p>Sinon c&#8217;est bien trouver&nbsp;! :D</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum509">
+                               <p class="idF">#40<em class="nomDate">par <span class="nomPers">biop</span>, le 24 ao&ucirc;t 2012</em></p>
+                               <div class="texteF"><p>salut&nbsp;:)</p>
+
+<p>J&#8217;adore cet effet,mais je ne vois pas la partie ou je peux copier le code complet.</p>
+
+<p>Merci d&#8217;avance&nbsp;:)</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum516">
+                               <p class="idF">#41<em class="nomDate">par <span class="nomPers">lemonnm</span>, le 28 ao&ucirc;t 2012</em></p>
+                               <div class="texteF"><p>Ne fonctionne pas sous IE... a mon grand regret....</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum543">
+                               <p class="idF">#42<em class="nomDate">par <span class="nomPers">Aiglichon</span>, le 15 septembre 2012</em></p>
+                               <div class="texteF"><p>Un lien de téléchargement direct aurait été le bienvenu mais bon&nbsp;:/
+<br />Sinon bon site merci.</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum544">
+                               <p class="idF">#43<em class="nomDate">par <span class="nomPers">mimi</span>, le 17 septembre 2012</em></p>
+                               <div class="texteF"><p>Sa fonctionne pas&nbsp;!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum545">
+                               <p class="idF">#44<em class="nomDate">par <span class="nomPers">latchocoolgirl</span>, le 17 septembre 2012</em></p>
+                               <div class="texteF"><p>je vais pété un câble&nbsp;! Je vais m&#8217;arracher les cheveux, j&#8217;y arrive pas&nbsp;!</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum583">
+                               <p class="idF">#45<em class="nomDate">par <span class="nomPers">Akshobhyia</span>, le 3 octobre 2012</em></p>
+                               <div class="texteF"><p>Pour ceux que ca interresse rdv sur ce lien pour les fichier css et Html&nbsp;: <a href="https://docs.google.com/folder/d/0B53oyslKYiklN0JjZG5YUWs5czA/edit" class="spip_url spip_out" rel="nofollow external">https://docs.google.com/folder/d/0B...</a></p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum610">
+                               <p class="idF">#46<em class="nomDate">par <span class="nomPers">rhap&#8217;s</span>, le 17 octobre 2012</em></p>
+                               <div class="texteF"><p>bonsoir&nbsp;!</p>
+
+<p>super travail merci beaucoup&nbsp;! je suis fan :d
+<br />par contre je comprend pas class="btnRot" il n&#8217;est pas dans le css pourtant si on le retir ca ne marche pas...
+<br />une explication..&nbsp;?</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum621">
+                               <p class="idF">#47<em class="nomDate">par <span class="nomPers">kiteman</span>, le 23 octobre 2012</em></p>
+                               <div class="texteF"><p>Merci beaucoup pour ce tuto&nbsp;!
+<br />Pour les besoins de mon site, j&#8217;ai dû agrandir la largeur. Du coup les sous-menus (</p>
+<dd>) ne sont plus centrés, et au survol, la couleur de fond ne fait pas toute la largeur du menu.
+<br />Je pense que ça se paramètre à cet endroit mais je ne vois pas comment modifier la largeur&nbsp;:
+<br />#article16 dd a:hover <i>
+<br />	background&nbsp;: rgba(255,255,255,0.1)&nbsp;;
+</i>
+<p>Merci&nbsp;!</p></dd></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum849">
+                               <p class="idF">#48<em class="nomDate">par <span class="nomPers">Kanda</span>, le 14 f&eacute;vrier 2013</em></p>
+                               <div class="texteF"><p>Bonjour super tuto mais qu`en en et nul comme moi le manque de code et pas facile a reproduire.</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum907">
+                               <p class="idF">#49<em class="nomDate">par <span class="nomPers">benoit</span>, le 8 avril 2013</em></p>
+                               <div class="texteF"><p>bonjour, merci pour votre exemple, il fonctionne très bien sauf sur tablette.</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum924">
+                               <p class="idF">#50<em class="nomDate">par <span class="nomPers">Con&#8217;Art</span>, le 28 avril 2013</em></p>
+                               <div class="texteF"><p>Voilà, je vient de m&#8217;essayer au tutoriel et voila mon résultat&nbsp;: <a href="http://sbcroc.xooit.fr/index.php" class="spip_url spip_out" rel="nofollow external">http://sbcroc.xooit.fr/index.php</a>
+<br />Malheureusement, mon but premier était de placer ce menu de facon a ce que la partie basse, suive le haut de l&#8217;écran (un menu flottant) Pourriez vous me conseiller je connais de grosses difficultées&nbsp;?</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum935">
+                               <p class="idF">#51<em class="nomDate">par <span class="nomPers">Scorpionoir</span>, le 9 mai 2013</em></p>
+                               <div class="texteF"><p>bonjour a tous, je ne suis pas debutant en html on va dire que je me debrouille mais des qu&#8217;il faut cree un css pour le relier a la page html alors la je suis perdu car dans cette exemple aucune indication donc je ne sais pas exactement ou mettre le code dans la page ou si je doit cree un fichier css pouvez m&#8217;aider merci a tous</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum936">
+                               <p class="idF">#52<em class="nomDate">par <span class="nomPers">Scorpionoir</span>, le 9 mai 2013</em></p>
+                               <div class="texteF"><p>comment mettre plusieur menu cote a cote&nbsp;? car je voudrait m&#8217;en servir sur la nouvelle version de mon site perso que je suis en train de réaliser merci d&#8217;avance a tous(tes) qui pourront m&#8217;aider</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                             
+                             
+                            <div class="row">
+                               <div class="comment" id="forum950" style="width:550px">
+                               <p class="idF">#53<em class="nomDate">par <span class="nomPers">Haldan</span>, le 23 mai 2013</em></p>
+                               <div class="texteF"><p>Bonjour et merci pour ce superbe tuto. Je l&#8217;ai mi à profit sur mon site, et l&#8217;effet est là.
+<br />Je l&#8217;ai mis sur toutes les pages. Le soucis, c&#8217;est qu&#8217;à chaque rechargement de la page en cours ou lorsque l&#8217;on charge une nouvelle page, touts les items du menu tournent automatiquement. Est-il donc possible d&#8217;empêcher cela, c&#8217;est à dire que la class dl.menu reste statique et fasse sa rotation uniquement au focus et non au chargement de la page. Ais-je été clair&nbsp;?</p></div>      
+                               </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                            
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum951">
+                               <p class="idF">#54<em class="nomDate">par <span class="nomPers">Haldan</span>, le 24 mai 2013</em></p>
+                               <div class="texteF"><p>Pour Scorpionoir
+<br />moi j&#8217;ai fait comme ça
+<br /><a href="http://freelance.saintpaul.free.fr" class="spip_url spip_out" rel="nofollow external">http://freelance.saintpaul.free.fr</a>
+<br />regarde le code
+<br />les tables,ça peut encore servir&nbsp;!
+<br />par contre, il n&#8217;y a qu&#8217;un seul masque et une seule ombre css pour les 4 items...
+<br />à toi de chercher...</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum976">
+                               <p class="idF">#55<em class="nomDate">par <span class="nomPers">Scorpionoir</span>, le 13 juin 2013</em></p>
+                               <div class="texteF"><p>Pour Haldan, merci beaucoup pour ton aide mais apres tous les effort que j&#8217;ai fourni j&#8217;ai trouver comment mettre plusieur menu cote a cote et c&#8217;est la que j&#8217;ai eu la rage car la surprise est que chrome n&#8217;acceptait pas mes liens donc j&#8217;ai tout a refaire avec un autre menu qui fonctionneras cette fois ci du moins je l&#8217;espere. bonne fin de journee</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum990">
+                               <p class="idF">#56<em class="nomDate">par <span class="nomPers">Nikos-font</span>, le 27 juin 2013</em></p>
+                               <div class="texteF"><p>Bonjour, ton tuto est super&nbsp;!
+<br />Cependant je n&#8217;arrive pas un cacher la partie souhaitée du "carré".
+<br />C&#8217;est bien avec les class masque et ombre&nbsp;??
+<br />Merci d&#8217;avance, et encore une fois super tuto&nbsp;!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum1001">
+                               <p class="idF">#57<em class="nomDate">par <span class="nomPers">Xude</span>, le 9 juillet 2013</em></p>
+                               <div class="texteF"><p>Bonjour, merci pour ce magnifique tutoriel&nbsp;! Une seule question toutefois&nbsp;: comment accéder au code source&nbsp;? Je ne trouve pas cette fameuse "partie &lt; head >"... Même en utilisant ctrl+F ça ne donne aucun résultat.</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum1063">
+                               <p class="idF">#58<em class="nomDate">par <span class="nomPers">pAcolito</span>, le 14 octobre 2013</em></p>
+                               <div class="texteF"><p>Super exemple, très classe. Je viens de le reproduire chez moi et tout marche bien... sauf que tout est à l&#8217;envers&nbsp;! Vous auriez une idée de la provenance du bug&nbsp;? En tout cas merci&nbsp;!</p></div>      
+                               </div>
+                               
+                            
+                            
+                            
+                              
+                            
+                               <div class="comment" id="forum1080">
+                               <p class="idF">#59<em class="nomDate">par <span class="nomPers">Delage Thierry</span>, le 26 octobre 2013</em></p>
+                               <div class="texteF"><p>Super site je suis vraiment impressionné.
+<br />Une question&nbsp;!
+<br />Avez vous toutes ces formules css en  mémoire, car moi j&#8217;apprend cela depuis des Années et je n&#8217;arrive pas à mémoriser.
+<br />Super votre site 
+<br />Bravo encore</p></div>      
+                               </div>
+                                 </div><div class="row"> 
+                            
+                            
+                       </div>
+                       </div>
+                       
+                       <div class="formulaire_spip formulaire_forum ajax" id="formulaire_forum">
+<hr class='bugajaxie' />
+
+
+
+
+
+
+ 
+
+
+
+
+
+<form action="#formulaire_forum" method="post" enctype='multipart/form-data'><div>
+<div><input name='formulaire_action' type='hidden'
+		value='forum' /><input name='formulaire_action_args' type='hidden'
+		value='kpSBWZOFZt6RX/2bx6Bvtk9hS13vuOh7miijze2msmZhzJrmeP1cyj8hbb0ZZOpsFDg82NWPaS6P/KX8a7353OnTEmlm7wR5IC4c7NjbjzxaiJ1AxI3pw1wucj+Sw6yI3CybQO6hkzdJ2WPsK56f2Q38MaUC8/zdJqLlhcKxyk9ae84mSbuP6gBJNhb/ar2hQ3XXE26bmw==' /><input type='hidden' name='id_article' value='16' /><input type='hidden' name='id_breve' value='' /><input type='hidden' name='id_forum' value='' /><input type='hidden' name='id_rubrique' value='' /><input type='hidden' name='id_syndic' value='' /><input type='hidden' name='arg' value='' /><input type='hidden' name='hash' value='' /><input type='hidden' name='verif_' value='ok' /><input type='hidden' name='afficher_texte' value='' /><input type='hidden' name='retour_forum' value='%21' /></div>
+<input type="hidden" name="id_forum" value="0" />
+<fieldset class="moderation_info">
+	<legend>mod&eacute;ration &agrave; priori</legend>
+	<p class="explication"> Ce forum est mod&eacute;r&eacute; &agrave; priori&nbsp;: votre contribution n'appara&icirc;tra qu'apr&egrave;s avoir &eacute;t&eacute; valid&eacute;e par un administrateur du site.</p>
+</fieldset>
+
+
+
+ 
+
+	<fieldset>
+	<legend>Un message, un commentaire&nbsp;?</legend>
+	 
+		<input type="hidden" name="titre" id="titre" value="Rotation d&#39;un menu en CSS3" />
+	<ul>
+	
+
+   
+<fieldset class="labelNom">
+<legend><b>Qui &ecirc;tes-vous ?</b> (optionnel)</legend>
+	<ul>
+		<li class='saisie_session_nom'>
+			<label for="session_nom">Votre nom (ou pseudonyme) :</label>
+			<input type="text" class="text" name="session_nom" id="session_nom" value="" size="40" />
+		</li>
+	</ul>
+</fieldset>
+<li class='saisie_texte'>
+		<label for='texte'>Texte de votre message&nbsp;:</label>
+		<p class='explication'>(Pour cr&eacute;er des paragraphes, laissez simplement des lignes vides.)</p>
+          
+		<textarea name="texte" id="texte" rows="12" cols="60"></textarea>
+		
+	</li>
+
+	</ul></fieldset>
+
+	
+	<p style="display: none;">
+		<label for="nobot_forum">Veuillez laisser ce champ vide&nbsp;:</label>
+		<input type="text" class="text" name="nobot" id="nobot_forum" value="" size="10" />
+	</p>
+	<p class="boutons"><input type="submit" class="submit" value="Voir ce message avant de le poster" /></p>
+
+</div>
+</form>
+
+
+
+
+</div>
+                       
+                       </section>
+                       
+                       </section>
+                </article>
+                <p style="clear:both;"></p>
+            </section>
+        </section>
+    </div>
+    <footer id="footer">
+     <div id="wrap_footer">
+         <div class="column" id="wrapFootLeft">
+         </div>
+         <div class="column" id="wrapFootRight">
+         	
+         	<div class="column">
+         	<h4>Démos CSS3</h4>
+         	<ul>
+         	
+         		<li><a href="Ombre-interne-sur-du-texte">Ombre interne sur du texte</a></li>
+         	
+         		<li><a href="Simuler-background-clip-text">Simuler background-clip&nbsp;: text</a></li>
+         	
+         		<li><a href="Filtre-CSS-flou-localise-ou-flou-progressif">Filtre CSS &#171;&nbsp;flou localisé&nbsp;&#187; ou &#171;&nbsp;flou progressif&nbsp;&#187;</a></li>
+         	
+         		<li><a href="Effet-soft-focus-en-CSS">Effet &#171;&nbsp;soft-focus&nbsp;&#187; en CSS</a></li>
+         	
+         		<li><a href="Reflection-en-CSS-sur-une-image">Reflection en CSS sur une image</a></li>
+         	
+         		<li><a href="Effet-accordeon-sur-une-image-en-CSS">Effet accordéon sur une image en CSS</a></li>
+         	
+         		<li><a href="Effet-de-brillance-en-CSS-et-SVG">Effet de brillance en CSS et SVG</a></li>
+         	
+         		<li><a href="Navigation-a-onglets-fluides-avec-les-transitions-CSS">Navigation à onglets fluides avec les transitions CSS</a></li>
+         	
+         		<li><a href="Effet-coverflow-en-full-CSS">Effet coverflow en full CSS</a></li>
+         	
+         		<li><a href="Barre-de-progression-avec-l-element-HTML5-progress">Barre de progression avec l&#8217;élément HTML5 <code class="spip_code" class='spip_code' dir='ltr'>&lt;progress&gt;</code></a></li>
+         	
+         	</ul>
+         	</div>
+         	
+         	
+         	<div class="column">
+         	<h4>Catégories</h4>
+         	<ul>
+         	
+         		<li><a href="Les-Menus">Les Menus</a></li>
+         	
+         		<li><a href="Galeries-Photos">Galeries Photos</a></li>
+         	
+         		<li><a href="Les-Animations">Les Animations</a></li>
+         	
+         		<li><a href="Les-Transitions">Les Transitions</a></li>
+         	
+         		<li><a href="La-Typographie">La Typographie</a></li>
+         	
+         		<li><a href="Just-for-Fun">Just for Fun</a></li>
+         	
+         		<li><a href="Les-Formulaires">Les Formulaires</a></li>
+         	
+         		<li><a href="User-Interface">User Interface</a></li>
+         	
+         		<li><a href="Les-Transformations">Les Transformations</a></li>
+         	
+         		<li><a href="Les-filtres">Les Filtres</a></li>
+         	
+         	</ul>
+         	</div>
+         	
+         	
+         	<div class="column">
+         	<h4>Ressources Web</h4>
+         	<ul>
+         	
+         		<li><a href="http://www.alsacreations.com" title="Alsacréations : Tutoriels XHTML, CSS, actualités et articles sur les standards web">Alsacréations</a></li>
+         	
+         		<li><a href="http://www.creativejuiz.fr" title="CreativeJuiz, blog de Webdesign et développement autour de HTML5, CSS3, WordPress, PHP et jQuery.">CreativeJuiz</a></li>
+         	
+         		<li><a href="http://css.mammouthland.net/" title="CSS Débutant : cours et tutoriels sur les feuilles de style CSS 1,2 et 3">CSS Débutant</a></li>
+         	
+         		<li><a href="http://letrainde13h37.fr/" title="Magazine en ligne lié à la conception web. Départ chaque mardi à 13h37.">Le Train de 13h37</a></li>
+         	
+         	</ul>
+         	</div>
+         	
+            <form id="don" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+               <p class="copy">
+                  CSS3Create 2013 - 
+                  <a href="http://iamvdo.me" style="">Vincent De Oliveira</a>
+                   - 
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="hosted_button_id" value="A7WZJ65WTMYQY">
+                  <input type="submit" value="Vous aimez CSS3Create, faites un don!">
+               </p>
+            </form>
+         </div>
+     </div>
+</footer>
+</body>
+</html>
+
