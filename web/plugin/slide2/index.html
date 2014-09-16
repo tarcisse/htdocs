@@ -53,23 +53,27 @@
      overflow: hidden;
      height: 40vh;
      display: none;
+     
     }
     .sb-img img
     {
         /*width change*/
+       
      width:  100%
     }
 </style>
 <script>
     $(document).ready(function(){
        i=2;
+       a=1;
       $('.sb-im'+1).show();
        setInterval(function(){
-       a=$('.sb-im'+i).data('sbimg');
-        $('.sb-img').hide();
-        $('.sb-im'+i).show('slide');
+       a=i-1;
+        $('.sb-im'+i).show('slide',{direction:'up'},100);
+        $('.sb-im'+a).hide('slide',{direction:'up'},3000);
+       
         i=i+1;
-        console.log(i);
+          /*a=$('.sb-im'+i).data('sbimg');*/
         if (i>4) {
         i=1;
         }

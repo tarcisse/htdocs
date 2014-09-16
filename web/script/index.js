@@ -45,7 +45,7 @@ $(function(){
   
   $('#logo').click(function(){
 		$('#logo').hide();
-		$('#form').show();
+		$('#form').fadeIn(1000);
 	});
 	
 	$('#connect').click(function(){
