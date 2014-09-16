@@ -37,6 +37,16 @@ $(function(){
   $('#titre_logo').css('left',taille2+'px');
    $('#titre_logo').fadeIn(4000);
   });
+  
+  $('#logo').click(function(){
+		$('#logo').hide();
+		$('#form').show();
+	});
+	
+	$('#connect').click(function(){
+		$('#form').hide();
+		$('#logo').show();
+	});
 	
 
 
