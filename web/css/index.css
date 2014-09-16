@@ -57,9 +57,9 @@ footer
   background: #e9eaea;
   margin: 0px;
   padding: 0px;
-  margin-top: -50px;
+  /*margin-top: -50px;
   z-index: 99;
-  position: relative;
+  position: relative;*/
 
 }
 #scenter
