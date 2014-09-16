@@ -348,26 +348,26 @@ left: 10vh;
 }
 
 .connect-form h4{
+	
 	color: white;
 	opacity:.8;
 }
 #fieldset {
 	border:none;
 }
-
 #connect-form input
 {
 	width: 165px;
 	font-family: 'MinionPro';
-	padding: 10px 10px;
+	padding: 10px 15px;
 	margin-top: 20px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
-
+	float:left;
 }
 .connect-form textArea
 {
-	padding: 10px 10px;
+	padding: 10px 15px;
 	background: #e9eaea;
 	border: 1px solid #e9eaea;
 	color: #6d7273;
@@ -380,10 +380,6 @@ left: 10vh;
 	background: #d2d2d3 !important;
 	border: 1px solid #d2d2d3;
 	color:#3a3b3c;
-
-
-	cursor: pointer;
-
 }
 .warning 
 {
@@ -398,6 +394,4 @@ left: 10vh;
 }
 .warning a:hover{
 	text-decoration:underline;
-
 }
-
