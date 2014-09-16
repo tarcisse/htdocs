@@ -3,8 +3,41 @@ header
 {
     width: 100%;
     height: 80vh;
-    background-image: url();
+ overflow: hidden;
+	
 }
+#support
+{
+      background-image:url(../images/nav2.jpg);
+	background-position:right top;
+	transition-property:all;
+	background-repeat: no-repeat;
+	background-size: 100%;
+			  /*opacity: .7;*/
+   -webkit-transform: scale(1.05,1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 3000ms;
+    -moz-transform: scale(1.05,1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 3000ms;
+    position: relative;
+    z-index: 0;
+			
+}
+#support:hover
+{
+     /*opacity: .7;*/
+   -webkit-transform: scale(1.05,1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 3000ms;
+    -moz-transform: scale(1.05,1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 3000ms;
+    position: relative;
+    z-index: 0;
+   background-size: 105%;
+}
+#support:
 footer
 {
     width: 100%;
@@ -15,17 +48,32 @@ footer
   
  background: #e9eaea;
 
+ 
+
 }
 #footer-social
 {
- height: 150px;
+ height: 100px;
   background: #e9eaea;
+  margin: 0px;
+  padding: 0px;
+  margin-top: -50px;
+  z-index: 99;
+  position: relative;
 
+}
+#scenter
+{
+    display: inline-block;
+   /* background: green;*/
+    text-align:left;
 }
 #footer-information
 {
- height: 25px;
+ height: 30px;
  background: #e9eaea;
+    text-align: center;
+ 
  
 }
 
@@ -102,18 +150,7 @@ footer
 	background-position:0 -144px; 
 	opacity:.7 !important;
 }
-.facebook.active{
-  /*background-color:#3B5998  !important;*/
-}
-.twitter.active{
-  /*background-color:#2094CA !important;*/
-}
-.tumblr.active{
-  /*background-color:#d85b4b !important;*/
-}
-.youtube.active{
-	/*background-color:#C92228 !important;*/
-}
+
 .active h1{
 	opacity:.7 !important;
  	color:#000;
@@ -131,24 +168,22 @@ footer
 /*MAIN-NAV --------------------------------------*/
 #main-nav
 {
-	background-image:url(../images/nav2.jpg);
-	background-position:right top;
+	
 	width: 100%;
-	height: 600px;
+	/*height: 600px;*/
+	height: 45vh;
 	overflow: hidden;
-	transition-property:all;
-			transition-duration: 0.2s;
-			transition-timing-function:  ease-in-out;
+	/*background: green;*/
+	
 }
 #nav
 {
-	height:20%;
+	height: 35vh;
   	list-style: none none;
-    margin: 70px 0px 70px 70px;
-    padding-top: 30vh;
-    line-height: 1;
-	float:left;
-	bottom:0;
+  /*  margin: 70px 0px 70px 70px;
+    padding-top: 45vh;*/
+    line-height:-15;
+    margin-left: 3%;
 	
 }
 .nav-title{
@@ -167,12 +202,13 @@ footer
 
 #nav ul > li 
 {
-	height:40%;
+	/*height:40%;*/
 	width:150px;
     float: left; /* Pour que les liens s’affichent horizontalement */
     position: relative; /* Crée un contexte de positionnement pour les sous-listes */
 	padding-left:0px;
 	margin-top:0px;
+	line-height: 30px;
 }
 #nav ul > li > a {
 	
@@ -216,6 +252,8 @@ footer
 .subsub li a
 {
 }
+
+
 /*EO MAIN-NAV*/
 
 #logo{
@@ -224,25 +262,78 @@ footer
     height: 80vh;
     position: absolute;
     right: 0px;
+    /*background: red;*/
 	
+}
+#logo_haut
+{
+    width: 80%;
+    height: 45vh;
+}
+#logo_bas
+{
+    width: 80%;
+  /* background: red;*/
+}
+#logo_bas p{
+    margin-top: 20px;
+    color: #fff;
+    font-family:AbadiMT;
+    font-weight: normal;
+    opacity: 0.4;
+    text-transform: uppercase;
+    line-height: 20px;
 }
 #titre_logo {
 font-family: logo;
 color: #ffffff;
-background: red;
 display: inline-block;
-position: relative;
-}
-#logo img{
-width: 100%;
 position: absolute;
+top: 40vh;
+display: none;
+cursor: pointer;
+
 }
-#imgd
+#logo_haut img{
+   height: 45vh;
+position:relative;
+opacity: 0.4;
+/*transition-property: all;
+transition-duration: 2s;*/
+cursor: pointer;
+opacity: 0;
+left: 10vh;
+}
+#logo_haut img:hover
 {
-    font-family: logo;
-width: 25vw;
-height: 50vw;
-color: #ffffff;
-background: red;
-position: relative;
+    opacity: 1;
 }
+
+
+
+#footer-information li
+{
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    font-family: infos;
+    
+}
+
+#footer-information li a
+{
+    text-decoration: none;
+     margin-left: 10px;
+    margin-right: 10px;
+      font-family:infos;
+    color:  #999999;
+}
+
+#footer-information li a:hover
+{
+    text-decoration: none;
+     margin-left: 10px;
+    margin-right: 10px;
+    color:  #000;
+}
+
