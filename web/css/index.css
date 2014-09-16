@@ -53,10 +53,10 @@ footer
 }
 #footer-social
 {
- height: 100px;
+  height: 20%;
   background: #e9eaea;
   margin: 0px;
-  padding: 0px;
+  padding: 20px;
   /*margin-top: -50px;
   z-index: 99;
   position: relative;*/
