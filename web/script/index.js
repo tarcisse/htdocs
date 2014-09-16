@@ -19,7 +19,7 @@ $(function(){
 	
 	$('#form').mouseleave(function(){
 		$('#form').hide();
-		$('#logo').show();
+		$('#logo').fadeIn(200);
 	});
 	
 	
@@ -43,14 +43,14 @@ $(function(){
    $('#titre_logo').fadeIn(4000);
   });
   
-  $('#logo').click(function(){
+   $('#logo').click(function(){
 		$('#logo').hide();
-		$('#form').show();
+		$('#form').fadeIn(500);
 	});
 	
 	$('#connect').click(function(){
 		$('#form').hide();
-		$('#logo').show();
+		$('#logo').fadeIn(200);
 	});
 	
 
