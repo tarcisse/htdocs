@@ -62,10 +62,16 @@
 </style>
 <script>
     $(document).ready(function(){
-       $i=0;
+       i=1;
+       alert('ok');
        setInterval(function(){
-        $('')
-       },4000);
+        $('.sb-img').hide();
+        $('.sb-im'+i).show();
+        i++;
+        if (i>4) {
+        i=1;
+        }
+       },10000);
     });
 </script>
 <div id='sb-slide'>
