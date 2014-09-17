@@ -60,8 +60,8 @@
       $('.sb-im'+1).show();
        setInterval(function(){
        a=i-1;
-        $('.sb-im'+i).fadeIn();
-        $('.sb-im'+a).fadeOut();
+        $('.sb-im'+i).show('slide',{direction:'up'},100);
+        $('.sb-im'+a).hide('slide',{direction:'up'},3000);
        
         i=i+1;
           /*a=$('.sb-im'+i).data('sbimg');*/
