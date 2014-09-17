@@ -358,7 +358,7 @@ left: 10vh;
 	display:none;
 }
 .connect-form{
-	padding:100px;
+	padding:20px 0px 0px 150px;
 	width: 50%;
     height: 80vh;
     position: absolute;
@@ -411,5 +411,17 @@ left: 10vh;
 	text-decoration:none;
 }
 .warning a:hover{
+	text-decoration:underline;
+}
+.checkbox{
+	color:#FFF;
+	opacity:.8;
+	
+}
+.checkbox a{
+	color:#FFF;
+	
+}
+.checkbox a:hover{
 	text-decoration:underline;
 }

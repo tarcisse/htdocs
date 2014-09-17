@@ -17,11 +17,17 @@ $(function(){
 		$('#support').css('background-image','url(web/images/'+a+'.jpg)');
 	});
 	
-	$('#form').mouseleave(function(){
+	
+	/*$('#form').mouseleave(function(){
 		$('#form').hide();
 		$('#logo').fadeIn(200);
 	});
 	
+	$('#form-new').mouseleave(function(){
+		$('#form-new').hide();
+		$('#logo').fadeIn(200);
+		
+	});*/
 	
 		
 		$('#logo_haut img').css('transition-property','all');
@@ -45,7 +51,7 @@ $(function(){
   
    $('#logo').click(function(){
 		$('#logo').hide();
-		$('#form-new').fadeIn(1000);
+		$('#form').fadeIn(1000);
 	});
 	
 	$('#connect').click(function(){
@@ -53,11 +59,18 @@ $(function(){
 		$('#logo').fadeIn(200);
 	});
 	
-	$("#new-count").click(function(){
-		$('#form').hide();
-		$('#form-new').fadeIn(200);
+	$('#log-up').click(function(){
+		$('#form-new').hide();
+		$('#logo').fadeIn(200);
 	});
 	
+	$("#new_count").click(function(){
+		$('#form').hide();
+		$('#form-new').fadeIn(200);
+		
+	});
+	
+	//$( "#new_count" ).trigger( "click" );
 
 
 	/*$('*').off();
