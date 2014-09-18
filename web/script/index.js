@@ -4,11 +4,11 @@ $(function(){
 	$("#social ul li").hover(
 		function() {
 			$("#social").addClass($(this).data("network")).addClass("active");
-			$("#social h3").html($(this).data("text"));
+			$("#social h1").html($(this).data("text"));
 		},
 		function() {
 			$("#social").removeClass();
-			$("#social h3").html("Follow us");
+			$("#social h1").html("Follow us");
 		}
 	);
 	
@@ -17,14 +17,14 @@ $(function(){
 		$('#support').css('background-image','url(web/images/'+a+'.jpg)');
 	});
 	
-	
-	$('#connect-form').mouseleave(function(){
+	$('#form').mouseleave(function(){
 		$('#form').hide();
-		$('#logo').fadeIn();
+		$('#logo').show();
 	});
 	
+	
 		
-		/*$('#logo_haut img').css('transition-property','all');
+		$('#logo_haut img').css('transition-property','all');
 		$('#logo_haut img').css('transition-duration','2s');
 		
 		$('#logo_haut img').css('opacity','0.4');
@@ -41,22 +41,18 @@ $(function(){
   }, 1, function() {
   $('#titre_logo').css('left',taille2+'px');
    $('#titre_logo').fadeIn(4000);
-  });*/
+  });
   
-   $('#logo_haut').click(function(){
+  $('#logo').click(function(){
 		$('#logo').hide();
-		$('#form').fadeIn(700);
+		$('#form').fadeIn(1000);
 	});
 	
 	$('#connect').click(function(){
 		$('#form').hide();
-		$('#logo').fadeIn(200);
+		$('#logo').show();
 	});
 	
-	
-	
-	
-	//$( "#new_count" ).trigger( "click" );
 
 
 	/*$('*').off();

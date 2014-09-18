@@ -1,9 +1,18 @@
 <style>
     #sb-slide
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        width: 1280px;
+        height: 450px;
+=======
+        width: 100vw;
+=======
         width: 100%;
+>>>>>>> 7488b21079b6e3d679ccb8f46d786e88d80a223b
         height: 55vh;
-        /*background: red;*/
+>>>>>>> ff69ea69732a7d5539a7ef34764b569d2220dc04
+        background: red;
         padding:2vh 0 2vh 0;
         text-align: center;
         overflow: hidden;
@@ -36,7 +45,7 @@
     }
     .sb-c
     {
-        background: white;
+        background: yellow;
          height: 15vh;
     }
     .sb-img
@@ -60,8 +69,8 @@
       $('.sb-im'+1).show();
        setInterval(function(){
        a=i-1;
-        $('.sb-im'+i).show('slide',{direction:'up'},100);
-        $('.sb-im'+a).hide('slide',{direction:'up'},3000);
+        $('.sb-im'+i).fadeIn();
+        $('.sb-im'+a).fadeOut();
        
         i=i+1;
           /*a=$('.sb-im'+i).data('sbimg');*/
