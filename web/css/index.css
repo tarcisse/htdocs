@@ -80,7 +80,7 @@ footer
 
 /* SOCIAL --------------------------------------------------------*/
 #social{
-  padding:05px;
+  padding:5px;
   width:10
     0%;
   -webkit-transition: background .5s;
@@ -162,7 +162,7 @@ footer
 .youtube.active{
 	/*background-color:#C92228 !important;*/
 }
-.active h1{
+.active h3{
 	opacity:.7 !important;
  	color:#000;
 }
@@ -380,7 +380,7 @@ left: 10vh;
 	width: 165px;
 	font-family: 'MinionPro';
 	padding: 10px 15px;
-	margin-top: 20px;
+	margin-top: 10px;
 	background: #e9eaea;
 	border: 1px solid #FFF;
 	
