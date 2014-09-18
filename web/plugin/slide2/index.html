@@ -14,6 +14,8 @@
         width: 200vw;
         position: relative;
         right:  20vw;
+         transition-property: all;
+        transition-duration: 1s;
     }
     .sb-slide
     {
@@ -22,7 +24,7 @@
         background: green;
         display: inline-block;
         margin-left: 2vh;
-        
+       
     
     }
     .sb-aide
@@ -60,7 +62,24 @@
 </style>
 <script>
     $(document).ready(function(){
-      
+        decalage=40;
+        largeur_ecran= document.body.clientWidth;
+        L2=largeur_ecran-100;
+        zone=0;
+      $('#sb-slide-st').mousemove(function(e){
+       valeur=largeur_ecran-e.pageX;
+       if ((valeur>0 && valeur<100) || (valeur<largeur_ecran && valeur >L2)) {
+     
+        $('#sb-slide-st').css('right',decalage+'vw');
+         alert('ok');
+       }
+       else
+       {
+         zone=1;
+       }
+   // console.log("Position X"+e.pageX +" Y"+e.pageY);
+  
+});
     });
 </script>
 <div id='sb-slide'>
