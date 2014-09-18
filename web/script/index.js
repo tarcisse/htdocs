@@ -17,10 +17,21 @@ $(function(){
 		$('#support').css('background-image','url(web/images/'+a+'.jpg)');
 	});
 	
+	/*Form MouseLeave*/
 	$('#form').mouseleave(function(){
-		$('#form').hide();
-		$('#logo').show();
+		if ($("#form2").is(":hidden")){
+			$('#form').hide();
+			$('#logo').show();
+		}
 	});
+	$('#form2').mouseleave(function(){
+		if ($("#form").is(":hidden")){
+			$('#form2').hide();
+			$('#logo').show();
+		}
+	});
+	
+	
 	
 	
 		
@@ -43,15 +54,31 @@ $(function(){
    $('#titre_logo').fadeIn(4000);
   });
   
+  /*MyS&B Home Event*/
   $('#logo').click(function(){
-		$('#logo').hide();
+	$('#logo').hide();
 		$('#form').fadeIn(1000);
-	});
+  });
 	
-	$('#connect').click(function(){
-		$('#form').hide();
-		$('#logo').show();
-	});
+  $('#login').click(function(){
+	$('#form').hide();
+	$('#logo').show();
+  });
+	
+  $('#new-count').click(function(){
+	$('#form').hide();
+	$('#form2').show();
+  });
+	
+  $('#my-count').click(function(){
+	$('#form2').hide();
+	$('#form').show();
+  });
+  
+  $('#valide').click(function(){
+	$('#form2').hide();
+	$('#logo').show();
+  });
 	
 
 

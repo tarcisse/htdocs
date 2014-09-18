@@ -342,7 +342,7 @@ left: 10vh;
     color:  #000;
 }
 
-/*Connect FORMS ------------------------------*/
+/*FORMULAIRE ------------------------------*/
 #form{
 	width: 50%;
     height: 80vh;
@@ -350,7 +350,14 @@ left: 10vh;
     right: 0px;
 	display:none;
 }
-.connect-form{
+#form2{
+	width: 50%;
+    height: 80vh;
+    position: absolute;
+    right: 0px;
+	display:none;
+}
+.css-form{
 	padding:100px;
 	width: 50%;
     height: 80vh;
@@ -358,7 +365,7 @@ left: 10vh;
 	/*background-color: blue;*/
 }
 
-.connect-form h4{
+.css-form h4{
 	padding-left: 15px;
 	color: white;
 	opacity:.8;
@@ -366,7 +373,7 @@ left: 10vh;
 #fieldset {
 	border:none;
 }
-#connect-form input
+#css-form input
 {
 	width: 165px;
 	font-family: 'MinionPro';
@@ -427,12 +434,14 @@ input[type=checkbox].css-checkbox + label.css-label {
 	font-size:15px;
 	vertical-align:middle;
 	color:#FFF;
+	opacity:.8;
 	
 }
 input[type=checkbox].css-checkbox + label.css-label a {
 	cursor:pointer;
 	color:#FFF;
 	text-decoration:none;
+	opacity:1;
 }
 input[type=checkbox].css-checkbox + label.css-label a:hover {
 	text-decoration:underline;
