@@ -376,7 +376,7 @@ left: 10vh;
 	border: 1px solid #FFF;
 	
 }
-.connect-form textArea
+input[type=checkbox].css-textArea
 {
 	padding: 10px 15px;
 	background: #e9eaea;
@@ -385,7 +385,7 @@ left: 10vh;
 	position:relative;
 
 }
-.button
+input[type=checkbox].css-button
 {
 	float:left;
 	background: #d2d2d3 !important;
@@ -417,7 +417,6 @@ input[type=checkbox].css-checkbox {
 	padding:0;
 	border:0;
 }
-
 input[type=checkbox].css-checkbox + label.css-label {
 	padding-left:20px;
 	height:15px; 
@@ -427,11 +426,19 @@ input[type=checkbox].css-checkbox + label.css-label {
 	background-position: 0 0;
 	font-size:15px;
 	vertical-align:middle;
-	cursor:pointer;
+	color:#FFF;
+	
 }
-
+input[type=checkbox].css-checkbox + label.css-label a {
+	cursor:pointer;
+	color:#FFF;
+	text-decoration:none;
+}
+input[type=checkbox].css-checkbox + label.css-label a:hover {
+	text-decoration:underline;
+}
 input[type=checkbox].css-checkbox:checked + label.css-label {
 	background-position: 0 -15px;
 }
 						
-.css-label{ background-image:url(http://csscheckbox.com/checkboxes/mac-style.png); }
+.css-label{ background-image:url(../images/mac-style.png) }
