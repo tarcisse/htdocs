@@ -63,7 +63,7 @@
 </style>
 <script>
     $(document).ready(function(event){
-        decalage=40;
+        decalage=20;
         largeur_ecran= document.body.clientWidth;
         L2=largeur_ecran-100;
         zone=0;
@@ -72,26 +72,27 @@
       $('#sb-slide-st').click(function(){
         
     if ((valeur>0 && valeur<100) /*|| (valeur<largeur_ecran && valeur >L2)*/) {
-     
+      decalage=decalage+20;
             $('#sb-slide-st').css('right',decalage+'vw');
-            decalage=decalage+20;
+           
       if (decalage>80) {
         decalage=80;
       }
     }
     
      else if (/*(valeur>0 && valeur<100) ||*/ (valeur<largeur_ecran && valeur >L2)) {
-     
-            $('#sb-slide-st').css('left',decalage+'vw');
-            decalage=decalage+20;
-      if (decalage>80) {
-        decalage=80;
+      decalage=decalage-20;
+            $('#sb-slide-st').css('right',decalage+'vw');
+           
+      if (decalage<40) {
+        decalage=20;
       }
     }
     else
     {
         
     }
+    console.log(decalage);
     
     
     
