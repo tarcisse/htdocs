@@ -391,6 +391,7 @@ input[type=button].css-button
 	background: #d2d2d3 !important;
 	border: 1px solid #d2d2d3;
 	color:#3a3b3c;
+	cursor:pointer;
 }
 .warning 
 {
@@ -428,6 +429,7 @@ input[type=checkbox].css-checkbox + label.css-label {
 	vertical-align:middle;
 	color:#FFF;
 	opacity:.8;
+	cursor:pointer;
 	
 }
 input[type=checkbox].css-checkbox + label.css-label a {
