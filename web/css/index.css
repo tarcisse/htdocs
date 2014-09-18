@@ -344,25 +344,27 @@ left: 10vh;
 
 /*FORMULAIRE ------------------------------*/
 #form{
-	width: 50%;
+	width: 30%;
     height: 80vh;
     position: absolute;
+	margin-right:140px;
     right: 0px;
 	display:none;
 }
 #form2{
-	width: 50%;
+	width: 30%;
     height: 80vh;
     position: absolute;
+	margin-right:140px;
     right: 0px;
 	display:none;
 }
 .css-form{
-	padding:100px;
-	width: 50%;
+	padding:10px 0px 0px 0px;
+	margin-left:40px;
+	width: 80%;
     height: 80vh;
     position: absolute;
-	/*background-color: blue;*/
 }
 
 .css-form h4{
