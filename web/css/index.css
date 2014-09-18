@@ -1,9 +1,9 @@
 
-header
+#header
 {
     width: 100%;
     height: 80vh;
- overflow: hidden;
+	overflow: hidden;
 	
 }
 @-webkit-keyframes pulse {
@@ -21,40 +21,35 @@ header
 }
 #support
 {
-      background-image:url(../images/nav2.jpg);
+	background: #e9eaea;
+    background-image:url(../images/nav2.jpg);
 	background-position:right top;
 	transition-property:all;
 	background-repeat: no-repeat;
 	background-size: 100%;
-	-webkit-animation-name: pulse;
+	/*-webkit-animation-name: pulse;
 	-webkit-animation-duration: 30s;
 	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-			  /*opacity: .7;*/
- 
+	-webkit-animation-timing-function: linear;*/
     position: relative;
     z-index: 0;
 			
 }
-
-#support:
-footer
+#footer
 {
     width: 100%;
+	background: #e9eaea;
+	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+ 	box-shadow: 0 0 50px rgba(0,0,0,0.8);
   
 }
 #footer-slide
 {
-  
- background: #e9eaea;
-
- 
-
 }
 #footer-social
 {
   height: 20%;
-  background: #e9eaea;
+  /*background: #e9eaea;*/
   margin: 0px;
   padding: 20px;
   /*margin-top: -50px;
@@ -70,9 +65,9 @@ footer
 }
 #footer-information
 {
- height: 30px;
- background: #e9eaea;
-    text-align: center;
+	height: 30px;
+	/*background: #e9eaea;*/
+	text-align: center;
  
  
 }
@@ -269,8 +264,6 @@ footer
     height: 80vh;
     position: absolute;
     right: 0px;
-    /*background: red;*/
-	
 }
 #logo_haut
 {
@@ -280,36 +273,34 @@ footer
 #logo_bas
 {
     width: 80%;
-  /* background: red;*/
 }
 #logo_bas p{
     margin-top: 20px;
     color: #fff;
     font-family:AbadiMT;
     font-weight: normal;
-    opacity: 0.4;
+    opacity: 0.5;
     text-transform: uppercase;
     line-height: 20px;
 }
 #titre_logo {
-font-family: logo;
-color: #ffffff;
-display: inline-block;
-position: absolute;
-top: 40vh;
-display: none;
-cursor: pointer;
+	font-family: logo;
+	color: #ffffff;
+	display: inline-block;
+	position: absolute;
+	top: 40vh;
+	display: none;
+	cursor: pointer;
 
 }
 #logo_haut img{
    height: 45vh;
-position:relative;
-opacity: 0.4;
-/*transition-property: all;
-transition-duration: 2s;*/
-cursor: pointer;
-opacity: 0;
-left: 10vh;
+	position:relative;
+	/*transition-property: all;
+	transition-duration: 2s;*/
+	cursor: pointer;
+	opacity: 0;
+	left: 10vh;
 }
 #logo_haut img:hover
 {
@@ -385,7 +376,7 @@ left: 10vh;
 	border: 1px solid #FFF;
 	
 }
-input[type=checkbox].css-textArea
+input[type=text].css-textArea
 {
 	padding: 10px 15px;
 	background: #e9eaea;
@@ -394,7 +385,7 @@ input[type=checkbox].css-textArea
 	position:relative;
 
 }
-input[type=checkbox].css-button
+input[type=button].css-button
 {
 	float:left;
 	background: #d2d2d3 !important;

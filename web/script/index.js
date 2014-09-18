@@ -1,4 +1,20 @@
-$(function(){
+$(document).ready(function(){
+	/*paralix effect*/
+	var $window = $(window);
+	$('section[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+    
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+            
+            // Put together our final background position
+            var coords = '50% '+ yPos + 'px';
+
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        }); 
+    });    
+	
 	/* Social hovers */
 	$("#social ul li").hover(
 		function() {
@@ -37,7 +53,7 @@ $(function(){
 		$('#logo_haut img').css('transition-property','all');
 		$('#logo_haut img').css('transition-duration','2s');
 		
-		$('#logo_haut img').css('opacity','0.4');
+		$('#logo_haut img').css('opacity','0.8');
 		contenu=$('#logo_haut').width();
 	image=$('#logo_haut img').width();
 	taille=(contenu-image)/2;
