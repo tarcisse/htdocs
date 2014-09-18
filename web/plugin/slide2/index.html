@@ -15,7 +15,8 @@
         position: relative;
         right:  20vw;
          transition-property: all;
-        transition-duration: 5s;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
     }
     .sb-slide
     {
@@ -66,19 +67,38 @@
         largeur_ecran= document.body.clientWidth;
         L2=largeur_ecran-100;
         zone=0;
-      myTimer='';
+      myTimer=0;
       
-      $('#sb-slide').hover(function(){
+      $('#sb-slide-st').click(function(){
         
-       myTimer= setInterval(function(){
+    if ((valeur>0 && valeur<100) /*|| (valeur<largeur_ecran && valeur >L2)*/) {
+     
             $('#sb-slide-st').css('right',decalage+'vw');
             decalage=decalage+20;
-        },2000);
-       
-      });
-      
-      $('#sb-slide').mouseleave(function(){
-       clearInterval(myTimer);
+      if (decalage>80) {
+        decalage=80;
+      }
+    }
+    
+     else if (/*(valeur>0 && valeur<100) ||*/ (valeur<largeur_ecran && valeur >L2)) {
+     
+            $('#sb-slide-st').css('left',decalage+'vw');
+            decalage=decalage+20;
+      if (decalage>80) {
+        decalage=80;
+      }
+    }
+    else
+    {
+        
+    }
+    
+    
+    
+    
+      }).mouseleave(function(){
+      window.clearInterval(myTimer);
+       myTimer=null;
       });
       
       
