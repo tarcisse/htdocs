@@ -1,5 +1,4 @@
 $(function(){
-	
 	/* Social hovers */
 	$("#social ul li").hover(
 		function() {
@@ -55,9 +54,15 @@ $(function(){
   });
   
   /*MyS&B Home Event*/
+  var connect = "membre"; //state
+  
   $('#logo').click(function(){
-	$('#logo').hide();
+	  $('#logo').hide();
+	  if(connect == "membre"){
 		$('#form').fadeIn(1000);
+	  }else{
+		$('#form2').fadeIn(1000);
+	  }
   });
 	
   $('#login').click(function(){
@@ -66,11 +71,13 @@ $(function(){
   });
 	
   $('#new-count').click(function(){
+	connect="count";
 	$('#form').hide();
 	$('#form2').show();
   });
 	
   $('#my-count').click(function(){
+	connect="membre";
 	$('#form2').hide();
 	$('#form').show();
   });
