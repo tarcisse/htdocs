@@ -94,18 +94,31 @@
         zone=0;
       myTimer=0;
       
-      $('#sb-slide-st').hover(function(){
-        
+      $('#sb-slide-st').click(function(){
+       
     if ((valeur>0 && valeur<100) /*|| (valeur<largeur_ecran && valeur >L2)*/) {
+     
+     
       decalage=decalage+20;
             $('#sb-slide-st').css('right',decalage+'vw');
            
       if (decalage>80) {
         decalage=80;
       }
+      
+      setInterval(function(){
+        decalage=decalage+20;
+         $('#sb-slide-st').css('right',decalage+'vw');
+           
+      if (decalage>80) {
+        decalage=80;
+      }
+      },2000);
     }
     
-     else if (/*(valeur>0 && valeur<100) ||*/ (valeur<largeur_ecran && valeur >L2)) {
+    
+    
+     /*else if ((valeur<largeur_ecran && valeur >L2)) {
       decalage=decalage-20;
             $('#sb-slide-st').css('right',decalage+'vw');
            
@@ -116,7 +129,7 @@
     else
     {
         
-    }
+    }*/
     console.log(decalage);
     
     
@@ -129,7 +142,9 @@
       
       
        $('#sb-slide-st').mousemove(function(e){
-       valeur=largeur_ecran-e.pageX;
+               
+
+      /* valeur=largeur_ecran-e.pageX;
        if ((valeur>0 && valeur<100) || (valeur<largeur_ecran && valeur >L2)) {
      
        
@@ -137,7 +152,7 @@
        else
        {
          
-       }
+       }*/
    // console.log("Position X"+e.pageX +" Y"+e.pageY);
 
 });
