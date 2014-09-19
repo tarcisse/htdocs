@@ -5,7 +5,7 @@
         width: 100%;
         height: 45vh;
         padding:2vh 0 2vh 0;
-        text-align: center;
+        
         overflow: hidden;
     }
     #sb-slide-st
@@ -21,7 +21,7 @@
     {
         height: 45vh;
         width: 10%;
-        background: green;
+        background-color:transparent;
         display: inline-block;
         margin-left: 2vh;
        
@@ -39,7 +39,7 @@
     }
     .sb-g
     {
-        background: blue;
+         background-color:transparent;
          height: 30vh;
          overflow: hidden;
          background-size:100%;
@@ -47,7 +47,7 @@
     }
     .sb-c
     {
-        background: yellow;
+        background: #FFF;
          height: 15vh;
     }
     .sb-img
@@ -63,8 +63,19 @@
     }
     .sb-text
     {
-       position: absolute; 
+		width:10%;
+		padding-top: 5px;
+       	position: absolute; 
+	   	text-align:center;
     }
+	.sb-text h8
+    {
+		font-size:36px;
+	}
+	.sb-text h7
+    {
+		font-size:26px;
+	}
 </style>
 <script>
     $(document).ready(function(event){
@@ -133,7 +144,8 @@
         <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/slide/1.jpg)'></div>
         <div class='sb-groupe sb-c' id='c1'>
             <span class='sb-text'>
-                <!--ici u met ton texte-->
+                <h1>#TipsOfTheWeek</h1>
+                <h1>#SoulNBeauty</h1>
             </span>
     </div>
     </div></div>
@@ -141,50 +153,57 @@
     
    <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g2' style='background-image:url(web/images/slide/2.jpg)'></div>
-        <div class='sb-groupe sb-c' id='c2'></div>
+        <div class='sb-groupe sb-c' id='c2'>
+        	<span class='sb-text'>
+            	<h8>The Blog</h8>
+            </span>
+        </div>
     </div></div>
      
       <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g3' style='background-image:url(web/images/slide/3.jpg)'></div>
         <div class='sb-groupe sb-c' id='c3'>
             <span class='sb-text'>
-                <!--ici u met ton texte-->
+                <h1>#InMakeUpWeTrust</h1>
+                <h1>#SoulNBeauty</h1>
             </span>
         </div>
     </div></div>
       
        <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g4'></div>
+        <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/slide/4.jpg)'></div>
         <div class='sb-groupe sb-c' id='c4'>
             <span class='sb-text'>
-                <!--ici u met ton texte-->
+                <h8>#Workshop</h8>
             </span>
         </div>
     </div></div>
        
        <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g4'></div>
+        <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/slide/1.jpg)'></div>
         <div class='sb-groupe sb-c' id='c4'>
             <span class='sb-text'>
-                <!--ici u met ton texte-->
+                <h8>The Blog</h8>
             </span>
         </div>
     </div></div>
        
        <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g4'></div>
+        <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/slide/2.jpg)'></div>
         <div class='sb-groupe sb-c' id='c4'>
             <span class='sb-text'>
-                <!--ici u met ton texte-->
+                <h1>#TipsOfTheWeek</h1>
+                <h1>#SoulNBeauty</h1>
             </span>
         </div>
     </div></div>
        
        <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g4'></div>
+        <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/slide/3.jpg)'></div>
         <div class='sb-groupe sb-c' id='c4'>
             <span class='sb-text'>
-                <!--ici u met ton texte-->
+                <h1>#InMakeUpWeTrust</h1>
+                <h1>#SoulNBeauty</h1>
             </span>
         </div>
     </div></div>

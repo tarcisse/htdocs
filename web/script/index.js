@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
 	/*paralix effect*/
 	var $window = $(window);
 	$('section[data-type="background"]').each(function(){
@@ -118,7 +119,22 @@ $(document).ready(function(){
   $('#lang li').click(function(event){
    	event.stopPropagation();
   });
+  //selction de la langue
+  $('#fr').click(function(){
+	document.getElementById("language").innerHTML = "Langue : Français";
+   	$("#lang").hide();
+  });
+  $('#nl').click(function(){
+	document.getElementById("language").innerHTML = "Taal : Nederlands";
+   	$("#lang").hide();
+  });
+  $('#en').click(function(){
+	document.getElementById("language").innerHTML = "Language : English";
+   	$("#lang").hide();
+  });
 	
+
+
 	/*$('*').off();
 	$('*').remove();
 	alert('ok');*/
