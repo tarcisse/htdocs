@@ -42,6 +42,8 @@
         background: blue;
          height: 30vh;
          overflow: hidden;
+         background-size:100%;
+         background-repeat: no-repeat;
     }
     .sb-c
     {
@@ -58,6 +60,10 @@
     .sb-img img
     {
      width:  100%
+    }
+    .sb-text
+    {
+       position: absolute; 
     }
 </style>
 <script>
@@ -113,7 +119,7 @@
          
        }
    // console.log("Position X"+e.pageX +" Y"+e.pageY);
-  
+
 });
        
       
@@ -124,39 +130,63 @@
     <div id='sb-slide-st'>
     
      <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g1'></div>
-        <div class='sb-groupe sb-c' id='c1'></div>
+        <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/slide/1.jpg)'></div>
+        <div class='sb-groupe sb-c' id='c1'>
+            <span class='sb-text'>
+                <!--ici u met ton texte-->
+            </span>
+    </div>
     </div></div>
     
     
    <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g2'></div>
+        <div class='sb-groupe sb-g' id='g2' style='background-image:url(web/images/slide/2.jpg)'></div>
         <div class='sb-groupe sb-c' id='c2'></div>
     </div></div>
      
       <div class='sb-slide'><div class='sb-aide'>
-        <div class='sb-groupe sb-g' id='g3'></div>
-        <div class='sb-groupe sb-c' id='c3'></div>
+        <div class='sb-groupe sb-g' id='g3' style='background-image:url(web/images/slide/3.jpg)'></div>
+        <div class='sb-groupe sb-c' id='c3'>
+            <span class='sb-text'>
+                <!--ici u met ton texte-->
+            </span>
+        </div>
     </div></div>
       
        <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g4'></div>
-        <div class='sb-groupe sb-c' id='c4'></div>
+        <div class='sb-groupe sb-c' id='c4'>
+            <span class='sb-text'>
+                <!--ici u met ton texte-->
+            </span>
+        </div>
     </div></div>
        
        <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g4'></div>
-        <div class='sb-groupe sb-c' id='c4'></div>
+        <div class='sb-groupe sb-c' id='c4'>
+            <span class='sb-text'>
+                <!--ici u met ton texte-->
+            </span>
+        </div>
     </div></div>
        
        <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g4'></div>
-        <div class='sb-groupe sb-c' id='c4'></div>
+        <div class='sb-groupe sb-c' id='c4'>
+            <span class='sb-text'>
+                <!--ici u met ton texte-->
+            </span>
+        </div>
     </div></div>
        
        <div class='sb-slide'><div class='sb-aide'>
         <div class='sb-groupe sb-g' id='g4'></div>
-        <div class='sb-groupe sb-c' id='c4'></div>
+        <div class='sb-groupe sb-c' id='c4'>
+            <span class='sb-text'>
+                <!--ici u met ton texte-->
+            </span>
+        </div>
     </div></div>
     
     </div>
