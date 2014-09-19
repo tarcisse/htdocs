@@ -107,9 +107,18 @@ $(document).ready(function(){
   $('#language').click(function(){
 	$("#lang").show();
   });
+  $("#lang").click(function() {
+	  if($("#lang-container").data('clicked')){
+    alert("ok");}
+  });
+  //lorqu'on clique à l'extérieur de la zone
+  $("#lang").click(function() {
+  	$('#lang').hide();
+  });
+  $('#lang li').click(function(event){
+   	event.stopPropagation();
+  });
 	
-
-
 	/*$('*').off();
 	$('*').remove();
 	alert('ok');*/
