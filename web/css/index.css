@@ -442,6 +442,20 @@ input[type=checkbox].css-checkbox + label.css-label a:hover {
 }
 input[type=checkbox].css-checkbox:checked + label.css-label {
 	background-position: 0 -15px;
+}					
+.css-label{ 
+	background-image:url(../images/mac-style.png) 
 }
-						
-.css-label{ background-image:url(../images/mac-style.png) }
+
+/*Language*/
+#lang
+{
+	width:100%;
+	height:100%;
+	position:fixed;
+	background-color:#000;
+	display:none;
+	z-index:500;
+	opacity:.4;	
+}
+

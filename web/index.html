@@ -5,11 +5,11 @@
 <head>
 	
     <title>{{title}}</title>
- <link rel='stylesheet' href='web/css/bootstrap.css'>
+ 	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 	<script src='web/script/index.js'></script>
 		
 		
@@ -17,9 +17,10 @@
 </head>
 <body>
 	<div id='page_pricipale' class='page-transition'>
-		  
+	
+    {% include 'web/language.html' %}	  
     <header>
-
+	
 	<section id="support" data-type="background" data-speed="5">
 	<div id="logo">
 		
@@ -102,6 +103,7 @@
           </div><!--footer-social-->
           
           <div id='footer-information'>
+          
               <ul>
                     <li>
                     <a href="#" class="arial-narrow">
@@ -134,7 +136,7 @@
                     </a>
                     </li>
                     <li>
-                    <a href="http://yahoo.fr" class="arial-narrow" target="">
+                    <a id="language" href="#" class="arial-narrow" target="">
                     Langue
                     </a>
                     </li>

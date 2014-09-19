@@ -102,6 +102,11 @@ $(document).ready(function(){
 	$('#form2').hide();
 	$('#logo').show();
   });
+  
+  /*Language*/
+  $('#language').click(function(){
+	$("#lang").show();
+  });
 	
 
 
