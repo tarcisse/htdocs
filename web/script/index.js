@@ -63,12 +63,12 @@ $(document).ready(function(){
 	//$('#logo_haut img').css('left',taille+'px');
 	
 	
-	$( "#logo_haut img" ).animate({
+  /*$( "#logo_haut img" ).animate({
     left: taille,
-  }, 1, function() {
+  }, 1, function() {*/
   $('#titre_logo').css('left',taille2+'px');
    $('#titre_logo').fadeIn(4000);
-  });
+  //});
   
   /*MyS&B Home Event*/
   var connect = "membre"; //state
