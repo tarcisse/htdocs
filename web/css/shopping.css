@@ -4,38 +4,92 @@ body{
 	margin: 0;
 	padding: 0;
 }
-
-p{
-	margin-top: 20px;
-    font-family:AbadiMT;
-    font-weight: normal;
-    text-transform: uppercase;
-    line-height: 20px;
-	margin: 0 0 20px 0;	
+/*Top Menu ---------------------*/
+.banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #3a3b3c;
+  height: 50px;
+  top: -30px;
+  transition: all 1s ease;
+  z-index: 500;
+  /* ====================
+  I'm doubling-up on the transitions, here,   
+  for both :targeted and not-targeted 
+  instances. This makes closing the menu just 
+  as pleasant. */
 }
-img{
-	border: 0;
+.banner:target {
+  top: 0;
+  transition: all 1s ease;
+  /* ====================
+    Descend the banner when targeted.
+    Swap opening and closing links as
+    appropriate.
+    */
 }
-
-#header, #intro, #second{
-	width: 100%;
+.banner:target a#open-menu {
+  display: none;
 }
-
-h8 {
-	font-size:76px;
-	text-transform:none;
+.banner:target a#close-menu {
+  display: block;
 }
-#header{
-	background: #6d7273;
-	height: 12vh;
-	position:fixed;
-	z-index: 500;
+.banner a#close-menu {
+  display: none;
 }
-#nav{
+/* ====================
+Here are some kind of ugly links. */
+nav{
+	background-color:#fff;
+}
+nav li {
+  position: relative;
+  list-style-type: none;
+  display: inline;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 1em;
+  height: 50px;
+}
+.ribbon h1 {
+	font-size:24px;
+  	position: relative;
+  	padding-top: 20px;
+  	text-align: center;
+  	color: #fff;
+}
+.ribbon h2{
+	font-size:12px;
+	text-align: center !important;
+	margin-top: -5px;
+}
+.ribbon h1 a {
+  color: #fff;
+}
+.ribbon h1 a#open-menu:before {
+  font-size: 1.5em;
+  
+}
+.ribbon h1 a#close-menu:before {
+  font-size: 1.5em;
+  
+}
+#top-menu{
 	width:100%;
-	height:60%;
-	background-color:#3a3b3c;
-	margin:0;
+	height:80%;
+	background:#3a3b3c;
+	position:relative;
+}
+#bottom-menu{
+	width:100%;
+	height:100%;
 }
 #shop-online{
 	left:0;
@@ -64,6 +118,39 @@ h8 {
 	text-align:center !important;
 }
 
+
+
+p{
+	margin-top: 20px;
+    font-family:AbadiMT;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 20px;
+	margin: 0 0 20px 0;	
+}
+img{
+	border: 0;
+}
+
+#header, #intro, #second{
+	width: 100%;
+}
+
+h8 {
+	font-size:76px;
+	text-transform:none;
+}
+#header{
+	background:#6d7273;
+	height: 16vh;
+	position:fixed;
+}
+#nav{
+	width:100%;
+	height:60%;
+	background-color:#3a3b3c;
+	margin:0;
+}
 #footer{
 	height: 100%;
 }
