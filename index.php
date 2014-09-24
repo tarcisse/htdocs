@@ -55,7 +55,7 @@ $app->get('/', function(Application $app) {
    $titre='Accueil';
     return $app['twig']->render('web/index.html', array('title' => $titre));
   });
-$app->get('/', function(Application $app) {
+$app->get('/shop', function(Application $app) {
    $titre='S&B shop online';
     return $app['twig']->render('web/shopping.html', array('title' => $titre));
   });
