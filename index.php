@@ -61,7 +61,7 @@ $app->get('/shop', function(Application $app) {
   });
 $app->get('/test', function(Application $app) {
    $titre='Accueil';
-    return $app['twig']->render('web/test2.html', array('title' => $titre));
+    return $app['twig']->render('web/test3.html', array('title' => $titre));
   });
 
 
