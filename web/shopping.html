@@ -17,6 +17,19 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 	$('#nav').localScroll();
+	
+	$('#open-menu').click(function(){
+	   $('#header').slideDown(500);
+	   $('#open-menu').hide();
+	    $('#close-menu').show();
+	});
+	
+	$('#close-menu').click(function(){
+	   $('#header').slideUp(500);
+	   $('#open-menu').show();
+	    $('#close-menu').hide();
+	});
+	
 	})
 	</script>
     
@@ -25,32 +38,21 @@
 <body>
 <div class="banner" id="banner">
 	<div id="header">
-         <div id="top-menu">
-       			<nav>
-                  	<ul>
-                        <li><a href="#">Link One</a></li>
-                        <li><a href="#">Link Two</a></li>
-                        <li><a href="#">Link Three</a></li>
-                        <li><a href="#">Link Four</a></li>
-                    </ul>
-                </nav>
-          
-              <div class="ribbon">
-                <h1>
-                    <a href="#banner" id="open-menu">
+	</div>
+	
+	 <div class="ribbon">
+              <a href="#" id="open-menu">
                         <h1>Soul & Beauty</h1>
                         <h2>Shop online</h2>
-                    </a>
-                  <a href="#" id="close-menu">
+		    </a>
+	      <a href="#" id="close-menu">
                         <h1>Close</h1>
                   </a>
-                </h1>
-              </div>
           </div>
-          
+	 
+	 
           <div id="bottom-menu">
           	
-          
           </div>
     
     </div>
