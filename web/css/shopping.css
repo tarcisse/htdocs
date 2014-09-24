@@ -9,9 +9,9 @@ body{
   position: fixed;
   left: 0;
   right: 0;
-  background: #3a3b3c;
-  height: 50px;
-  top: -30px;
+  background: #6d7273;
+  height: 60px;
+  top: -180px;
   transition: all 1s ease;
   z-index: 500;
   /* ====================
@@ -21,7 +21,7 @@ body{
   as pleasant. */
 }
 .banner:target {
-  top: 0;
+  top: 0px;
   transition: all 1s ease;
   /* ====================
     Descend the banner when targeted.
@@ -40,13 +40,21 @@ body{
 }
 /* ====================
 Here are some kind of ugly links. */
-nav{
-	background-color:#fff;
+#nav{
+	background-color:blue !important;
 }
-nav li {
+#nav ul{
+	width:100%;
+	height:200px;
+}
+#nav li {
   position: relative;
   list-style-type: none;
+  color:#000 !important;
   display: inline;
+}
+#nav li a{
+  color:#000 !important;
 }
 a {
   color: #000;
@@ -56,7 +64,8 @@ a {
   position: absolute;
   top: 0;
   left: 1em;
-  height: 50px;
+  height: 250px;
+  background:red;
 }
 .ribbon h1 {
 	font-size:24px;
@@ -83,8 +92,8 @@ a {
 }
 #top-menu{
 	width:100%;
-	height:80%;
-	background:#3a3b3c;
+	height:100px !important;
+	background:#3a3b3c !important;
 	position:relative;
 }
 #bottom-menu{
@@ -142,7 +151,7 @@ h8 {
 }
 #header{
 	background:#6d7273;
-	height: 16vh;
+	height: 36vh;
 	position:fixed;
 }
 #nav{
