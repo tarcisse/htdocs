@@ -1,62 +1,63 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Page Title</title>
+<style>
     
-    <style>
-        body
-        {
-            margin: 0px;
-            padding: 0px;
-        }
-        #sb-gauche
-        {
-        width: 20%;
-        display: inline-block;
-        position: fixed;
-        height: 100vh;
-        background: red;
-        }
-        #sb-droite
-        {
-        width: 80%;
-        height: 2000px;
-        background: blue;
-        display: inline-block;
-        margin-left: 20%;
-        }
-        #sb-menu
-        {
-            width: 100%;
-            height: 30vh;
-            background: #cdcdcd;
-        }
-        </style>
+#makeup
+{
+    width: 100%;
+    margin: auto;
+    background: blue;
+    height: 30vh;
+    text-align: center;
+   
+}
+#makeup-aide
+{
+   /* width: 300vh;*/
+   
+}
+.makeup-article
+{
+    width: 12%;
+    height: 12vw;
+    background: red;
+    display: inline-block;
+    margin: auto;
+    margin-left: 2vh;
+    cursor: pointer;
+    position: relative;
+   
+}
+#makeup-center
+{
     
-</head>
+}
+</style>
 
-<body>
-
-
- <div id='page'>
+<div id='makeup'>
+   <div id='makeup-aide'>
+    
+    <div class='makeup-article' data-mk_article='1'>
         
-    <div id='sb-gauche'>
-            
-    </div><!--====sb-gauche====-->
+    </div>
+    <div class='makeup-article' data-mk_article='2'>
         
-    <div id='sb-droite'>
+    </div>
+    <div class='makeup-article' data-mk_article='3'>
         
-        <div id='sb-menu'>
-            
-        </div>
-       <div id='sb-corps'>
+    </div>
+    
+    <div class='makeup-article' id='makeup-center' data-mk_article='4' >
+    </div>
+    
+    <div class='makeup-article' data-mk_article='5'>
         
-       </div>
-    </div><!--====sb-droite====-->
+    </div>
+    <div class='makeup-article' data-mk_article='6'>
         
+    </div>
+    <div class='makeup-article' data-mk_article='7'>
         
-</div><!--====page====-->
-
-</body>
-</html>
+    </div>
+   
+     
+    </div> 
+</div>
