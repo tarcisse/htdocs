@@ -4,7 +4,7 @@
 
 <head>
 	
-    <title>S&B shop online</title>
+    <title>{{title}}</title>
  	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
     <link rel='stylesheet' href='web/css/shopping.css'>
@@ -14,66 +14,13 @@
 	<script type="text/javascript" src="web/script/jquery.localscroll-1.2.7-min.js"></script>
 	<script type="text/javascript" src="web/script/jquery.scrollTo-1.4.2-min.js"></script>
 	<script type="text/javascript" src="web/script/jquery.inview.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function(){
-	$('#nav').localScroll();
-	})
-	</script>
+    <script type="text/javascript" src="web/script/menu.js"></script>
     
 </head>
 
 <body>
-<div class="banner" id="banner">
-	<div id="header">
-         
-         		
-       			<div id="nav">
-                	
-                  	<ul>
-                    <center>
-                        <li><a href="#">Link One</a></li>
-                        <li><a href="#">Link Two</a></li>
-                        <li><a href="#">Link Three</a></li>
-                        <li><a href="#">Link Four</a></li>
-                    </center>
-                    </ul>
-                    
-                </div>
-                
-                <div id="top-menu">
-          
-              <div class="ribbon">
-                <h1>
-                    <a href="#banner" id="open-menu">
-                        <h1>Soul & Beauty</h1>
-                        <h2>Shop online</h2>
-                    </a>
-                  <a href="#" id="close-menu">
-                        <h1>Close</h1>
-                  </a>
-                </h1>
-              </div>
-          </div>
-          
-          <div id="bottom-menu">
-          	
-          
-          </div>
-    
-    </div>
-    
-    
-    
-    
-	<!--<div id="nav">
-    	<div id="shop-online">
-        	<a> 
-        	<h1>Soul & Beauty</h1>
-            <h2>Shop online</h2>
-            </a>
-        </div>
-    </div>-->
-</div> <!--#header-->
+
+{% include 'web/main-menu.html' %} <!--Menu principale-->
 
 <div id="footer">
 

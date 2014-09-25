@@ -4,14 +4,14 @@ body{
 	margin: 0;
 	padding: 0;
 }
+
 /*Top Menu ---------------------*/
 .banner {
-  position: fixed;
   left: 0;
   right: 0;
-  background: #6d7273;
-  height: 60px;
-  top: -180px;
+  background: #3a3b3c;
+  position: fixed;
+  overflow: hidden;
   transition: all 1s ease;
   z-index: 500;
   /* ====================
@@ -20,67 +20,38 @@ body{
   instances. This makes closing the menu just 
   as pleasant. */
 }
-.banner:target {
-  top: 0px;
-  transition: all 1s ease;
-  /* ====================
-    Descend the banner when targeted.
-    Swap opening and closing links as
-    appropriate.
-    */
-}
-.banner:target a#open-menu {
-  display: none;
-}
-.banner:target a#close-menu {
-  display: block;
-}
-.banner a#close-menu {
-  display: none;
-}
-/* ====================
-Here are some kind of ugly links. */
-#nav{
-	background-color:blue !important;
-}
-#nav ul{
-	width:100%;
-	height:200px;
-}
-#nav li {
-  position: relative;
-  list-style-type: none;
-  color:#000 !important;
-  display: inline;
-}
-#nav li a{
-  color:#000 !important;
-}
 a {
   color: #000;
   text-decoration: none;
 }
 .ribbon {
-  position: absolute;
+ 
   top: 0;
-  left: 1em;
-  height: 250px;
-  background:red;
+  height: 10vh;
+  width: 15%;
+  text-align: center;
+  background:#3a3b3c;
 }
 .ribbon h1 {
 	font-size:24px;
-  	position: relative;
   	padding-top: 20px;
-  	text-align: center;
+  	text-align: center !important;
   	color: #fff;
+	position: absolute;
+	opacity:.7;
+	width:200px;
 }
 .ribbon h2{
 	font-size:12px;
 	text-align: center !important;
-	margin-top: -5px;
+	float: left;
+	margin-top: 7vh;
+	color:#fff;
+	width:200px;
+	opacity:.7;
 }
 .ribbon h1 a {
-  color: #fff;
+ 
 }
 .ribbon h1 a#open-menu:before {
   font-size: 1.5em;
@@ -89,44 +60,140 @@ a {
 .ribbon h1 a#close-menu:before {
   font-size: 1.5em;
   
+  
+}
+#close-menu
+{
+	display: none;
 }
 #top-menu{
 	width:100%;
-	height:100px !important;
-	background:#3a3b3c !important;
-	position:relative;
+	padding-top: -50px;
+	background:#3a3b3c;
+}
+.mysb-menu{
+	width:900px;
+	height:10vh;
+	right: 0;
+	margin-top:-60px;
+	margin-right: 25px;
+	position:absolute;
+}
+.mysb-menu li{
+	color:#fff;
+  	position: relative;
+  	list-style-type: none;
+  	display: inline-block;
+  	padding-left:100px;
+	padding-top:25px;
+	float:right;
+	opacity:.8;
+}
+.mysb-menu li ul{
+	display:inline;
+	float:right;
+	margin-left:-40px;
+}
+.mysb-menu li ul li{
+	float: left !important;
+	color:#fff;
+  	list-style-type: none;
+	padding-left:5px;
+	margin-top:-25px;
+}
+.mysb-menu li a{
+	color:#fff;
+}
+.mysb-menu li a:hover{
+	opacity:.6;
+}
+
+#submenu
+{
+	width:100%;
+	display:inline;
 }
 #bottom-menu{
 	width:100%;
-	height:100%;
+	height:5vh;
+	background:#6d7273;
+	margin:auto;
 }
-#shop-online{
-	left:0;
-	height:25px;
-	width:200px;
+#bottom-menu li {
+	color:#fff;
+  	position: relative;
+  	list-style-type: none;
+  	display: inline-block;
+  	margin-left:100px;
+	padding-top:5px;
 }
-#shop-online a h1, a h2{
-	cursor:pointer;
+#bottom-menu li a{
+	color:#fff;
 	opacity:.5;
 }
-#shop-online a:hover h1{
-	opacity:.9;
+#bottom-menu li a:hover{
+	opacity:.8;
+}
+h9{
+	text-transform:uppercase;
+	text-align:center;
+	font-size:18px;
+}
+#bottom-menu li a h9{
+	
+}
+#search{
+	width:20%;
+	float:right;
+	margin-top: -28px;
+	margin-right:20px;
+	text-align:right;
 }
 
-#shop-online h1{
-	font-size:24px;
-	text-align:center !important;
-	color:#FFF;
-}
-#shop-online h2{
-	font-family:AbadiMT;
-    font-weight: normal;
-	font-size:14px;
-	color:#FFF;
-	margin-top:-5px;
-	text-align:center !important;
+#search input[type="text"] {
+    background: url(../images/search-dark.png)  no-repeat 10px 6px #3a3b3c;
+    border: 0 none;
+    color: #777;
+    width: 150px;
+	height:15px;
+    padding: 6px 15px 0px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
 }
 
+#search input[type="text"]:focus {
+    width: 200px;
+}
+#bottom-submenu{
+	width:100%;
+	height:100%;
+	margin-top:14.9vh;
+	position:fixed;
+	background-color:transparent;
+	z-index: 600;
+	display:none;
+}
+#subsub-nav{
+	width:100%;
+	height:400px;
+	position:relative;
+	background:#fff;
+	z-index: 601;
+	display:none;
+}
+.menu-footer{
+	position:relative;
+	height:100%;
+	width:100%;
+	z-index:6001;
+	background:black;
+	opacity:.7;
+}
 
 
 p{
@@ -150,9 +217,11 @@ h8 {
 	text-transform:none;
 }
 #header{
-	background:#6d7273;
-	height: 36vh;
-	position:fixed;
+
+	background:#fff;
+	height: 35vh;
+	display: none;
+	
 }
 #nav{
 	width:100%;
@@ -162,6 +231,8 @@ h8 {
 }
 #footer{
 	height: 100%;
+	/*padding-top:  34vh;*/
+	
 }
 .text{
 	margin: 0 auto;
@@ -228,6 +299,7 @@ h8 {
 	margin: 0;
 	padding: 160px 0 0 0;
 	background-color:#6d7273;
+	background-size: 100% !important;
 }
 
 #second{
@@ -280,3 +352,97 @@ h8 {
 	height: 25vh;
 	margin: 0 auto;
 }
+
+/*TOP NAVIGATION*/
+#top-nav
+{
+	height: 35vh;
+  	list-style: none none;
+    line-height:-15;
+	width:100% !important;
+	background:red;
+	display:inline;
+}
+.top-nav-title{
+    font-size: smaller;
+}
+#top-nav ul
+{
+	height:140%;
+	font-family:'AbadiMT';
+    padding: 20px 20px 0px 0;
+    color: #000;
+    text-decoration: none;
+	list-style:none;
+	text-align:center;
+	
+}
+
+#top-nav ul > li 
+{
+	/*height:40%;*/
+	width:100px;
+	margin-left: 50px !important;
+    /*float: left; /* Pour que les liens s’affichent horizontalement */
+    /*position: relative; /* Crée un contexte de positionnement pour les sous-listes */
+	padding-left:0px;
+	margin-top:0px;
+	line-height: 30px;
+	display: inline-block;
+	margin:auto;
+	text-align:left;
+}
+#top-nav ul li span{
+	position:absolute;
+}
+#top-nav ul > li > a {
+	
+    text-decoration: none;
+    color: #000;
+}
+#top-nav ul > li > a : hover {
+    text-decoration: none;
+
+}
+#top-nav ul > li.subnav a 
+{ 
+	opacity:.5;
+	text-transform:uppercase;
+}
+
+#top-nav ul  > li.subnav:hover a 
+{ 
+	opacity: 0.7;
+}
+
+#top-nav ul > li.subnav > ul li
+{
+	font-family:'abadiMTBold';
+	 
+}
+
+#top-nav ul > li.subnav > ul li:hover a
+{
+	opacity: 1;
+	
+}
+.active h1{
+	opacity:.7 !important;
+ 	
+}
+.active p{
+  opacity:.7 !important;
+
+}
+.subsub 
+{
+	
+}
+.pos
+{
+	position:absolute;
+	text-align:left;
+	z-index:0;
+	display:none;
+}
+/*EO MAIN-NAV*/
