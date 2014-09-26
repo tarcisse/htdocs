@@ -18,15 +18,19 @@ $(document).ready(function(){
 	    $('#close-menu').hide();
 	});
 	
-	$('#bottom-menu ul li').hover(function(){
-		$('#bottom-submenu').fadeIn(function(){
-			$("#subsub-nav").slideDown(100);
-		});
+	
+	$('.bottom-menu').hover(function(){
+		$('.subsub-nav').hide();
+			$('#sb-'+this.id).show();
+		if ($("#bottom-submenu").is(":hidden")){
+			$("#bottom-submenu").slideDown(300);
+		}
+		
 	});
 	
-	$('#bottom-menu ul li').mouseleave(function(){
-		$("#subsub-nav").hide();
-			$('#bottom-submenu').hide();
+	$('#banner').mouseleave(function(){
+		
+			$('#bottom-submenu').slideUp(300);
 		
 		
 	});
