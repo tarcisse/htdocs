@@ -20,18 +20,29 @@ $(document).ready(function(){
 	
 	
 	$('.bottom-menu').hover(function(){
-		$('.subsub-nav').hide();
-			$('#sb-'+this.id).show();
-		if ($("#bottom-submenu").is(":hidden")){
-			$("#bottom-submenu").slideDown(300);
-		}
-		
+		$('#bottom-submenu').show();
+		$('.subsub-nav').show();
+			//$('#sb-'+this.id).show();
+		//$('.menu-footer').fadeIn();*/
 	});
 	
-	$('#banner').mouseleave(function(){
+	
+
+	$('#bottom-menu').mouseleave(function(){
 		
-			$('#bottom-submenu').slideUp(300);
 		
+		$(".subsub-nav").mouseleave(function(){
+			$('#bottom-submenu').hide();
+			
+		});
 		
+		if($("#bottom-submenu").is(":hidden")){
+			
+		}
+		else{
+			/*if(){
+			}	*/
+			$('#bottom-submenu').hide();
+		}
 	});
 })
