@@ -27,30 +27,8 @@ $(document).ready(function(){
 	});
 
 	$('.menu-footer,#top-menu').hover(function(){
-		$('#bottom-submenu').slideUp();
-		$('.menu-footer').fadeOut();
+		$('#bottom-submenu').hide();
+		$('.menu-footer').hide();
 		
-		/*if($("#bottom-submenu").is(":visible")){
-			  $("#bottom-submenu").mouseout(function(){
-				  $('#bottom-submenu').hide();
-			  })
-		}*/
-		
-		
-		/*$(".subsub-nav").mouseleave(function(){
-			$('#bottom-submenu').hide();
-			
-		});
-		
-		if($("#bottom-submenu").is(":hidden")){
-			
-		}
-		else{
-			if(){
-			}	
-			if($('.subsub-nav').hover()){
-			}
-			$('#bottom-submenu').hide();
-		}*/
 	});
 })

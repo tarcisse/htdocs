@@ -1,107 +1,11 @@
-<!doctype html>
-<html lang="en">
-	
-
-<head>
-	
-    <title>{{title}}</title>
- 	<link rel='stylesheet' href='web/css/bootstrap.css'>
-    <link rel='stylesheet' href='web/css/index.css'>
-    <link rel='stylesheet' href='web/css/shopping.css'>
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-	
-	<script type="text/javascript" src="web/script/nbw-parallax.js"></script>
-	<script type="text/javascript" src="web/script/jquery.localscroll-1.2.7-min.js"></script>
-	<script type="text/javascript" src="web/script/jquery.scrollTo-1.4.2-min.js"></script>
-	<script type="text/javascript" src="web/script/jquery.inview.js"></script>
-    <script type="text/javascript" src="web/script/menu.js"></script>
-    
-</head>
-
-<body>
-
-{% include 'web/main-menu.html' %} <!--Menu principale-->
-
-<div id="footer">
-
-<div id="intro">
-	<div class="text">
-    	<a href="#">
-    	<div class="float-right">
-		<h2>Nouvelle collection</h2>
-        <h1>Fresh Hair</h1>
-        <p>FUERIT TOTO IN CONSULATU SINE PROVINCIA, CUI FUERIT, ANTEQUAM DESIGNATUS EST, DECRETA PROVINCIA. SORTIETUR AN NON? NAM ET NON SORTIRI ABSURDUM EST, ET, QUOD SORTITUS SIS, NON HABERE. PROFICISCETUR PALUDATUS? QUO? QUO PERVENIRE ANTE CERTAM DIEM NON LICEBIT. IANUARIO, FEBRUARIO, PROVINCIAM NON HABEBIT; KALENDIS EI DENIQUE MARTIIS NASCETUR REPENTE PROVINCIA.
-</p>
-        </div>
-        </a>
-    </div> <!--text-->
-</div> <!--#intro-->
-
-<div id="second">
-	<div class="text" style="padding-top:400px"><!--<div class="bg"></div>-->
-    	<a href="#">
-    	<div class="float-left">
-            <h2>Nouvelle collection</h2>
-        	<h1>Makeup 4LIVE</h1>
-            <p>FUERIT TOTO IN CONSULATU SINE PROVINCIA, CUI FUERIT, ANTEQUAM DESIGNATUS EST, DECRETA PROVINCIA. SORTIETUR AN NON? NAM ET NON SORTIRI ABSURDUM EST, ET, QUOD SORTITUS SIS, NON HABERE. PROFICISCETUR PALUDATUS? QUO? QUO PERVENIRE ANTE CERTAM DIEM NON LICEBIT. IANUARIO, FEBRUARIO, PROVINCIAM NON HABEBIT; KALENDIS EI DENIQUE MARTIIS NASCETUR REPENTE PROVINCIA.
-</p>
-        </div>
-        </a>
-    </div> <!--text-->
-</div> <!--#second-->
-
-<div id="third">
-	<div class="text">
-    	<a href="#">
-    	<div class="float-right">
-        	<h2>New</h2>
-            <h1>Magic box</h1>
-            <p>FUERIT TOTO IN CONSULATU SINE PROVINCIA, CUI FUERIT, ANTEQUAM DESIGNATUS EST, DECRETA PROVINCIA. SORTIETUR AN NON? NAM ET NON SORTIRI ABSURDUM EST, ET, QUOD SORTITUS SIS, NON HABERE. PROFICISCETUR PALUDATUS? QUO? QUO PERVENIRE ANTE CERTAM DIEM NON LICEBIT. IANUARIO, FEBRUARIO, PROVINCIAM NON HABEBIT; KALENDIS EI DENIQUE MARTIIS NASCETUR REPENTE PROVINCIA.</p>
-        </div>
-        </a>
-    </div> <!--text-->
-</div> <!--#third-->
-
-<div id="fourth">
-	<div class="text">
-    	<a href="#">
-    	<div class="float-left">
-            <h2>New</h2>
-            <h1>Magic box</h1>
-            
-            <p>FUERIT TOTO IN CONSULATU SINE PROVINCIA, CUI FUERIT, ANTEQUAM DESIGNATUS EST, DECRETA PROVINCIA. SORTIETUR AN NON? NAM ET NON SORTIRI ABSURDUM EST, ET, QUOD SORTITUS SIS, NON HABERE. PROFICISCETUR PALUDATUS? QUO? QUO PERVENIRE ANTE CERTAM DIEM NON LICEBIT. IANUARIO, FEBRUARIO, PROVINCIAM NON HABEBIT; KALENDIS EI DENIQUE MARTIIS NASCETUR REPENTE PROVINCIA.</p>
-        </div>
-        </a>
-    </div> <!--text-->
-</div> <!--#fourth-->
-
-
-
-
-<div id="bottom">
-    
-    
-        	 <div style="margin-left:25px">
-                <a href="#" class="sb min twitter">Twitter</a>
-                <a href="#" class="sb min facebook">Facebook</a>
-                <a href="#" class="sb min pinterest">Pinterest</a>
-                <a href="#" class="sb min vimeo">Vimeo</a>
-            </div>
-            <div id="info-bottom">
-            	<a href="#">NOS BOUTIQUES</a>
-                <a href="#">CONTACT</a>
-                <a href="#">FAQS</a>
-                <a href="#">Aide</a>
-            </div>
-            <div id="split">|</div>
-            <div id="info-bottom">
-            	<a href="#">termes légals</a>
-                <a href="#">autres</a>
-            </div>
-</div> <!----bottom-->
-</div>
-</body>
-</html>
+{% include 'web/shop/header.html' %} <!--Header-->
+{% if(title=="S&B shop online Hair") %}
+{% include 'web/shop/hair.html' %} <!--content-->
+{% elseif(title=="S&B shop online Make-up") %}
+{% include 'web/shop/make-up.html' %}
+{% elseif(title=="S&B shop online Accessories") %}
+{% include 'web/shop/accessories.html' %}
+{% else %}
+{% include 'web/shop/bodyCare.html' %}
+{% endif %}
+{% include 'web/shop/footer.html' %} <!--footer-->

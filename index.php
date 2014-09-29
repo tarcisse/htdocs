@@ -55,10 +55,38 @@ $app->get('/', function(Application $app) {
    $titre='Accueil';
     return $app['twig']->render('web/index.html', array('title' => $titre));
   });
-$app->get('/shop', function(Application $app) {
-   $titre='S&B shop online';
-    return $app['twig']->render('web/shopping.html', array('title' => $titre));
+  //========================= route par défauts en cas d'erreur =============================
+  $app->get('/{a}/', function(Application $app){
+	 return $app->redirect('/'); 
   });
+  //=======================================================Chemin pour les shopping======================================
+$app->get('/shop/{menu}', function(Application $app, $menu) {
+	if(strtolower($menu)=="makeup"){
+		$titre='S&B shop online Make-Up';
+		$description='quia Montius inter dilancinantium manus 2';
+		$keywords='lips, crayons';
+	}elseif(strtolower($menu)=="accessories"){
+		$titre='S&B shop online Accessories';
+		$description='quia Montius inter dilancinantium manus 3';
+		$keywords='nails, cils';
+	}elseif(strtolower($menu)=="bodycare"){
+		$titre='S&B shop online BodyCare';
+		$description='quia Montius inter dilancinantium manus 4';
+		$keywords='huile';
+	}else{
+		$titre='S&B shop online Hair';
+		$description='quia Montius inter dilancinantium manus';
+		$keywords='cheveux, tissage';
+	}
+	
+    return $app['twig']->render('web/shopping.html', array('title' => $titre, 
+															'description' => $description,
+															'keywords' => $keywords));
+  });
+  $app->get('/shop', function(Application $app){
+	 return $app->redirect('/shop/hair'); 
+  });
+  //=====================================================================================================================
 $app->get('/test', function(Application $app) {
    $titre='Accueil';
     return $app['twig']->render('web/test3.html', array('title' => $titre));
