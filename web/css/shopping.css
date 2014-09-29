@@ -171,24 +171,26 @@ h9{
 }
 #bottom-submenu{
 	width:100%;
-	height:700px;
-	position:fixed;
+	height:40vh;
+	
 	background-color:transparent;
 	/*display: none;*/
-	z-index:700;
 }
 .subsub-nav{
 	width:100%;
 	height:40vh;
 	background:#fff;
 	/*display: none;*/
+
 }
 .menu-footer{
 	width:100%;
-	height: 100%;
+	height: 1700px;
+	position:fixed;
 	background:black;
-	opacity:.6;
-	display:none;
+	opacity:.7;
+	display:block;
+	z-index:1;
 }
 
 
@@ -443,3 +445,108 @@ h8 {
 	display:none;
 }
 /*EO MAIN-NAV*/
+
+/************************************************************************************
+SOCIAL LINK a.sb
+*************************************************************************************/
+a.sb,
+.sb a {
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-indent: -900em;
+	color: #333;
+	
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 2px 5px 0;
+	float:left;
+}
+/* for IE */
+*:first-child+html a.sb,
+*:first-child+html .sb a {
+	text-indent: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+
+
+/* SB LIST
+================================================ */
+.sb {
+	margin: 0;
+	padding: 0;
+}
+.sb li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+/* STYLES
+================================================ */
+
+/* min style */
+a.sb.min,
+.sb.min a {
+	background-color: transparent;
+	border: none;
+	
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+/* ICONS
+================================================ */
+a.sb.twitter,
+.sb a.twitter {
+	background-image: url(../images/white_twitter_bird.png);
+}
+
+a.sb.facebook,
+.sb a.facebook {
+	background-image: url(../images/white_facebook.png);
+}
+
+a.sb.heart,
+.sb a.heart {
+	background-image: url(../images/white_heart.png);
+}
+
+a.sb.linkedin,
+.sb a.linkedin {
+	background-image: url(../images/white_linkedin.png);
+}
+
+a.sb.pinterest,
+.sb a.pinterest {
+	background-image: url(../images/white_pinterest.png);
+}
+
+a.sb.podcast,
+.sb a.podcast {
+	background-image: url(../images/white_podcast.png);
+}
+
+a.sb.rss,
+.sb a.rss {
+	background-image: url(../images/white_rss.png);
+}
+
+a.sb.share_this,
+.sb a.share_this {
+	background-image: url(../images/white_share_this.png);
+}
+
+a.sb.star,
+.sb a.star {
+	background-image: url(../images/white_star.png);
+}
+
+a.sb.vimeo,
+.sb a.vimeo {
+	background-image: url(../images/white_vimeo.png);
+}
+
