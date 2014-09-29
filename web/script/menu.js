@@ -26,7 +26,7 @@ $(document).ready(function(){
 		$('.menu-footer').fadeIn();
 	});
 
-	$('.menu-footer').hover(function(){
+	$('.menu-footer,#top-menu').hover(function(){
 		$('#bottom-submenu').slideUp();
 		$('.menu-footer').fadeOut();
 		
