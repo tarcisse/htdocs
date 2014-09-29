@@ -551,11 +551,16 @@ a.sb.vimeo,
 }
 #info-bottom{
 	width:200px;
-	background:red;
 	margin-left:225px;
-	padding-top:7px;	
+	padding-top:10px;
 }
 #info-bottom a{
 	padding-left:15px;
+	color:#fff;
+	text-transform:uppercase;
+	opacity:.6;	
+}
+#info-bottom a:hover{
+	opacity:1;
 }
 
