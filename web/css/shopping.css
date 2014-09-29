@@ -174,13 +174,13 @@ h9{
 	height:40vh;
 	
 	background-color:transparent;
-	/*display: none;*/
+	display: none;
 }
 .subsub-nav{
 	width:100%;
 	height:40vh;
 	background:#fff;
-	/*display: none;*/
+	display:none;
 
 }
 .menu-footer{
@@ -189,7 +189,7 @@ h9{
 	position:fixed;
 	background:black;
 	opacity:.7;
-	display:block;
+	display:none;
 	z-index:1;
 }
 
@@ -458,7 +458,7 @@ a.sb,
 	background-position: center center;
 	text-indent: -900em;
 	color: #333;
-	
+	vertical-align:middle;
 	display: inline-block;
 	position: relative;
 	/*margin: 0 2px 5px 0;*/
@@ -548,5 +548,14 @@ a.sb.star,
 a.sb.vimeo,
 .sb a.vimeo {
 	background-image: url(../images/white_vimeo.png);
+}
+#info-bottom{
+	width:200px;
+	background:red;
+	margin-left:225px;
+	padding-top:7px;	
+}
+#info-bottom a{
+	padding-left:15px;
 }
 
