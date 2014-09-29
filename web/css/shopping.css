@@ -347,9 +347,10 @@ h8 {
 
 #bottom{
 	background:#3a3b3c;
-	height: 9vh;
+	height: 5vh;
 	margin: 0 auto;
-	
+}
+#footer-social{
 }
 
 /*TOP NAVIGATION*/
@@ -460,8 +461,7 @@ a.sb,
 	
 	display: inline-block;
 	position: relative;
-	vertical-align: middle;
-	margin: 0 2px 5px 0;
+	/*margin: 0 2px 5px 0;*/
 	float:left;
 }
 /* for IE */
