@@ -185,7 +185,7 @@ h9{
 }
 .menu-footer{
 	width:100%;
-	height: 1700px;
+	height: 100%;
 	position:fixed;
 	background:black;
 	opacity:.7;
@@ -493,10 +493,14 @@ a.sb.min,
 .sb.min a {
 	background-color: transparent;
 	border: none;
-	
+	opacity:.6;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+}
+a.sb.min:hover,
+.sb.min a:hover {
+	opacity:1;
 }
 /* ICONS
 ================================================ */
@@ -551,9 +555,13 @@ a.sb.vimeo,
 }
 
 #info-bottom{
-	width:200px;
-	margin-left:225px;
+	width:auto;
+	margin-left:5px;
 	padding-top:10px;
+	color:#fff;
+	padding-left:25px;
+	display:inline-block;
+	font-size:12px;
 }
 #info-bottom a{
 	padding-left:15px;
@@ -564,5 +572,14 @@ a.sb.vimeo,
 #info-bottom a:hover{
 	opacity:1;
 }
+#split{
+	width:;
+	padding-top:10px;
+	color:#fff;
+	opacity:.6;
+	padding-left:45px;
+	display:inline;
+}
+
 
 
