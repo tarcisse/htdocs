@@ -19,14 +19,14 @@ $(document).ready(function(){
 	});
 	
 	
-	$('#bottom-menu li').hover(function(){
+	$('.bottom-menu').hover(function(){
 		$('#bottom-submenu').show();
 		$('.subsub-nav').hide();
 			$('#sb-'+this.id).show();
 		$('.menu-footer').fadeIn();
 	});
 
-	$('#bottom-menu li').mouseleave(function(){
+	$('.bottom-menu').mouseleave(function(){
 		$('.menu-footer').hide();
 		
 		/*if($("#bottom-submenu").is(":visible")){
