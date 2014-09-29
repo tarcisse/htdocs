@@ -173,10 +173,8 @@ h9{
 	width:100%;
 	height:100%;
 	position:fixed;
-	background:#000;
-	opacity:.7;
-	z-index:99999;
-	display:none;
+	background-color:transparent;
+	display: none;
 }
 .subsub-nav{
 	width:100%;
