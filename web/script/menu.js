@@ -26,8 +26,9 @@ $(document).ready(function(){
 		$('.menu-footer').fadeIn();
 	});
 
-	$('.bottom-menu').mouseleave(function(){
-		$('.menu-footer').hide();
+	$('.menu-footer').hover(function(){
+		$('#bottom-submenu').slideUp();
+		$('.menu-footer').fadeOut();
 		
 		/*if($("#bottom-submenu").is(":visible")){
 			  $("#bottom-submenu").mouseout(function(){
