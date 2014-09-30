@@ -176,10 +176,8 @@ h9{
 }
 .subsub-nav{
 	width:100%;
-	height:auto;
 	background:#fff;
 	display: none;
-
 }
 .menu-footer{
 	width:100%;
@@ -598,7 +596,6 @@ a.sb.vimeo,
 	list-style:none;
 	text-align:center;
 	margin:auto;
-	background:yellow;
 	margin: auto;
 }
 
@@ -617,7 +614,7 @@ a.sb.vimeo,
 #bottom-subsubmenu ul li span{
 	position:absolute;
 }
-#bottom-subsubmenu ul > li > a {
+#bottom-subsubmenu ul > li > ul > li a {
 	
     text-decoration: none;
     color: #000;
@@ -641,7 +638,6 @@ a.sb.vimeo,
 {
 	font-family:'abadiMT';
 	text-align:left;
-	 
 }
 
 #bottom-subsubmenu ul > li.subsubnav > ul li:hover a
@@ -657,11 +653,12 @@ a.sb.vimeo,
   opacity:.7 !important;
 
 }
-.subpos
+#bottom-subsubmenu ul > li.subsubnav > ul li.subpos 
 {
 	text-align:left;
 	z-index:0;
-	position:absolute;
+	position:absolute !important;
+	background:red !important;
 }
 
 
