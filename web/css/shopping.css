@@ -171,14 +171,12 @@ h9{
 }
 #bottom-submenu{
 	width:100%;
-	height:40vh;
-	
 	background-color:transparent;
 	display: none;
 }
 .subsub-nav{
 	width:100%;
-	height:40vh;
+	height:auto;
 	background:#fff;
 	display: none;
 
@@ -579,6 +577,91 @@ a.sb.vimeo,
 	opacity:.6;
 	padding-left:45px;
 	display:inline;
+}
+
+#bottom-subsubmenu{
+  	list-style: none none;
+    line-height:-15;
+	width:100% !important;
+	display:inline;
+	margin-left:120px;
+}
+.subsubmenu-title{
+    font-size: smaller;
+	font-size:20px !important;
+}
+#bottom-subsubmenu ul
+{
+    padding: 20px 0px 0px 0;
+    color: #000;
+    text-decoration: none;
+	list-style:none;
+	text-align:center;
+	margin:auto;
+	background:yellow;
+	margin: auto;
+}
+
+#bottom-subsubmenu ul > li 
+{
+	width:auto;
+	margin-right:170px !important;
+    /*float: left; /* Pour que les liens s’affichent horizontalement */
+    /*position: relative; /* Crée un contexte de positionnement pour les sous-listes */
+	margin-top:0px;
+	line-height: 30px;
+	display: inline-block;
+	margin:auto;
+	text-align:left;
+}
+#bottom-subsubmenu ul li span{
+	position:absolute;
+}
+#bottom-subsubmenu ul > li > a {
+	
+    text-decoration: none;
+    color: #000;
+}
+#bottom-subsubmenu ul > li > a : hover {
+    text-decoration: none;
+
+}
+#bottom-subsubmenu ul > li.subsubnav a 
+{ 
+	opacity:.8;
+	text-transform:uppercase;
+}
+
+#bottom-subsubmenu ul  > li.subsubnav:hover a 
+{ 
+	opacity: 0.7;
+}
+
+#bottom-subsubmenu ul > li.subsubnav > ul li
+{
+	font-family:'abadiMT';
+	text-align:left;
+	 
+}
+
+#bottom-subsubmenu ul > li.subsubnav > ul li:hover a
+{
+	opacity: 1;
+	
+}
+.active h1{
+	opacity:.7 !important;
+ 	
+}
+.active p{
+  opacity:.7 !important;
+
+}
+.subpos
+{
+	text-align:left;
+	z-index:0;
+	position:absolute;
 }
 
 

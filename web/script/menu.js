@@ -24,6 +24,8 @@ $(document).ready(function(){
 		$('.subsub-nav').hide();
 			$('#sb-'+this.id).show();
 		$('.menu-footer').fadeIn();
+		
+		/*$('.subpos').css("position", "absolute");*/
 	});
 
 	$('.menu-footer,#top-menu').hover(function(){
