@@ -660,6 +660,17 @@ a.sb.vimeo,
 	position:absolute !important;
 	background:red !important;
 }
-
+.subpos
+{
+	position: relative;
+	
+}
+#bottom-submenu{
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 
