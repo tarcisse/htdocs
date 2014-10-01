@@ -174,7 +174,6 @@ h9{
 }
 #bottom-submenu{
 	width:100%;
-	height:100%;
 	background-color:transparent;
 	display: none;
 }
@@ -191,6 +190,7 @@ h9{
 	background:black ;
 	display:none;
 	opacity:.7;
+	z-index:32;
 }
 
 
@@ -330,116 +330,7 @@ h8 {
 	z-index:50;
 }
 
-/*
-#intro-makeup{
-	background:url url(../images/shop/make6.jpg) 0 no-repeat fixed;
-	color: white !important;
-	height: 600px;
-	margin: 0;
-	padding: 160px 0 0 0;
-	background-color:#6d7273;
-	background-size: 100% !important;
-}
 
-#second-makeup{
-	background: url(../images/shop/make5.jpg) 50% 0 no-repeat fixed;
-	color: white;
-	height: 1300px;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 0;
-}
-
-#second-makeup .bg{
-	background: url(../images/shop/makeup/2.png) 50% 0 no-repeat fixed;
-	background-size:500px;
-	height: 1000px;
-	padding-right: 100px;
-	position: absolute;
-	width: 900px;
-	z-index: 20;
-}
-
-#third-makeup{
-	background: url(../images/shop/makeup4.jpg) 50% 0 no-repeat fixed;
-	background-size: 150%;
-	color: #000;
-	height: 550px;
-	padding: 100px 0 0 0;	
-}
-
-#fourth-makeup{
-	background: url(../images/shop/hair4.jpg) 50% 0 no-repeat fixed;
-	background-repeat: no-repeat;
-	background-size: 110%;
-	color: white;
-	height: 600px;
-	padding: 100px 0 0 0;
-}
-
-#fifth-makeup{
-	background: #3a3b3c;
-	height: 5vh;
-	margin: 0 auto;
-	padding: 15px 0 0 0;
-	z-index:50;
-}
-
-/**********
-#intro-acc{
-	/*background:url url(../images/shop/make6.jpg) 0 no-repeat fixed;
-	color: white !important;
-	height: 600px;
-	margin: 0;
-	padding: 160px 0 0 0;
-	background-color:#6d7273;
-	background-size: 100% !important;
-}
-
-#second-acc{
-	background: url(../images/shop/make5.jpg) 50% 0 no-repeat fixed;
-	color: white;
-	height: 1300px;
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 0;
-}
-
-#second-acc .bg{
-	background: url(../images/shop/makeup/2.png) 50% 0 no-repeat fixed;
-	background-size:500px;
-	height: 1000px;
-	padding-right: 100px;
-	position: absolute;
-	width: 900px;
-	z-index: 20;
-}
-
-#third-acc{
-	background: url(../images/shop/makeup4.jpg) 50% 0 no-repeat fixed;
-	background-size: 150%;
-	color: #000;
-	height: 550px;
-	padding: 100px 0 0 0;	
-}
-
-#fourth-acc{
-	background: url(../images/shop/hair4.jpg) 50% 0 no-repeat fixed;
-	background-repeat: no-repeat;
-	background-size: 110%;
-	color: white;
-	height: 600px;
-	padding: 100px 0 0 0;
-}
-
-#fifth-acc{
-	background: #3a3b3c;
-	height: 5vh;
-	margin: 0 auto;
-	padding: 15px 0 0 0;
-	z-index:50;
-}
-*/
 #bottom{
 	background:#3a3b3c;
 	height: 5vh;
@@ -873,4 +764,115 @@ a.sb.vimeo,
 #mysb-profil-B p{
 	margin-top:15px !important;
 	
+}
+/*************ORDER*************/
+#order{
+	width:100%;
+}
+.order-header{
+	height:10vh;
+	background:#e9eaea !important;
+	padding-top:130px;
+}
+.order-title{
+	height:50px;
+	width:20%;
+	padding-left:20px;
+	opacity:.5;
+}
+.order-title img{
+	height:80px;
+	float:left;
+	margin-top:-20px;
+	
+}
+.order-title h1{
+	text-align:left;
+	float:left;
+}
+.order-step{
+	float:left;
+	margin-top:-55px;
+	margin-left:150px;
+}
+.order-step li{
+	display:inline-block;
+	list-style:none;
+	margin-right: 40px;
+}
+.order-step li h2{
+	font-size:18px;
+	font-family:'abadiMT';
+	opacity:.5;
+}
+.order-step li .active-step{
+	opacity:1;
+}
+.order-step li a{
+	opacity:.9;
+}
+.order-step li a:hover{
+	opacity:1;
+}
+/********************HAUTER à régler**********/
+.order-footer{
+	background:#FFF;
+	height:70vh !important;
+}
+#bild{
+	width:70%;
+	float:left;
+	margin-top: 15px !important; 
+	
+	position:absolute;
+}
+#bild h10{
+	font-size:25px;
+	opacity:.7;
+}
+#bild li{
+	display:inline-block;
+	list-style:none;
+	margin-right: 100px;
+	min-height: 20vh;
+}
+#pub{
+	margin-top:50px;
+}
+#pub li{
+	display:inline-block;
+	list-style:none;
+	margin-right: 10px;
+}
+#pub li img{
+	 width:50px;
+	 margin-right:40px;
+}
+#pub li h5{
+	font-family:'abadiMT';
+	text-align:left !important;
+}
+#pub li p{
+}
+#bild li h3{
+	font-size:15px;
+	font-family:'abadiMT';
+	opacity:.5;
+}
+#helpdesk{
+	width:28%;
+	float:right;
+	margin-top: 15px !important;
+	padding-left: 22px;
+	border-left:1px solid #6d7273;
+}
+#helpdesk h1{
+	text-align:left !important;
+	float:left;
+	width:100%;
+	opacity:.7;
+}
+#helpdesk p{
+	width:90%;
+	opacity:.7;
 }
