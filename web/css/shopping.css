@@ -104,6 +104,9 @@ a {
 .mysb-menu li a{
 	color:#fff;
 }
+.mysb-menu li a h10{
+	
+}
 .mysb-menu li a:hover{
 	opacity:.6;
 }
@@ -171,22 +174,23 @@ h9{
 }
 #bottom-submenu{
 	width:100%;
+	height:100%;
 	background-color:transparent;
 	display: none;
 }
 .subsub-nav{
 	width:100%;
+	height:auto !important;
 	background:#fff;
 	display: none;
 }
-.menu-footer{
+#menu-footer{
 	width:100%;
 	height: 100%;
 	position:fixed;
-	background:black;
-	opacity:.7;
+	background:black ;
 	display:none;
-	z-index:1;
+	opacity:.7;
 }
 
 
@@ -582,7 +586,6 @@ a.sb.vimeo,
     line-height:-15;
 	width:100% !important;
 	display:inline;
-	margin-left:120px;
 }
 .subsubmenu-title{
     font-size: smaller;
@@ -638,6 +641,8 @@ a.sb.vimeo,
 {
 	font-family:'abadiMT';
 	text-align:left;
+	color:white;
+	cursor:default;
 }
 
 #bottom-subsubmenu ul > li.subsubnav > ul li:hover a
@@ -660,6 +665,9 @@ a.sb.vimeo,
 	position:absolute !important;
 	background:red !important;
 }
+#bottom-subsubmenu ul > li.subsubnav > ul li.subpos .white-text{
+	color:green;
+}
 .subpos
 {
 	position: relative;
@@ -672,5 +680,103 @@ a.sb.vimeo,
   -ms-user-select: none;
   user-select: none;
 }
+#mysb{
+	width:100%;
+	height:45vh;
+	background-color:white;
+	display: none;
+	position:fixed;
+	z-index:90;
+}
+#mysb-footer{
+	width:100%;
+	height: 100%;
+	position:fixed;
+	background:black;
+	display:none;
+	opacity:.7;
+	z-index:1;
+}
 
+#mysb-profil{
+	width:100%;
+	height:100%;
+	background-color:white;
+	margin-top: 125px !important;
+}
 
+#mysb-profil-A{
+	width:20%;
+	height:95%;
+	float:left;
+	margin-left:100px;
+	border-right: 1px solid #6d7273 ; 
+}
+#mysb-profil-A a{
+	opacity:.9;
+}
+#mysb-profil-A a:hover{
+	opacity:1;
+}
+#mysb-profil-A img{
+	 width:100px;
+	 border-radius: 50%;
+	 margin:auto;
+}
+#mysb-profil-A h1{
+	font-size: 18px;
+	padding-bottom: 25px;
+	text-align:center !important;
+}
+
+#mysb-profil-A h3{
+	font-family:'abadiMT';
+	font-size: 16px;
+	text-align:center !important;
+	margin-top:25px !important;
+}
+
+#mysb-profil-A h6{
+	font-family:'abadiMT';
+	margin-top:-15px !important;
+	font-size: 12px;
+	text-align:center !important;
+}
+
+#mysb-profil-B{
+	width:66%;
+	height:100%;
+	float:left;
+	margin-left: 30px !important;
+}
+#mysb-profil-B li{
+	display:inline-block;
+	list-style:none;
+}
+#mysb-profil-B li a{
+	opacity:.9;
+}
+#mysb-profil-B li a:hover{
+	opacity:1;
+}
+#mysb-profil-B li h2{
+	font-size:16px;
+	font-family:'abadiMT';
+	text-align:left !important;
+}
+#mysb-profil-B img{
+	 width:80px;
+	 margin-right:50px;
+}
+#mysb-profil-B img p{
+	 color:blue;
+}
+#mysb-profil-B h1{
+	font-size: 18px;
+	margin-bottom:25px !important;
+	text-align:left !important;
+}
+#mysb-profil-B p{
+	margin-top:15px !important;
+	
+}
