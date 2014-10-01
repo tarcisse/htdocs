@@ -73,7 +73,12 @@ $app->get('/shop/{menu}', function(Application $app, $menu) {
 		$titre='S&B shop online BodyCare';
 		$description='quia Montius inter dilancinantium manus 4';
 		$keywords='huile';
+	}elseif(strtolower($menu)=="basket"){
+		$titre='S&B Payment';
+	 	$description='quia Montius inter dilancinantium manus';
+		$keywords='payement';
 	}
+	
 	else{
 		$titre='S&B shop online Hair';
 		$description='quia Montius inter dilancinantium manus';
@@ -88,16 +93,6 @@ $app->get('/shop/{menu}', function(Application $app, $menu) {
   $app->get('/shop', function(Application $app){
 	 return $app->redirect('/shop/hair'); 
   });
-  
-  $app->get('/basket', function(Application $app){
-	 $titre='S&B Payment';
-	 $description='quia Montius inter dilancinantium manus';
-	$keywords='payement';
-    return $app['twig']->render('web/shop/basket.html', array('title' => $titre,
-																'description' => $description,
-																'keywords' => $keywords));
-  });
-  
   
 //=====================================================================================================================
 $app->get('/test', function(Application $app) {

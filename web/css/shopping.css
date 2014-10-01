@@ -814,45 +814,62 @@ a.sb.vimeo,
 .order-step li a:hover{
 	opacity:1;
 }
-/********************HAUTER à régler**********/
+
 .order-footer{
-	background:#FFF;
-	height:70vh !important;
+	background:white;
+	
 }
 #bild{
 	width:70%;
-	float:left;
 	margin-top: 15px !important; 
-	
-	position:absolute;
+	display:inline-block;
+	/*background:blue;*/
 }
 #bild h10{
 	font-size:25px;
 	opacity:.7;
+	/*background:#9F9;*/
+}
+#bild ul{
+	/*background:#F06;*/
 }
 #bild li{
 	display:inline-block;
 	list-style:none;
 	margin-right: 100px;
 	min-height: 20vh;
+	/*background:#0C9;*/
 }
 #pub{
 	margin-top:50px;
+	/*background:#9F0;*/
+}
+#pub ul{
+	/*background:#390 !important;*/
+	padding:0 !important;
+	width:100% !important;
+	position:relative !important;
 }
 #pub li{
 	display:inline-block;
 	list-style:none;
-	margin-right: 10px;
+	margin:auto !important;
+	/*background:pink;*/
+	width:100px;
+	
 }
 #pub li img{
-	 width:50px;
-	 margin-right:40px;
+	 width:80px;
+	 
 }
 #pub li h5{
 	font-family:'abadiMT';
-	text-align:left !important;
+	text-align:center !important;
+	/*background:red;*/
 }
-#pub li p{
+#paragraph-shop{
+	/*background:#F93;*/
+	text-align:center;
 }
 #bild li h3{
 	font-size:15px;
@@ -861,10 +878,12 @@ a.sb.vimeo,
 }
 #helpdesk{
 	width:28%;
-	float:right;
+	display:inline-block;
 	margin-top: 15px !important;
 	padding-left: 22px;
 	border-left:1px solid #6d7273;
+	float:left;
+	position:absolute;
 }
 #helpdesk h1{
 	text-align:left !important;
