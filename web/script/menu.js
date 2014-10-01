@@ -19,10 +19,15 @@ $(document).ready(function(){
 	});
 	
 	$('.mysb-menu li a h10' && '#shop-mysb').click(function(){
-		$('#bottom-submenu').show();
-		$('.subsub-nav').hide();
-			$('#mysb').show();
-		$('#mysb-footer').fadeIn();
+		if($('#mysb').is(":hidden")){
+			  $('#bottom-submenu').show();
+			  $('.subsub-nav').hide();
+				  $('#mysb').show();
+			  $('#mysb-footer').fadeIn();
+		}
+		else{
+			$('#mysb').hide();
+		}
 	});
 	
 	$(document).click(function(){

@@ -62,7 +62,7 @@ $app->get('/', function(Application $app) {
   //=======================================================Chemin pour les shopping======================================
 $app->get('/shop/{menu}', function(Application $app, $menu) {
 	if(strtolower($menu)=="makeup"){
-		$titre='S&B shop online Make-Up';
+		$titre='S&B shop online MakeUp';
 		$description='quia Montius inter dilancinantium manus 2';
 		$keywords='lips, crayons';
 	}elseif(strtolower($menu)=="accessories"){

@@ -290,10 +290,8 @@ h8 {
 	text-align: center;
 }
 
+/*************************HAIR*****************************/
 #intro{
-	background:url(../images/shop/afro.jpg) 50% 0 no-repeat fixed;
-	color: white !important;
-	height: 600px;
 	margin: 0;
 	padding: 160px 0 0 0;
 	background-color:#6d7273;
@@ -301,17 +299,12 @@ h8 {
 }
 
 #second{
-	background: url(../images/shop/make5.jpg) 50% 0 no-repeat fixed;
-	color: white;
-	height: 1300px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
 }
 
-
 #second .bg{
-	background: url(../images/shop/makeup/2.png) 50% 0 no-repeat fixed;
 	background-size:500px;
 	height: 1000px;
 	padding-right: 100px;
@@ -321,19 +314,11 @@ h8 {
 }
 
 #third{
-	background: url(../images/shop/makeup4.jpg) 50% 0 no-repeat fixed;
-	background-size: 150%;
-	color: #000;
-	height: 550px;
 	padding: 100px 0 0 0;	
 }
 
 #fourth{
-	background: url(../images/shop/hair4.jpg) 50% 0 no-repeat fixed;
 	background-repeat: no-repeat;
-	background-size: 110%;
-	color: white;
-	height: 600px;
 	padding: 100px 0 0 0;
 }
 
@@ -345,6 +330,116 @@ h8 {
 	z-index:50;
 }
 
+/*
+#intro-makeup{
+	background:url url(../images/shop/make6.jpg) 0 no-repeat fixed;
+	color: white !important;
+	height: 600px;
+	margin: 0;
+	padding: 160px 0 0 0;
+	background-color:#6d7273;
+	background-size: 100% !important;
+}
+
+#second-makeup{
+	background: url(../images/shop/make5.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#second-makeup .bg{
+	background: url(../images/shop/makeup/2.png) 50% 0 no-repeat fixed;
+	background-size:500px;
+	height: 1000px;
+	padding-right: 100px;
+	position: absolute;
+	width: 900px;
+	z-index: 20;
+}
+
+#third-makeup{
+	background: url(../images/shop/makeup4.jpg) 50% 0 no-repeat fixed;
+	background-size: 150%;
+	color: #000;
+	height: 550px;
+	padding: 100px 0 0 0;	
+}
+
+#fourth-makeup{
+	background: url(../images/shop/hair4.jpg) 50% 0 no-repeat fixed;
+	background-repeat: no-repeat;
+	background-size: 110%;
+	color: white;
+	height: 600px;
+	padding: 100px 0 0 0;
+}
+
+#fifth-makeup{
+	background: #3a3b3c;
+	height: 5vh;
+	margin: 0 auto;
+	padding: 15px 0 0 0;
+	z-index:50;
+}
+
+/**********
+#intro-acc{
+	/*background:url url(../images/shop/make6.jpg) 0 no-repeat fixed;
+	color: white !important;
+	height: 600px;
+	margin: 0;
+	padding: 160px 0 0 0;
+	background-color:#6d7273;
+	background-size: 100% !important;
+}
+
+#second-acc{
+	background: url(../images/shop/make5.jpg) 50% 0 no-repeat fixed;
+	color: white;
+	height: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#second-acc .bg{
+	background: url(../images/shop/makeup/2.png) 50% 0 no-repeat fixed;
+	background-size:500px;
+	height: 1000px;
+	padding-right: 100px;
+	position: absolute;
+	width: 900px;
+	z-index: 20;
+}
+
+#third-acc{
+	background: url(../images/shop/makeup4.jpg) 50% 0 no-repeat fixed;
+	background-size: 150%;
+	color: #000;
+	height: 550px;
+	padding: 100px 0 0 0;	
+}
+
+#fourth-acc{
+	background: url(../images/shop/hair4.jpg) 50% 0 no-repeat fixed;
+	background-repeat: no-repeat;
+	background-size: 110%;
+	color: white;
+	height: 600px;
+	padding: 100px 0 0 0;
+}
+
+#fifth-acc{
+	background: #3a3b3c;
+	height: 5vh;
+	margin: 0 auto;
+	padding: 15px 0 0 0;
+	z-index:50;
+}
+*/
 #bottom{
 	background:#3a3b3c;
 	height: 5vh;
@@ -573,7 +668,6 @@ a.sb.vimeo,
 	opacity:1;
 }
 #split{
-	width:;
 	padding-top:10px;
 	color:#fff;
 	opacity:.6;
