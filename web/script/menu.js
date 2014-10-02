@@ -60,18 +60,35 @@ $(document).ready(function(){
     	e.stopPropagation();
 	});
 	
+	/*lorsqu'on clique sur un bottom-menu, généralement
+	 *le submenu ne doit pas se dérouler et il doit donc rester caché
+	 *sans cette variable subMenu la div submenu s'affiche toujours après le click ce qui n'est pas propre je trouve
+	 */
+	/*var $subMenu = "no";
+	$('#menu-footer,#top-menu,#content').mouseover(function(){
+			$subMenu = "yes";
+	});
+	$('#Hair, #Make-Up, #Accessoiries, #Bodycare ').mouseout(function(){
+			$subMenu = "yes";
+	});
+	
+	$('#Hair, #Make-Up, #Accessoiries, #Bodycare ').click(function(){
+		$subMenu = "no";
+	});*/
 	$('.bottom-menu').hover(function(){
 		if($('#mysb-profil').is(":hidden")){
+			//if($subMenu=="yes"){
 			  $('#bottom-submenu').show();
 			  $('.subsub-nav').hide();
 				  $('#sb-'+this.id).show();
 			  $('#menu-footer').show();
+			//}
 		}
 		/*$('.subpos').css("position", "absolute");*/
 	});
 	
 	$('.bottom-menu').mouseout(function(){
-		$('#menu-footer,#top-menu,#mysb-menu').mouseover(function(){
+		$('#menu-footer,#top-menu,#content').mouseover(function(){
 			$('#menu-footer').hide();
 			$('#bottom-submenu').hide();	
 		});
