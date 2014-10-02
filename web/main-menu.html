@@ -65,9 +65,9 @@
               	  <li id="shop-mysb"><a href="#" data-type-lien="noClick"><h10>MyS&B </h10></a></li>
                   <li>PAYS :
                   	<ul>
-                    	<li><a href="#"><h10>FR</h10></a></li>
-                        <li><a href="#"><h10>NL</h10></a></li>
-                        <li><a href="#"><h10>UK</h10></a></li>
+                    	<li><a href="?lang=fr" {% if lang == "fr" %} class="lang" {% endif %}><h10>FR</h10></a></li>
+                        <li><a href="?lang=nl" {% if lang == "nl" %} class="lang" {% endif %}><h10>NL</h10></a></li>
+                        <li><a href="?lang=en" {% if lang == "en" %} class="lang" {% endif %}><h10>EN</h10></a></li>
                     </ul>
                   <li><a href="/shop/basket"><h10>MON PANIER (0)</h10></a></li>
               </ul>

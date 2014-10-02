@@ -10,15 +10,28 @@ use Silex\Application;
 $app = new Application();
 $app['debug'] = true;
 
-/*
+ /*
  *inclusion de module
  */
+
+////------------------------session---------------------------------------
+$app->register(new Silex\Provider\SessionServiceProvider());
+if(isset($_GET['lang']))
+{
+    $app['session']->set('lang',$_GET['lang']);
+    
+}
+
+if(! $app['session']->get('lang'))
+{
+   $app['session']->set('lang','fr');
+}
 
 ////----------------twig-----------------------------------------------------
 $app->register(new Silex\Provider\TwigServiceProvider(), 
 	       array('twig.path' => '.',));
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
-    'locale_fallbacks' => array('fr'),
+    'locale_fallbacks' => array( $app['session']->get('lang')),
 ));
 ////----------------translation-----------------------------------------------------
 use Symfony\Component\Translation\Loader\YamlFileLoader;
@@ -27,21 +40,16 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
     $translator->addLoader('yaml', new YamlFileLoader());
 
     $translator->addResource('yaml', __DIR__.'/locales/en.yml', 'en');
-    $translator->addResource('yaml', __DIR__.'/locales/do.yml', 'do');
+    $translator->addResource('yaml', __DIR__.'/locales/nl.yml', 'nl');
     $translator->addResource('yaml', __DIR__.'/locales/fr.yml', 'fr');
 
     return $translator;
 }));
-
-// Maintenant on démontre l'utilisation des templates Twig
-// On commence par charger le moteur de templating
-$app->register(new Silex\Provider\TwigServiceProvider(), 
-	       array('twig.path' => '.',));
+////----------------------------bdd------------------
 
 /*
  *fin inclusion module
  */
-
  
  
  
@@ -87,7 +95,8 @@ $app->get('/shop/{menu}', function(Application $app, $menu) {
 	
     return $app['twig']->render('web/shopping.html', array('title' => $titre, 
 															'description' => $description,
-															'keywords' => $keywords));
+															'keywords' => $keywords,
+															'lang' => $app["session"]->get('lang')));
   }); 
 
   $app->get('/shop', function(Application $app){
