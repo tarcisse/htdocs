@@ -30,7 +30,7 @@ $(document).ready(function(){
 	
 	$('.subnav').hover(function(){
 		a=this.id;
-		$('#support').css('background-image','url(web/images/'+a+'.jpg)');
+		$('#support').css('background-image','url(web/images/bg/'+a+'.jpg)');
 	});
 	
 	/*Form MouseLeave*/
