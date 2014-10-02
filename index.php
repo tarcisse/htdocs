@@ -60,8 +60,13 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
  /*--------------------------------------------------------------------------------------------------------------------------------------*/
 // On définit une route pour l'url /
 $app->get('/', function(Application $app) {
-   $titre='Accueil';
-    return $app['twig']->render('web/index.html', array('title' => $titre));
+   $titre='Soul & Beauty';
+   $description='quia Montius inter dilancinantium manus 2';
+	$keywords='soul, beauty';
+    return $app['twig']->render('web/index.html', array('title' => $titre,
+															'description' => $description,
+															'keywords' => $keywords,
+															'lang' => $app["session"]->get('lang')));
   });
   //========================= route par défauts en cas d'erreur =============================
   $app->get('/{a}/', function(Application $app){

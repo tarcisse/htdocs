@@ -18,7 +18,25 @@ $(document).ready(function(){
 	    $('#close-menu').hide();
 	});
 	
+	
+	$('#close-menu').click(function(){
+		$('.pos').fadeOut(100,function(){
+			$('#header').slideUp(300);
+		});
+	   $('#open-menu').show();
+	    $('#close-menu').hide();
+	});
+	
 	$('.mysb-menu li a h10' && '#shop-mysb').click(function(){
+		
+		if($('#header').is(":visible")){
+			  $('.pos').fadeOut(100,function(){
+			  $('#header').slideUp(300);
+		  });
+		 $('#open-menu').show();
+		  $('#close-menu').hide();
+		}
+		
 		if($('#mysb').is(":hidden")){
 			  $('#bottom-submenu').show();
 			  $('.subsub-nav').hide();
