@@ -127,7 +127,7 @@ $(document).ready(function(){
   $('#cancel').click(function(){
 	  connect="membre"
 	$('#form3').hide();
-	$('#logo').show();
+	$('#form').show();
   });
   
   /*Language*/
