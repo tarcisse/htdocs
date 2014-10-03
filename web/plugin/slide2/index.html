@@ -143,19 +143,19 @@
         }
         else
         {
-             decalage=decalage-20;
+             decalage=decalage-10;
             $('#sb-slide-st').css('right',decalage+'vw');
            
-      if (decalage<=20) {
+      if (decalage<=10) {
         decalage=0;
       }
       
       myTimer=setInterval(function(){
         console.log('ok');
-        decalage=decalage-20;
+        decalage=decalage-10;
          $('#sb-slide-st').css('right',decalage+'vw');
            
-      if (decalage<=20) {
+      if (decalage<=10) {
         decalage=0;
       }
       },1000);
