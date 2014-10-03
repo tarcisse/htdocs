@@ -346,6 +346,14 @@
     right: 0px;
 	display:none;
 }
+#form3{
+	width: 30%;
+    height: 80vh;
+    position: absolute;
+	margin-right:140px;
+    right: 0px;
+	display:none;
+}
 .css-form{
 	padding:10px 0px 0px 0px;
 	margin-left:40px;

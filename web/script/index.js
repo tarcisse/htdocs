@@ -35,7 +35,7 @@ $(document).ready(function(){
 	
 	/*Form MouseLeave*/
 	$('#form').mouseleave(function(){
-		if ($("#form2").is(":hidden")){
+		if ($("#form2").is(":hidden") && $("#form3").is(":hidden")){
 			$('#form').hide();
 			$('#logo').show();
 		}
@@ -43,6 +43,12 @@ $(document).ready(function(){
 	$('#form2').mouseleave(function(){
 		if ($("#form").is(":hidden")){
 			$('#form2').hide();
+			$('#logo').show();
+		}
+	});
+	$('#form3').mouseleave(function(){
+		if ($("#form").is(":hidden")){
+			$('#form3').hide();
 			$('#logo').show();
 		}
 	});
@@ -91,6 +97,11 @@ $(document).ready(function(){
 	connect="count";
 	$('#form').hide();
 	$('#form2').show();
+  });
+  
+  $('#error').click(function(){
+	$('#form').hide();
+	$('#form3').show();
   });
 	
   $('#my-count').click(function(){
