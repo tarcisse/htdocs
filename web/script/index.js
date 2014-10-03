@@ -118,6 +118,12 @@ $(document).ready(function(){
 	$('#logo').show();
   });
   
+  $('#confirmer').click(function(){
+	  connect="membre"
+	$('#form3').hide();
+	$('#logo').show();
+  });
+  
   $('#cancel').click(function(){
 	  connect="membre"
 	$('#form3').hide();
