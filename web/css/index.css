@@ -368,9 +368,11 @@
 	opacity:.8;
 }
 
-#password{
+#password-f{
 	padding-left: 15px;
 	color:white;
+	font-family: 'AbadiMT';
+	opacity:.8;
 }
 #fieldset {
 	border:none;
@@ -396,13 +398,12 @@ input[type=text].css-textArea
 }
 input[type=text].css-textArea-pw
 {
-	width:265px;
+	width: 230px !important;
 	padding: 10px 15px;
 	background: #e9eaea;
 	border: 1px solid #e9eaea;
-	color: blue;
+	color: #6d7273;
 	position:relative;
-
 }
 
 input[type=button].css-button
@@ -413,6 +414,27 @@ input[type=button].css-button
 	color:#3a3b3c;
 	cursor:pointer;
 }
+input[type=button].css-button-pw
+{
+	width:125px !important;
+	float:left;
+	background: #d2d2d3 !important;
+	border: 1px solid #d2d2d3;
+	color:#3a3b3c;
+	cursor:pointer;
+	margin-right:10px !important;
+}
+input[type=button].css-button-pw2
+{
+	width:125px !important;
+	float:left;
+	background: #3a3b3c !important;
+	border: 1px solid #d2d2d3 !important;
+	color:white;
+	cursor:pointer;
+	margin-right:10px !important;
+}
+
 .warning 
 {
 	color: #fff;

@@ -83,6 +83,8 @@ $(document).ready(function(){
 	  $('#logo').hide();
 	  if(connect == "membre"){
 		$('#form').fadeIn(1000);
+	  }else if(connect == "password"){
+		$('#form3').fadeIn(1000);
 	  }else{
 		$('#form2').fadeIn(1000);
 	  }
@@ -100,6 +102,7 @@ $(document).ready(function(){
   });
   
   $('#error').click(function(){
+	connect="password";
 	$('#form').hide();
 	$('#form3').show();
   });
@@ -112,6 +115,12 @@ $(document).ready(function(){
   
   $('#valide').click(function(){
 	$('#form2').hide();
+	$('#logo').show();
+  });
+  
+  $('#cancel').click(function(){
+	  connect="membre"
+	$('#form3').hide();
 	$('#logo').show();
   });
   
