@@ -12,7 +12,7 @@
     {
         width: 200vw;
         position: relative;
-        right:  -20vw;
+        right:  -10vw;
          transition-property: all;
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
@@ -143,19 +143,19 @@
         }
         else
         {
-             decalage=decalage-20;
+             decalage=decalage-10;
             $('#sb-slide-st').css('right',decalage+'vw');
            
-      if (decalage<=20) {
+      if (decalage<=10) {
         decalage=0;
       }
       
       myTimer=setInterval(function(){
         console.log('ok');
-        decalage=decalage-20;
+        decalage=decalage-10;
          $('#sb-slide-st').css('right',decalage+'vw');
            
-      if (decalage<=20) {
+      if (decalage<=10) {
         decalage=0;
       }
       },1000);
