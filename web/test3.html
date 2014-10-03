@@ -1,3 +1,6 @@
+ {% set nombre=30  %}
+ {% set valeur=800  %}
+ 
  	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -23,22 +26,22 @@
     }
     #sb-slide-st
     {
-        width: 200vw;
-        position: relative;
-        right:  -40vw;
+        width: {{valeur}}vw;
+        /*right:  -40vw;*/
+        position: absolute;
          transition-property: all;
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
-      /*  background: red;*/
+       background: red;
     }
     .sb-slide
     {
-        height: 45vh;
-        width: 7.5%;
-        padding-left: 2.5%;
+        height: {{ valeur/72 }}vh;
+        width: {{valeur/444}}%;
+       /* padding-left: 2.5%;*/
         background-color:transparent;
         display: inline-block;
-       /* background: blue*/
+       background: blue
         /*margin-left: 2vh;*/
        
     
@@ -250,9 +253,11 @@ polyline {
       });
        
       */
-    
-      $('#sb-fleche-d').click(function(){
-        alert($('.sb-slide').width() );
+       taille=$('.sb-slide').width();
+      $('#sb-fleche-g').click(function(){
+        
+         $('#sb-slide-st').css('right',taille+'vh');
+         taille=taille+45;
         });
      
     });
@@ -274,7 +279,8 @@ polyline {
     
    <div id='sb-slide-st'>
     
-       <div class='sb-slide'>
+    {% for i in 1..30 %}
+       <div class='sb-slide'>       
        		<div class='sb-aide'>
                 <a href="#">
                     <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/shop/makeup/1.png)'></div>
@@ -288,9 +294,9 @@ polyline {
                 </a>
             </div>
        </div>
+    {% endfor %}
     
-    
-      <div class='sb-slide'>
+    <!--  <div class='sb-slide'>
            <div class='sb-aide'>
                <a href="#">
                     <div class='sb-groupe sb-g' id='g2' style='background-image:url(web/images/shop/makeup/2.png)'></div>
@@ -405,7 +411,7 @@ polyline {
                     </div>
                </a>   
            </div>     
-       </div>
+      </div>-->
   
   
     </div>
