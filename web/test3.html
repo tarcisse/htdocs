@@ -123,15 +123,77 @@
     	font-weight: normal;
     	text-transform: uppercase;
 	}
+        /*==================fleche============================*/
+
+
+
+
+
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+ /* background: red;*/
+ 
+}
+
+svg {
+  padding: 5px;
+   color: #000;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 12vh;
+  height: 16vh;
+  position: absolute;
+  z-index: 9999;
+  
+}
+
+.left {
+  left: 0;
+  
+}
+
+.right {
+  right:  0%;
+}
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+  
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}
 </style>
 <script>
     $(document).ready(function(event){
-        decalage=20;
+      /*  decalage=20;
         largeur_ecran= document.body.clientWidth;
         L2=largeur_ecran-100;
         zone=0;
       myTimer=0;
-      dec=20;
+      dec=10;
       
        $('#sb-slide-st').mousemove(function(e){
                
@@ -199,10 +261,23 @@
        myTimer=null;
       });
        
-      
+      */
     });
 </script>
 <div id='sb-slide'>
+    <button class="arrow left">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60%" height="80%" viewBox="0 0 50 80" xml:space="preserve">
+    <polyline fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+	45.63,75.8 0.375,38.087 45.63,0.375 "/>
+  </svg>  
+</button>
+
+<button class="arrow right">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60%" height="80%" viewBox="0 0 50 80" xml:space="preserve">
+    <polyline fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+	0.375,0.375 45.63,38.087 0.375,75.8 "/>
+  </svg>
+</button>
     
    <div id='sb-slide-st'>
     
@@ -343,3 +418,8 @@
     </div>
     
 </div>
+
+
+
+
+
