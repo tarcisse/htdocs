@@ -367,6 +367,11 @@
 	color: white;
 	opacity:.8;
 }
+
+#password{
+	padding-left: 15px;
+	color:white;
+}
 #fieldset {
 	border:none;
 }
@@ -389,6 +394,17 @@ input[type=text].css-textArea
 	position:relative;
 
 }
+input[type=text].css-textArea-pw
+{
+	width:265px;
+	padding: 10px 15px;
+	background: #e9eaea;
+	border: 1px solid #e9eaea;
+	color: blue;
+	position:relative;
+
+}
+
 input[type=button].css-button
 {
 	float:left;
