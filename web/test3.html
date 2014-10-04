@@ -46,7 +46,7 @@
         display: inline-block;
         margin: 0px !important;
         padding: 0px !important;
-       background: blue;
+       /*background: blue;*/
        overflow: hidden;
        float: left;
     
@@ -271,7 +271,7 @@ polyline {
       
       $('#sb-fleche-d').click(function(){
         
-$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, 200 );
+$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, 100 );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
@@ -280,7 +280,7 @@ $("#sb-slide-st").animate({ "left": "-="+taille+"px" }, 200 );
       
       $('#sb-fleche-g').click(function(){
         
-$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, 200 );
+$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, 100 );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
