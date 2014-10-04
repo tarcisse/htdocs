@@ -1,4 +1,4 @@
- {% set nombre=28 %}
+ {% set nombre=10 %}
  {% set valeur=nombre*20 %}
   {% set valeur2=valeur/100 %}
  {% set ecart=( (1.9*(valeur/nombre))/100) %}
@@ -92,9 +92,9 @@
     }
     .sb-c
     {
-        background: #FFF;
-         height: 15vh;
-         display: none;
+        background:transparent;
+         height: 10vh;
+display: none;
     }
     .sb-img
     {
@@ -193,11 +193,11 @@ polyline {
     height: 1px;
     background: #d2d2d3 ;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 320px;
 }
 #sb-rectangle
 {
-    width: {{width2}}vw;
+   /* width: {{width2}}vw;*/
     height: 3px;
     background:#6d7273;
     position: relative;
@@ -206,6 +206,7 @@ polyline {
     transition-property: all;
         transition-duration: 0.5s;
         transition-timing-function: ease-in-out;
+        cursor: pointer;
 }
 </style>
 <script>
@@ -286,57 +287,78 @@ polyline {
       */
       
       taille=$('.sb-slide').width();
-       taille2=$('#sb-rectangle').width();
-       couT={{nombre}}-1;
-       cou=0;
+       $('#console3').text(taille);
+
+      
       var p = $( "#curseur" );
       var position = p.position();
-      $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
+     // $( "#console1" ).text( "curs left: " + position.left + ", top: " + position.top );
+
+      
       var p = $( "#sb-rectangle" );
       var position = p.position();
-       $( "#console2").text( "left: " + position.left + ", top: " + position.top );
+      $( "#console2" ).text( "curs left: " + position.left + ", top: " + position.top );
+            depart=position.left;
+         
+            taille2=$('#curseur').width()/{{nombre}};
+            arriver=position.left+{{nombre}}*taille2-2*taille2;
+           $('#sb-rectangle').css('width',$('#curseur').width()/{{nombre}}+'px');
+           $('#console4').text(taille2);
        vitesse=10;
        taille3=2*taille;
-      $("#sb-slide-st").animate({ "left": "+="+taille3+"px" }, vitesse );
-      
-      
-      
+      $("#sb-slide-st").animate({ "left": "+="+taille3+"px" }, "slow" );
+     //  $('#curseur').css('width',taille2*{{nombre}}+'px');
+       
+       $( "#console1" ).text(arriver);
+       
+       
+       
+       
       $('#sb-fleche-d').click(function(){
-        
-        if (cou<{{nombre}}-1) {
+      
+      var p = $( "#sb-rectangle" );
+      var position = p.position();
+          $( "#console2" ).text( "left: " + position.left + ", top: " + position.top );
+           if (position.left <= arriver) {
         
   $("#sb-rectangle").animate({ "left": "+="+taille2+"px" }, vitesse );     
 $("#sb-slide-st").animate({ "left": "-="+taille+"px" }, vitesse ,function(){
-     cou=cou+1;
+    
 });
-
-         var p = $( "#sb-slide-st" );
-      var position = p.position();
-          $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
-        }
+      }   
         });
       
       
       
       
       $('#sb-fleche-g').click(function(){
-        if (cou !=0 ) {
+        // alert(depart);
+          var p = $( "#sb-rectangle" );
+      var position = p.position();
+          $( "#console2" ).text( "left: " + position.left + ", top: " + position.top );
+         // alert(depart+ " " + position.left)
+           if (depart < position.left) {
  $("#sb-rectangle").animate({ "left": "-="+taille2+"px" }, vitesse );          
 $("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse,function(){
-   cou=cou-1;  
+ 
 });
-         var p = $( "#sb-slide-st" );
-      var position = p.position();
-          $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
-         
-        }
+           }    
+       
         });
       
+      
+     var cellules = document.querySelectorAll(".sb-slide");
+for (var i = 0; i < cellules.length; i++) {
+ // Faire quelque chose avec cellules.item(i) ou cellules[i]
+ console.log('ok');
+}
      
     });
 </script>
-<div id='console1'></div>
-<div id='console2'></div>
+<div id='console1'>1</div>
+<div id='console2'>2</div>
+<div id='console3'>3</div>
+<div id='console4'>4</div>
 <div id='sb-slide'>
     <button class="arrow left " id='sb-fleche-g'>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60%" height="80%" viewBox="0 0 50 80" xml:space="preserve">
@@ -366,9 +388,9 @@ $("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse,function(){
                     <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/shop/makeup/{{z}}.png)'></div>
                     <div class='sb-groupe sb-c' id='c1'>
                           <span class='sb-text'>
-                              <h1>#TipsOfTheWeek</h1>
-                              <h1>#SoulNBeauty</h1>
-                              <p>QUAE VEHUNT BINA VEL</p>
+                             <h4>MAKE UP FOR EVER</h4>
+                            <h4>75 &#128;</h4>
+                              <!--<p>QUAE VEHUNT BINA VEL</p>-->
                           </span>
                      </div>
                 </a>
