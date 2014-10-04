@@ -1,7 +1,7 @@
  {% set nombre=20 %}
  {% set valeur=nombre*20 %}
   {% set valeur2=valeur/100 %}
- {% set ecart=( (10*(valeur/nombre))/100) %}
+ {% set ecart=( (1.9*(valeur/nombre))/100) %}
  {%set width=(valeur/nombre-ecart)/valeur2%}
  	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
@@ -270,7 +270,7 @@ polyline {
       
       $('#sb-fleche-g').click(function(){
         
-$("#sb-slide-st").animate({ "left": "-=246px" }, 200 );
+$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, 200 );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
@@ -279,7 +279,7 @@ $("#sb-slide-st").animate({ "left": "-=246px" }, 200 );
       
       $('#sb-fleche-d').click(function(){
         
-$("#sb-slide-st").animate({ "left": "+=246px" }, 200 );
+$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, 200 );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
