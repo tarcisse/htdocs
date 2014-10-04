@@ -3,6 +3,7 @@
   {% set valeur2=valeur/100 %}
  {% set ecart=( (1.9*(valeur/nombre))/100) %}
  {%set width=(valeur/nombre-ecart)/valeur2%}
+ {% set width2=80/nombre %}
  	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -32,7 +33,7 @@
        /* right:  -40vw;*/
         position:relative;
          transition-property: all;
-        transition-duration: 1s;
+        transition-duration: 0.5s;
         transition-timing-function: ease-in-out;
        background: red;
     }
@@ -185,6 +186,27 @@ svg {
 polyline {
   transition: all 250ms ease-in-out;
 }
+/*===========================cureseur=====================*/
+#curseur
+{
+    width: 80vw;
+    height: 1px;
+    background: #d2d2d3 ;
+    margin: auto;
+    margin-top: 300px;
+}
+#sb-rectangle
+{
+    width: {{width2}}vw;
+    height: 3px;
+    background:#6d7273;
+    position: relative;
+    margin-top: -1px;
+    position: absolute;
+    transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+}
 </style>
 <script>
     $(document).ready(function(event){
@@ -263,6 +285,7 @@ polyline {
         
       */
       taille=$('.sb-slide').width();
+       taille2=$('#sb-rectangle').width();
       var p = $( "#sb-slide-st" );
       var position = p.position();
       $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
@@ -273,6 +296,7 @@ polyline {
       $('#sb-fleche-d').click(function(){
         
 $("#sb-slide-st").animate({ "left": "-="+taille+"px" }, vitesse );
+$("#sb-rectangle").animate({ "left": "+="+taille2+"px" }, vitesse );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
@@ -282,6 +306,7 @@ $("#sb-slide-st").animate({ "left": "-="+taille+"px" }, vitesse );
       $('#sb-fleche-g').click(function(){
         
 $("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse);
+$("#sb-rectangle").animate({ "left": "-="+taille2+"px" }, vitesse );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
@@ -330,126 +355,11 @@ $("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse);
             </div>
        </div>
     {% endfor %}
-    
-    <!--  <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g2' style='background-image:url(web/images/shop/makeup/2.png)'></div>
-                    <div class='sb-groupe sb-c' id='c2'>
-                          <span class='sb-text'>
-                              <h8>The Blog</h8>
-                              <p>PERVENIRE ANTE CERTAM</p>
-                          </span>
-                    </div>
-               </a>
-           </div>    
-       </div>
-     
-       <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                   <div class='sb-groupe sb-g' id='g3' style='background-image:url(web/images/shop/makeup/3.png)'></div>
-                   <div class='sb-groupe sb-c' id='c3'>
-                        <span class='sb-text'>
-                            <h1>#InMakeUpWeTrust</h1>
-                            <h1>#SoulNBeauty</h1>
-                            <p>FUERIT TOTO</p>
-                        </span>
-                   </div>
-               </a>
-           </div>    
-       </div>
-      
-       <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/shop/makeup/4.png)'></div>
-                    <div class='sb-groupe sb-c' id='c4'>
-                        <span class='sb-text'>
-                            <h8>#Workshop</h8>
-                            <p>CERTOS NEC CRISPARE PERMISSI TELA</p>
-                        </span>
-                    </div>
-               </a>
-           </div>
-       </div>
-       
-       <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/shop/makeup/5.png)'></div>
-                    <div class='sb-groupe sb-c' id='c4'>
-                        <span class='sb-text'>
-                            <h8>The Blog</h8>
-                            <p>FUERIT TOTO</p>
-                        </span>
-                    </div>
-               </a>
-            </div>            
-        </div>
-       
-     <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/shop/makeup/6.png)'></div>
-                    <div class='sb-groupe sb-c' id='c4'>
-                        <span class='sb-text'>
-                            <h1>#TipsOfTheWeek</h1>
-                            <h1>#SoulNBeauty</h1>
-                            <p>PERVENIRE ANTE CERTAM</p>
-                        </span>
-                    </div>
-               </a>   
-           </div>     
-       </div>
-       
-       <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/shop/makeup/7.png)'></div>
-                    <div class='sb-groupe sb-c' id='c4'>
-                        <span class='sb-text'>
-                            <h1>#InMakeUpWeTrust</h1>
-                            <h1>#SoulNBeauty</h1>
-                            <p>QUAE VEHUNT BINA VEL</p>
-                        </span>
-                    </div>
-                </a>
-           </div>    
-       </div>
-    
-      <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/shop/makeup/8.png)'></div>
-                    <div class='sb-groupe sb-c' id='c4'>
-                        <span class='sb-text'>
-                            <h1>#TipsOfTheWeek</h1>
-                            <h1>#SoulNBeauty</h1>
-                            <p>PERVENIRE ANTE CERTAM</p>
-                        </span>
-                    </div>
-               </a>   
-           </div>     
-       </div>
-      
-      <div class='sb-slide'>
-           <div class='sb-aide'>
-               <a href="#">
-                    <div class='sb-groupe sb-g' id='g4' style='background-image:url(web/images/shop/makeup/9.png)'></div>
-                    <div class='sb-groupe sb-c' id='c4'>
-                        <span class='sb-text'>
-                            <h1>#TipsOfTheWeek</h1>
-                            <h1>#SoulNBeauty</h1>
-                            <p>PERVENIRE ANTE CERTAM</p>
-                        </span>
-                    </div>
-               </a>   
-           </div>     
-      </div>-->
-  
   
     </div>
+   <div id='curseur'>
+    <div id='sb-rectangle'></div>
+   </div>
     
 </div>
 
