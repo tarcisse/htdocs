@@ -24,7 +24,7 @@
         width: 100%;
         height: 45vh;
        padding:2vh 0 2vh 0;
-        margin-top: 200px;
+        margin-top: 100px;
         overflow: hidden;
     }
     #sb-slide-st
@@ -49,21 +49,8 @@
         padding: 0px !important;
        /*background: blue;*/
        float: left;
-    -webkit-transition: all .3s ease-out; 
-   -moz-transition: all .3s ease-out; 
-   -o-transition: all .3s ease-out; 
-   transition: all .3s ease-out;
-       
+    }
     
-    }
-    .sb-slide:hover
-    {
-        -moz-transform: scale(1.3);
-   -webkit-transform: scale(1.3);
-   -o-transform: scale(1.3);
-   transform: scale(1.3);
-   -ms-transform: scale(1.3);
-    }
     .sb-aide
     {
         position: 
@@ -98,12 +85,24 @@
          background-size:50%;
           background-position: center;
          background-repeat: no-repeat;
+         -webkit-transition: all .3s ease-out; 
+   -moz-transition: all .3s ease-out; 
+   -o-transition: all .3s ease-out; 
+   transition: all .3s ease-out;
+    }
+    .sb-g:hover
+    {
+        -moz-transform: scale(1.3);
+   -webkit-transform: scale(1.3);
+   -o-transform: scale(1.3);
+   transform: scale(1.3);
+   -ms-transform: scale(1.3);
     }
     .sb-c
     {
         background:transparent;
          height: 10vh;
-display: none;
+      display: none;
     }
     .sb-img
     {
@@ -122,7 +121,7 @@ display: none;
 		padding-top: 5px;
        	position: absolute; 
 	   	text-align:center;
-                /*display: none;*/
+               
     }
 	.sb-text a
 	{
@@ -134,7 +133,8 @@ display: none;
 	}
 	.sb-text h7
     {
-		font-size:26px;
+		font-size:12px;
+                display:block;
 	}
 	.sb-text p
 	{
@@ -289,7 +289,19 @@ for (var i = 0; i < cellules.length; i++) {
  // Faire quelque chose avec cellules.item(i) ou cellules[i]
  console.log(cellules[i]);tab[i]=cellules.item(i) ;
 }
-  tab[0].hide();  */ 
+  tab[0].hide();  */
+    
+    $('.sb-g').hover(function(){
+        $('.sb-c').hide();
+        id=$(this).data('number');
+        $('#c'+id).show();
+    });
+    
+    $('.sb-slide').mouseleave(function(){
+        
+        $('.sb-c').hide();
+    });
+    
     });
 </script>
 <div id='console1'>1</div>
@@ -322,11 +334,11 @@ for (var i = 0; i < cellules.length; i++) {
        <div class='sb-slide'>       
        		<div class='sb-aide'>
                 <a href="#">
-                    <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/shop/makeup/{{z}}.png)'></div>
-                    <div class='sb-groupe sb-c' id='c1'>
+                    <div class='sb-groupe sb-g' id='g{{i}}' data-number='{{i}}' style='background-image:url(web/images/shop/makeup/{{z}}.png)'></div>
+                    <div class='sb-groupe sb-c' id='c{{i}}'>
                           <span class='sb-text'>
-                             <h4>MAKE UP FOR EVER</h4>
-                            <h4>75 &#128;</h4>
+                             <h7>MAKE UP FOR EVER</h7>
+                            <h7>75 &#128;</h7>
                               <!--<p>QUAE VEHUNT BINA VEL</p>-->
                           </span>
                      </div>
