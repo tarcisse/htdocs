@@ -1,7 +1,8 @@
- {% set nombre=45 %}
+ {% set nombre=20 %}
  {% set valeur=nombre*20 %}
   {% set valeur2=valeur/100 %}
  {% set ecart=( (10*(valeur/nombre))/100) %}
+ {%set width=(valeur/nombre-ecart)/valeur2%}
  	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -28,8 +29,8 @@
     #sb-slide-st
     {
         width: {{valeur}}vw;
-        /*right:  -40vw;*/
-        position: absolute;
+       /* right:  -40vw;*/
+        position:relative;
          transition-property: all;
         transition-duration: 1s;
         transition-timing-function: ease-in-out;
@@ -38,7 +39,8 @@
     .sb-slide
     {
        /* height: {{ valeur/72 }}vh;     width: {{(valeur/nombre-ecart)/valeur2}}%;*/
-        width: {{(valeur/nombre-ecart)/valeur2}}%;
+        width: {{width}}%;
+        
          /*height: {{valeur/5-ecart}}%;*/
         background-color:transparent;
         display: inline-block;
@@ -257,17 +259,37 @@ polyline {
          window.clearInterval(myTimer);
        myTimer=null;
       });
-       
+        
       */
-       taille=$('.sb-slide').width();
+      taille=$('.sb-slide').width();
+      var p = $( "#sb-slide-st" );
+      var position = p.position();
+      $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
+       $( "#console2").text( "element: " + taille);
+      
+      
       $('#sb-fleche-g').click(function(){
         
-         $('#sb-slide-st').css('right',taille+'vh');
-         taille=taille+45;
+$("#sb-slide-st").animate({ "left": "-=246px" }, 200 );
+         var p = $( "#sb-slide-st" );
+      var position = p.position();
+          $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
         });
+      
+      
+      $('#sb-fleche-d').click(function(){
+        
+$("#sb-slide-st").animate({ "left": "+=246px" }, 200 );
+         var p = $( "#sb-slide-st" );
+      var position = p.position();
+          $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
+        });
+      
      
     });
 </script>
+<div id='console1'></div>
+<div id='console2'></div>
 <div id='sb-slide'>
     <button class="arrow left " id='sb-fleche-g'>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60%" height="80%" viewBox="0 0 50 80" xml:space="preserve">
@@ -286,7 +308,7 @@ polyline {
    <div id='sb-slide-st'>
     {% set z=1 %}
     {% for i in 1..nombre %}
-    {% if z == 10 %}
+    {% if z == 9 %}
     {% set z=1 %}
     {% else %}
     {% set  z=z+1 %}
