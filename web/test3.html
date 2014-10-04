@@ -1,8 +1,7 @@
- {% set nombre=2 %}
+ {% set nombre=100 %}
  {% set valeur=nombre*20 %}
   {% set valeur2=valeur/100 %}
  {% set ecart=( (10*(valeur/nombre))/100) %}
- {{ecart}}
  	<link rel='stylesheet' href='web/css/bootstrap.css'>
     <link rel='stylesheet' href='web/css/index.css'>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -38,10 +37,9 @@
     }
     .sb-slide
     {
-       /* height: {{ valeur/72 }}vh;*/
+       /* height: {{ valeur/72 }}vh;     width: {{(valeur/nombre-ecart)/valeur2}}%;*/
         width: {{(valeur/nombre-ecart)/valeur2}}%;
          /*height: {{valeur/5-ecart}}%;*/
-       /* padding-left: 2.5%;*/
         background-color:transparent;
         display: inline-block;
         margin: 0%;
@@ -85,6 +83,7 @@
          height: 30vh;
          overflow: hidden;
          background-size:50%;
+          background-position: center;
          background-repeat: no-repeat;
     }
     .sb-c
@@ -285,12 +284,17 @@ polyline {
 </button>
     
    <div id='sb-slide-st'>
-    
+    {% set z=1 %}
     {% for i in 1..nombre %}
+    {% if z == 10 %}
+    {% set z=1 %}
+    {% else %}
+    {% set  z=z+1 %}
+    {% endif %}
        <div class='sb-slide'>       
        		<div class='sb-aide'>
                 <a href="#">
-                    <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/shop/makeup/1.png)'></div>
+                    <div class='sb-groupe sb-g' id='g1' style='background-image:url(web/images/shop/makeup/{{z}}.png)'></div>
                     <div class='sb-groupe sb-c' id='c1'>
                           <span class='sb-text'>
                               <h1>#TipsOfTheWeek</h1>
