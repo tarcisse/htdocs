@@ -1,4 +1,4 @@
- {% set nombre=2 %}
+ {% set nombre=28 %}
  {% set valeur=nombre*20 %}
   {% set valeur2=valeur/100 %}
  {% set ecart=( (1.9*(valeur/nombre))/100) %}
@@ -30,7 +30,7 @@
     #sb-slide-st
     {
         width: {{valeur}}vw;
-       /* right:  -40vw;*/
+       /*right:  -40vw;*/
         position:relative;
          transition-property: all;
         transition-duration: 0.5s;
@@ -190,7 +190,7 @@ polyline {
 #curseur
 {
     width: 80vw;
-    height: 3px;
+    height: 1px;
     background: #d2d2d3 ;
     margin: auto;
     margin-top: 300px;
@@ -198,10 +198,10 @@ polyline {
 #sb-rectangle
 {
     width: {{width2}}vw;
-    height: 9px;
+    height: 3px;
     background:#6d7273;
     position: relative;
-    margin-top: -3px;
+    margin-top: -1px;
    float: left;
     transition-property: all;
         transition-duration: 0.5s;
@@ -284,32 +284,52 @@ polyline {
       });
         
       */
+      
       taille=$('.sb-slide').width();
        taille2=$('#sb-rectangle').width();
-      var p = $( "#sb-slide-st" );
+       couT={{nombre}}-1;
+       cou=0;
+      var p = $( "#curseur" );
       var position = p.position();
       $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
-       $( "#console2").text( "element: " + taille);
+      var p = $( "#sb-rectangle" );
+      var position = p.position();
+       $( "#console2").text( "left: " + position.left + ", top: " + position.top );
        vitesse=10;
+       taille3=2*taille;
+      $("#sb-slide-st").animate({ "left": "+="+taille3+"px" }, vitesse );
+      
       
       
       $('#sb-fleche-d').click(function(){
         
-$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, vitesse );
-$("#sb-rectangle").animate({ "left": "+="+taille2+"px" }, vitesse );
+        if (cou<{{nombre}}-1) {
+        
+  $("#sb-rectangle").animate({ "left": "+="+taille2+"px" }, vitesse );     
+$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, vitesse ,function(){
+     cou=cou+1;
+});
+
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
+        }
         });
       
       
+      
+      
       $('#sb-fleche-g').click(function(){
-        
-$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse);
-$("#sb-rectangle").animate({ "left": "-="+taille2+"px" }, vitesse );
+        if (cou !=0 ) {
+ $("#sb-rectangle").animate({ "left": "-="+taille2+"px" }, vitesse );          
+$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse,function(){
+   cou=cou-1;  
+});
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
+         
+        }
         });
       
      
