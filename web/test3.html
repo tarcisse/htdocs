@@ -267,11 +267,12 @@ polyline {
       var position = p.position();
       $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
        $( "#console2").text( "element: " + taille);
+       vitesse=10;
       
       
       $('#sb-fleche-d').click(function(){
         
-$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, 100 );
+$("#sb-slide-st").animate({ "left": "-="+taille+"px" }, vitesse );
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
@@ -280,7 +281,7 @@ $("#sb-slide-st").animate({ "left": "-="+taille+"px" }, 100 );
       
       $('#sb-fleche-g').click(function(){
         
-$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, 100 );
+$("#sb-slide-st").animate({ "left": "+="+taille+"px" }, vitesse);
          var p = $( "#sb-slide-st" );
       var position = p.position();
           $( "#console1" ).text( "left: " + position.left + ", top: " + position.top );
