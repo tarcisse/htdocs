@@ -24,8 +24,8 @@
         width: 100%;
         height: 45vh;
        padding:2vh 0 2vh 0;
-        margin-top: 100px;
         overflow: hidden;
+        background: yellow;
     }
     #sb-slide-st
     {
@@ -53,7 +53,6 @@
     
     .sb-aide
     {
-        position: 
        
     }
 	.sb-aide a
@@ -217,6 +216,13 @@ polyline {
         transition-timing-function: ease-in-out;
         cursor: pointer;
 }
+/*==========================ddetail produit===========================*/
+#sb-detail
+{
+    height: 50vh;
+    width: 100%;
+    background: red;
+}
 </style>
 <script>
     $(document).ready(function(event){
@@ -302,12 +308,19 @@ for (var i = 0; i < cellules.length; i++) {
         $('.sb-c').hide();
     });
     
+    $('.sb-slide').click(function(){
+       $('.sb-aide').show();
+       id=$(this).data('number');
+       $('#a'+id).fadeOut();
+       $('#sb-slide').css('transform',' scale(0.5)');
+    });
+    
     });
 </script>
-<div id='console1'>1</div>
-<div id='console2'>2</div>
-<div id='console3'>3</div>
-<div id='console4'>4</div>
+
+<div id='sb-detail'>
+    
+</div>
 <div id='sb-slide'>
     <button class="arrow left " id='sb-fleche-g'>
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60%" height="80%" viewBox="0 0 50 80" xml:space="preserve">
@@ -331,8 +344,8 @@ for (var i = 0; i < cellules.length; i++) {
     {% else %}
     {% set  z=z+1 %}
     {% endif %}
-       <div class='sb-slide'>       
-       		<div class='sb-aide'>
+       <div class='sb-slide' data-number='{{i}}' >       
+       		<div class='sb-aide' id='a{{i}}'>
                 <a href="#">
                     <div class='sb-groupe sb-g' id='g{{i}}' data-number='{{i}}' style='background-image:url(web/images/shop/makeup/{{z}}.png)'></div>
                     <div class='sb-groupe sb-c' id='c{{i}}'>
