@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coming Soon</title>
+<link href="tools/style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="tools/jquery.min.js"></script> 
+<link rel="shortcut icon" href="images/favicon.png">
+
+</head>
+<body>
+<div id="wrapper">
+	<div class="main">
+		<div class="header">
+			<div class="logo">
+				<h1>Soul&amp;<strong>Beauty</strong></h1>
+				<h2><strong></strong></h2>
+			</div>
+			<div class="form">
+				<p>Soyez le premier à découvrir notre site</p><input type="text" id="test" value="" placeholder='Entrez votre adresse Email'/>       
+			</div>
+            
+            <center>
+                <div id='feed'><div>
+                </center>
+			
+		   
+				
+			
+		</div>
+        
+         <div class="social">
+  <a href="https://www.facebook.com/soulandbeautybelgium" class="link facebook" target='_blank'><span class="fa fa-facebook-square"></span></a>
+  
+</div>
+        
+        <!--<ul class="boxes">
+			
+			<li>
+				<h3>Ecrivez nous</h3>
+				<a href="#">contact@soulandbeauty.be</a>
+				
+			</li>
+			
+		</ul>-->
+		
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+/*var placeholder = $("#test").val();
+
+$("#test").keydown(function() {
+    if (this.value == placeholder) {
+        this.value = '';
+    }
+}).blur(function() {
+    if (this.value == '') {
+        this.value = placeholder;
+    }
+});*/
+$(document).ready(function(){
+$('#test').keyup(function(e){
+    if( e.keyCode==13 )
+    {
+       
+       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($('#test').val()))  
+  {  
+    $('#feed').html("<img src='../progress/images/loading.gif'>");
+    $.post('mail.php',{adresse:$('#test').val()},function(data){
+        $('#feed').html(data);
+    });
+    
+  }
+  else
+  {
+    $('#feed').html("Votre adresse Email est invalide");
+    
+  }
+    }
+});
+});
+ 
+ a=2;
+setInterval(function(){
+	 $('body').css({'background-image':'url(images/slider'+a+'.jpg)'});
+	 a++;
+	 if (a>3) {
+	a=1;	//code
+	 }
+	},10000);
+</script>
+</body>
+</html>

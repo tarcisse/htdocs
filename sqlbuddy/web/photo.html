@@ -1,0 +1,96 @@
+  
+       {# <!--PORTFOLIO SECTION START--> 
+        <section id="BOOK" class="clearfix content">
+        	<div class="container">
+            	<div class="title-content clearfix">
+                	<div class="title-inner">
+                    	<h3>PHOTO</h3>
+                        <p>SOUL &amp; BEAUTY</p>
+                    </div><!--/.title-inner-->
+                </div><!--/.title-content-->#}
+                
+               
+                
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               <div class="container" >
+               
+               
+				<ul class="lb-album" style=' list-style-type: none;'>
+                             
+                                
+                                {% for i in 1..3%}
+                                {% set next=i-1 %}
+				{% set prev=i+1 %}
+				
+				{% if(i==1) %}
+				 {% set next=3%}
+				{%endif%}
+				{% if(i==3) %}
+				 {% set prev=1%}
+				{%endif%}
+				
+				
+                                      <li style=' list-style-type: none;'>
+						<a href="#image-{{i}}">
+							<center><img src="book/photos/miniature/{{i}}.jpg" alt="image0{{i}}" class='it'></center>
+							<!--<span>SoulnBeauty</span>-->
+						</a>
+						<div class="lb-overlay" id="image-{{i}}" data-num='{{i}}'>
+							<!--<nav class='fleche fnext' id='fnext-{{i}}' data-num='{{next}}' ><a href='#image-{{next}}'><img src='images/next.png'></a></nav>
+							<nav class='fleche fprev' id='fprev-{{i}}' data-num='{{prev}}' ><a href='#image-{{prev}}'><img src='images/prev.png'></a></nav>-->
+							<img src="book/photos/full/{{i}}.jpg" alt="image0{{i}}"  style='height:50vh;width:auto'/>
+							<center style='background:#fff !important'><div>
+								<h3>nom <span>/date/</span></h3>
+								<p><span>###" petit texte</span></p>
+							</div>
+								
+                                                        </center>
+							<a href="#page" class="lb-close">x</a>
+						</div>
+					</li>
+                                        
+                                {% endfor %}
+                                        
+                                        
+                                </ul>
+               
+               </div>
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+                 
+                    
+                    
+           {#     </div><!--/.row-->    
+            </div><!--/.container-->
+        </section><!--/portfolio-->
+        <!--PORTFOLIO SECTION END-->#}
+  	

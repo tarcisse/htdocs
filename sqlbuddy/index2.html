@@ -1,0 +1,804 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Alamak - Responsive One Page Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    
+        <!-- Le styles -->
+        <style>
+		/* Preloader */
+		#preloader {
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background-color:#fff; /* change if the mask should have another color then white */
+			z-index:999999; /* makes sure it stays on top */
+		}
+		
+		#status {
+			width:200px;
+			height:200px;
+			position:absolute;
+			left:50%; /* centers the loading animation horizontally one the screen */
+			top:50%; /* centers the loading animation vertically one the screen */
+			background-image:url(images/preloader.gif); /* path to your loading animation */
+			background-repeat:no-repeat;
+			background-position:center;
+			margin:-100px 0 0 -100px; /* is width and height divided by two */
+		}
+		#status p{text-align:center;}
+		</style>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/prettyPhoto.css" rel="stylesheet">
+        <link href="css/supersized.css" rel="stylesheet">
+        <link href="css/supersized.shutter.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.html">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.html">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.html">
+        <link rel="apple-touch-icon-precomposed" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.html">
+        <link rel="shortcut icon" href="images/favicon.png"><!--favicon image-->
+    </head>
+
+	<body>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div id="status"><p>CHARGEMENT...</p></div>
+        </div>
+        
+        <!--HOME SECTION START-->
+    	<section id="home" class="clearfix">
+        	<div class="header clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-5 col-sm-4">
+                            <a class="logo" href="index.html"><img alt="logo" src="images/logo.png"></a>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-8">
+                        	 <!--MENU BUTTON(ON TABLET/MOBILE) START-->
+                        	<div class="menu-btn" data-target=".nav-collapse" data-toggle="collapse">
+                                <span class="fa fa-th"></span>
+                            </div>
+                            <!--MENU BUTTON END-->
+                            
+                            <!--NAVIGATION START-->
+                            <ul class="navigation nav-collapse">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul><!--/.navigation-->
+                             <!--NAVIGATION END-->
+                             
+                        </div><!--/.col-md-4-->
+                    </div><!--/.row-->
+                </div><!--/.container-->   
+            </div><!--/.header-->
+            <div class="clearfix"></div>
+            <div class="container">
+            	<div class="row">
+                	
+                    <div class="col-md-6"> 
+                    	<div class="slider-content clearfix">
+                            <!--SLIDER CAPTION START-->  
+                            <div class="title-caption">
+                                <h4>We are creative agency</h4>
+                            </div><!--/.title-caption-->
+                            <div id="slidecaption"></div> 
+                            <!--SLIDER CAPTION END--> 
+                            <div class="centering">
+                                <div id="progress-back">
+                                    <div id="progress-bar"></div><!--SLIDER PROGRESS BAR-->
+                                </div>
+                            </div><!--/.centering-->
+                        </div><!--/.slider-content-->
+                    </div><!--/.col-sm-6-->  
+                	
+                </div><!--/row-->
+            </div><!--/container-->
+        </section><!--/home-->
+        <!--HOME SECTION END-->
+         
+        <!--PORTFOLIO SECTION START--> 
+        <section id="portfolio" class="clearfix content">
+        	<div class="container">
+            	<div class="title-content clearfix">
+                	<div class="title-inner">
+                    	<h3>Our Recent Works</h3>
+                        <p>What we've done so far</p>
+                    </div><!--/.title-inner-->
+                </div><!--/.title-content-->
+                
+                <!--AJAX PORTFOLIO WILL SHOWN HERE-->
+                <div id="workslist">
+                     <div class="clearfix worksajax">
+                     </div><!--/.worksajax -->
+                </div><!--/workslist-->
+                <!--AJAX PORTFOLIO END-->
+                
+                <div class="row">
+                	<!--PORTFOLIO ITEM START-->
+                    <div class="col-md-6 port-item">
+                        <div class="port-inner white-bg clearfix">
+                            <a class="box-40 hovers bwWrapper" href="images/work/1.jpg" data-rel="prettyPhoto">
+                            	<img alt="Portfolio" src="images/work/1.jpg">
+                            </a>
+                            <a class="more" href="#" data-link="work1.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+                            <div class="padding box-60">
+                                <h3>The Quiet Things</h3>
+                                <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+                                <i class="cat-icon fa fa-html5" data-link="work1.html"></i>
+                            </div><!--/.padding-->
+                        </div><!--/.port-inner-->
+                    </div><!--/.col-md-6-->
+                    
+                     <div class="col-md-6 port-item">
+                        <div class="port-inner white-bg clearfix">
+                            <a class="box-40 hovers bwWrapper" href="images/work/2.jpg" data-rel="prettyPhoto">
+                            	<img alt="Portfolio" src="images/work/2.jpg">
+                            </a>
+                            <a class="more" href="#" data-link="work2.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+                            <div class="padding box-60">
+                                <h3>No One Knows</h3>
+                                <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+                                <i class="cat-icon fa fa-android" data-link="work2.html"></i>
+                            </div><!--/.padding-->
+                        </div><!--/.port-inner-->
+                    </div><!--/.col-md-6-->
+                    
+                     <div class="col-md-6 port-item">
+                        <div class="port-inner white-bg clearfix">
+                            <a class="box-40 hovers bwWrapper" href="images/work/3.jpg" data-rel="prettyPhoto">
+                            	<img alt="Portfolio" src="images/work/3.jpg">
+                            </a>
+                            <a class="more" href="#" data-link="work3.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+                            <div class="padding box-60">
+                                <h3>Ghost Of You</h3>
+                                <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+                                <i class="cat-icon fa fa-css3" data-link="work3.html"></i>
+                            </div><!--/.padding-->
+                        </div><!--/.port-inner-->
+                    </div><!--/.col-md-6-->
+                    
+                    <div class="col-md-6 port-item">
+                        <div class="port-inner white-bg clearfix">
+                            <a class="box-40 hovers bwWrapper" href="images/work/4.jpg" data-rel="prettyPhoto">
+                            	<img alt="Portfolio" src="images/work/4.jpg">
+                            </a>
+                            <a class="more" href="#" data-link="work4.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+                            <div class="padding box-60">
+                                <h3>This Is The End</h3>
+                                <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+                                <i class="cat-icon fa fa-pagelines" data-link="work4.html"></i>
+                            </div><!--/.padding-->
+                        </div><!--/.port-inner-->
+                    </div><!--/.col-md-6-->
+                    
+                     <div class="col-md-6 port-item">
+                        <div class="port-inner white-bg clearfix">
+                            <a class="box-40 hovers bwWrapper" href="images/work/5.jpg" data-rel="prettyPhoto">
+                            	<img alt="Portfolio" src="images/work/5.jpg">
+                            </a>
+                            <a class="more" href="#" data-link="work5.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+                            <div class="padding box-60">
+                                <h3>Can't Be Saved</h3>
+                                <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+                                <i class="cat-icon fa fa-html5" data-link="work5.html"></i>
+                            </div><!--/.padding-->
+                        </div><!--/.port-inner-->
+                    </div><!--/.col-md-6-->
+                    
+                     <div class="col-md-6 port-item">
+                        <div class="port-inner white-bg clearfix">
+                            <a class="box-40 hovers bwWrapper" href="images/work/6.jpg" data-rel="prettyPhoto">
+                            	<img alt="Portfolio" src="images/work/6.jpg">
+                            </a>
+                            <a class="more" href="#" data-link="work4.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+                            <div class="padding box-60">
+                                <h3>Set Phasers Stun</h3>
+                                <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+                                <i class="cat-icon fa fa-youtube" data-link="work4.html"></i>
+                            </div><!--/.padding-->
+                        </div><!--/.port-inner-->
+                    </div><!--/.col-md-6-->
+                    <!--PORTFOLIO ITEM END-->
+                    
+                </div><!--/.row-->    
+            </div><!--/.container-->
+        </section><!--/portfolio-->
+  		<!--PORTFOLIO SECTION END-->
+         
+        <!--TEXT WITH DARK BG START--> 
+		<section class="bg-dark bg1">
+        	<div class="dark-mask"></div>
+        	<div class="container align-center">
+                <h2 class="slogan">Success is a journey, not a destination. The doing is often more important than the outcome.</h2>
+                <div class="slogan-divider"><span class="line-left"></span><span class="fa fa-quote-left"></span><span class="line-right"></span></div>
+                <h3 class="author-slogan">Arthur Ashe</h3>
+            </div><!--/.container-->
+        </section><!--/.bg-dark-->
+        <!--TEXT WITH DARK BG END-->
+        
+        <!--ABOUT SECTION START-->
+        <section id="about" class="clearfix content">
+        	<div class="container">
+            	<div class="title-content clearfix">
+                	<div class="title-inner">
+                    	<h3>Story About Us</h3>
+                        <p>The Things you Should Know</p>
+                    </div><!--/.title-inner-->
+                </div><!--/.title-content-->
+                
+                <!--ABOUT TAB START-->
+            	<div class="tab-content white-bg">
+                
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane active fade in active" id="history">
+                  	 <img src="images/about/1.jpg" alt="about">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">0.1</p><p class="gray-text">History</p>
+                                     <h2 class="about-title">How we Founded</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. 
+                                     Now he is given </p>
+                                     <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT END-->
+                  
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane fade" id="profile">
+                  	 <img src="images/about/2.jpg" alt="about">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">0.2</p><p class="gray-text">Profile</p>
+                                     <h2 class="about-title">Who are alamak?</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. 
+                                     Now he is given </p>
+                                     <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT END-->
+                  
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane fade" id="achievement">
+                  	 <img src="images/about/3.jpg" alt="about">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">0.3</p><p class="gray-text">Achievement</p>
+                                     <h2 class="about-title">Our Awards</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                 	<p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                     
+                                     <!--ACHIEVEMENT LIST START-->
+                                     <ul class="achievement-list">
+                                     	<li><p class="strong"><span>Jun 2013</span> - Featured in kompaz magazine</p>
+                                        	<p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a 
+                                            difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
+                                        </li>
+                                        <li><p class="strong"><span>Jul 2013</span> - Best agency of the year</p>
+                                        	<p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a 
+                                            difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
+                                        </li>
+                                        <li><p class="strong"><span>Aug 2013</span> - Featured on intisary</p>
+                                        	<p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a 
+                                            difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
+                                        </li>
+                                        <li><p class="strong"><span>Oct 2013</span> - Best Actor of the month</p>
+                                        	<p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a 
+                                            difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
+                                        </li>
+                                     </ul>
+                                     <!--ACHIEVEMENT LIST END-->
+                                     
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                 <!--TAB CONTENT END-->
+                  
+                </div><!--/.tab-content-->
+                <!--ABOUT TAB END-->
+                
+                <!--ABOUT TAB NAVIGATION START-->
+                <div class="white-bg clearfix">
+                    <ul class="nav margin align-right nav-tabs">
+                      <li class="active"><a href="#history" data-toggle="tab">History</a></li>
+                      <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                      <li><a href="#achievement" data-toggle="tab">Achievement</a></li>
+                    </ul>
+                </div>
+                <!--ABOUT TAB NAVIGATION END-->
+                
+                <div class="spacing40 clearfix"></div>
+                
+                <!--TEAM LIST START-->
+                <div class="row" id="team">
+                	<div class="col-md-4">
+                    	<a href="#" class="bwWrapper team-ajax" data-link="team1.html">
+                    		<img src="images/team/1.jpg" alt="team">
+                        </a>
+                        <div class="clearfix team-inner white-bg padding">
+                        	<h3 class="team-name">Titi Haryati</h3>
+                            <p class="team-position">Web Designer</p>
+                            <i class="fa fa-css3 team-icon" data-link="team1.html"></i>
+                        </div><!--/.white-bg-->
+                    </div><!--/.col-md4-->
+                    
+                    <div class="col-md-4">
+                    	<a href="#" class="bwWrapper team-ajax" data-link="team2.html">
+                    		<img src="images/team/2.jpg" alt="team">
+                        </a>
+                        <div class="clearfix team-inner  white-bg padding">
+                        	<h3 class="team-name">Cucu Maricu</h3>
+                            <p class="team-position">Web Developer</p>
+                            <i class="fa fa-html5 team-icon" data-link="team2.html"></i>
+                        </div><!--/.white-bg-->
+                    </div><!--/.col-md4-->
+                    
+                    <div class="col-md-4">
+                    	<a href="#" class="bwWrapper team-ajax" data-link="team3.html">
+                    		<img src="images/team/3.jpg" alt="team">
+                        </a>
+                        <div class="clearfix team-inner  white-bg padding">
+                        	<h3 class="team-name">Marimas</h3>
+                            <p class="team-position">Photographer</p>
+                            <i class="fa fa-camera team-icon" data-link="team3.html"></i>
+                        </div><!--/.white-bg-->
+                    </div><!--/.col-md4-->
+                    
+                </div><!--/.row-->
+                <!--TEAM LIST END-->
+                
+                <div class="spacing40 clearfix"></div>
+                
+                <!--AJAX TEAM WILL SHOW HERE-->
+                <div id="teamlist">
+                	<div class="clearfix teamajax"> </div>
+                </div>
+                <!--AJAX TEAM END-->
+
+            </div><!--/.container-->
+        </section><!--/about-->
+		<!--ABOUT SECTION END-->
+        
+        <!--TESTIMONIAL WITH DARK BG START-->
+		<section class="bg-dark bg2">
+        	<div class="dark-mask"></div>
+        	<div class="container align-center">
+            <ul class="testimonial">
+            
+            	<li>
+                    <h2 class="slogan">The shuttle is destroyed, leaving Stone completely alone!</h2>
+                    <div class="slogan-divider">
+                    	<span class="line-left"></span>
+                        <img class="testi-img" src="images/testimonial/1.jpg" alt="testi">
+                        <span class="line-right"></span>
+                    </div>
+                    <h3 class="author-slogan">Chelsea Olivia</h3>
+                    <p>Dirut PT Telcom</p>
+                </li>
+                
+                <li>
+                    <h2 class="slogan">When she uncovers Victor’s dark secrets!</h2>
+                    <div class="slogan-divider">
+                        <span class="line-left"></span>
+                        <img class="testi-img" src="images/testimonial/2.jpg" alt="testi">
+                        <span class="line-right"></span>
+                    </div>
+                    <h3 class="author-slogan">Asmirandah</h3>
+                    <p>Skynet Owner</p>
+                </li>
+                
+                <li>
+                    <h2 class="slogan">Fragile woman-child, Beatrice seethes with a rage of her own!</h2>
+                    <div class="slogan-divider">
+                        <span class="line-left"></span><img class="testi-img" src="images/testimonial/3.jpg" alt="testi">
+                        <span class="line-right"></span>
+                    </div>
+                    <h3 class="author-slogan">Chikita Meidi</h3>
+                    <p>The Kutumbabas</p>
+                </li>
+                
+            </ul><!--/.testimonial-->
+            </div><!--/.container-->
+        </section><!--/.bg-dark-->
+        <!--TESTIMONIAL WITH DARK BG END-->
+        
+        <!--SERVICES SECTION START-->
+        <section id="services" class="clearfix content">
+        	<div class="container">
+            	<div class="title-content clearfix">
+                	<div class="title-inner">
+                    	<h3>Our Services</h3>
+                        <p>What we really can provide</p>
+                    </div><!--/.title-inner-->
+                </div><!--/.title-content-->
+                
+                <!--SERVICES TAB START-->
+                <div class="tab-content white-bg">
+                  
+                  <!--TAB CONTENT START-->	
+                  <div class="tab-pane active fade in active" id="web-design">
+                  	 <img src="images/services/1.jpg" alt="services">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">Technic:</p><p class="gray-text">Photoshop</p>
+                                     <h2 class="about-title">Web Design</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. 
+                                     Now he is given </p>
+                                     <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT END-->
+                  
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane fade" id="web-develop">
+                  	 <img src="images/services/2.jpg" alt="services">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">Technic:</p><p class="gray-text">Html5 & Jquery</p>
+                                     <h2 class="about-title">Web Develop</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. 
+                                     Now he is given </p>
+                                     <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT END-->
+                  
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane fade" id="brand-identity">
+                  	 <img src="images/services/3.jpg" alt="services">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">Technic:</p><p class="gray-text">SEO Specialist</p>
+                                     <h2 class="about-title">Brand & Identity</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. 
+                                     Now he is given </p>
+                                     <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT START-->
+                  
+                </div><!--/.tab-content-->
+                <!--SERVICES TAB END-->
+                
+                <!--SERVICES NAVIGATION TAB START-->
+                <div class="white-bg clearfix">
+                    <ul class="nav margin align-right nav-tabs">
+                      <li class="active"><a href="#web-design" data-toggle="tab">Web Design</a></li>
+                      <li><a href="#web-develop" data-toggle="tab">Web Develop</a></li>
+                      <li><a href="#brand-identity" data-toggle="tab">Brand & Identity</a></li>
+                    </ul>
+                </div>
+                <!--SERVICES NAVIGATION TAB END-->
+                
+                <div class="spacing40 clearfix"></div>
+                
+                <!--PRICING TABLE START-->
+                <div class="row">
+                	<div class="col-sm-6 col-md-3">
+                    	<div class="padding align-center white-bg pricing-table">
+                        	<h3>Bugsy Package</h3>
+                            <i class="price-icon fa fa-bug"></i>
+                            <p class="price">$10/month</p>
+                            <p>Continues to offer</p>
+                            <p>Deal in his past </p>
+                            <p>Kept secret for decades</p>
+                            <p>Decides on a desperate</p>
+                            <div class="spacing40"></div>
+                            <a class="view-more" href="#">Order Now!</a>
+                        </div><!--/.pricing-table-->
+                    </div><!--/col-sm-3-->
+                    
+                    <div class="col-sm-6 col-md-3">
+                    	<div class="padding align-center white-bg pricing-table">
+                        	<h3>Wheel Package</h3>
+                            <i class="price-icon fa fa-wheelchair"></i>
+                            <p class="price">$20/month</p>
+                            <p>Continues to offer</p>
+                            <p>Deal in his past </p>
+                            <p>Kept secret for decades</p>
+                            <p>Decides on a desperate</p>
+                            <div class="spacing40"></div>
+                            <a class="view-more" href="#">Order Now!</a>
+                        </div><!--/.pricing-table-->
+                    </div><!--/col-sm-3-->
+                    
+                    <div class="col-sm-6 col-md-3">
+                    	<div class="padding align-center white-bg pricing-table special">
+                        	<h3>Bolt Package</h3>
+                            <i class="price-icon fa fa-bolt"></i>
+                            <p class="price">$30/month</p>
+                            <p>Continues to offer</p>
+                            <p>Deal in his past </p>
+                            <p>Kept secret for decades</p>
+                            <p>Decides on a desperate</p>
+                            <div class="spacing40"></div>
+                            <a class="view-more" href="#">Hot Deal!</a>
+                        </div><!--/.pricing-table-->
+                    </div><!--/col-sm-3-->
+                    
+                    <div class="col-sm-6 col-md-3">
+                    	<div class="padding align-center white-bg pricing-table">
+                        	<h3>Flask Package</h3>
+                            <i class="price-icon fa fa-flask"></i>
+                            <p class="price">$40/month</p>
+                            <p>Continues to offer</p>
+                            <p>Deal in his past </p>
+                            <p>Kept secret for decades</p>
+                            <p>Decides on a desperate</p>
+                            <div class="spacing40"></div>
+                            <a class="view-more" href="#">Order Now!</a>
+                        </div><!--/.pricing-table-->
+                    </div><!--/col-sm-3-->
+                </div><!--/.row-->
+                <!--PRICING TABLE END-->
+                
+            </div><!--/.container-->
+            <div class="spacing40 clearfix"></div>
+        </section><!--services-->
+        <!--SERVICES SECTION START-->
+        
+        <!--TWITTER SECTION START-->
+        <section class="bg-dark twitter-feed clearfix">
+        	<div class="dark-mask"></div>
+        	<div class="container align-center">
+                <div class="tweetfeed clearfix"><!--retrive twitter feed here--></div>
+                <div class="slogan-divider"><span class="line-left"></span><span class="fa fa-twitter"></span><span class="line-right"></span></div>
+                <a href="#" class="tweet-follow">Follow Us</a>
+            </div><!--/.container-->
+        </section><!--/.bg-dark-->
+        <!--TWITTER SECTION START-->
+        
+        <!--CONTACT SECTION START-->
+        <section id="contact" class="clearfix content">
+        	<div class="container">
+            	<div class="title-content clearfix">
+                	<div class="title-inner">
+                    	<h3>Our Contact</h3>
+                        <p>Start communicate with us</p>
+                    </div><!--/.title-inner-->
+                </div><!--/.title-content-->
+                
+                <!--CONTACT TAB START-->
+                <div class="tab-content white-bg">
+                
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane active fade in active" id="office">
+                  	 <div id="map_canvas"><!--retrive map here--></div>
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">Info:</p><p class="gray-text">Basecamp</p>
+                                     <h2 class="about-title">Our Office</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC 
+                                     motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a 
+                                     range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
+                                     
+                                     <!--ADDRESS LIST START-->
+                                     <ul class="address-list">
+                                     	<li><i class="fa fa-map-marker"></i> Buah Batu Street 1234</li>
+                                        <li><i class="fa fa-phone"></i> 987-654-321</li>
+                                        <li><i class="fa fa-suitcase"></i> 08 AM - 05 PM</li>
+                                        <li><i class="fa fa-envelope"></i> <a href="#">email@email.com</a></li>
+                                     </ul><!--/.address-list-->
+                                     <!--ADDRESS LIST END-->
+                                     
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT END-->
+                  
+                  <!--TAB CONTENT START-->
+                  <div class="tab-pane fade" id="message-us">
+                  	 <img src="images/contact/1.jpg" alt="contact">
+                     <div class="white-bg clearfix">
+                         <div class="row clearfix">
+                             <div class="col-md-4">
+                                 <div class="padding">
+                                     <p class="black-text">Info:</p><p class="gray-text">Lets Closer</p>
+                                     <h2 class="about-title">Leave Message</h2>
+                                 </div><!--/.padding-->
+                             </div><!--/col-md-4-->
+                             <div class="col-md-8">
+                                 <div class="padding">
+                                     <div id="form-wrapper">
+                                         <div id="form-inner">
+                                             <div id="ErrResults"><!-- retrive Error Here --></div>
+                                             <div id="MainResult"><!-- retrive response Here --></div>
+                                             <div id="MainContent">
+                                                 <form id="MyContactForm" name="MyContactForm" method="post">
+                                                     <p class="name">
+                                                         <input type="text" name="name" id="name" placeholder="Your Name ...">
+                                                         <label for="name" id="nameLb"><span class="error">*Name Field Required</span></label>
+                                                     </p>
+                                                     <p>
+                                                         <input type="email" name="email" id="email" placeholder="Your Email ...">
+                                                         <label for="email" id="emailLb">
+                                                             <span class="error error1">*Email Field Required</span> 
+                                                             <span class="error error2">*Email Not Valid</span>
+                                                         </label>  
+                                                     </p>
+                                                     <p> 
+                                                         <input type="text" name="phone" id="phone" placeholder="Your Telephone ...">
+                                                         <label for="phone" id="phoneLb"><span class="error">*Telephone Field Required</span></label>
+                                                     </p>
+                                                     <p class="textarea">
+                                                         <textarea name="message" id="message" placeholder="Your Message ..." rows="4"></textarea>
+                                                         <label for="message" id="messageLb"><span class="error">*Message Field Required</span></label>
+                                                     </p>
+                                                     <div class="clearfix"></div>
+                                                     <a href="#" class="contact-btn">Send Message</a>
+                                             	</form>
+                                             </div><!--MainContent-->
+                                         </div><!--form-inner-->
+                                     </div><!--form-wrapper-->
+                                 </div><!--/.padding-->
+                                 <div class="spacing40 clearfix"></div>
+                              </div><!--/col-md-8-->
+                     	</div><!--/.row-->
+                     </div><!--/.white-bg--> 
+                  </div><!--/.tab-pane-->
+                  <!--TAB CONTENT END-->
+                  
+                </div><!--/.tab-content-->
+                <!--CONTACT TAB END-->
+                
+                <!--CONTACT NAVIGATION TAB START-->
+                <div class="white-bg clearfix">
+                    <ul class="nav margin align-right nav-tabs">
+                      <li class="active"><a href="#office" data-toggle="tab">Our Office</a></li>
+                      <li><a href="#message-us" data-toggle="tab">Leave Message</a></li>
+                    </ul>
+                </div>
+                <div class="spacing40 clearfix"></div>
+                <!--CONTACT NAVIGATION TAB END-->
+                
+            </div><!--/.container-->
+        </section><!--contact-->
+        <!--CONTACT SECTION END-->
+        
+        <section class="footer clearfix">
+        	<div class="container">
+            	<div class="row">
+                    <div class="col-sm-6">
+                    	<p>Copyright 2013 <a href="#">Your Website</a></p>
+                    </div><!--/.col-sm-6-->
+                    <div class="col-sm-6">
+                    	<ul class="soc-footer">
+                        	<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        </ul><!--/.soc-footer-->
+                    </div><!--/.col-sm-6-->
+                </div><!--/.row-->
+            </div>
+        </section><!--footer-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+            $(window).load(function() { // makes sure the whole site is loaded
+                $("#status").fadeOut(); // will first fade out the loading animation
+                $("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+            })
+        //]]>
+    </script> 
+    <script src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="js/jquery.nav.js"></script>
+    <script type="text/javascript" src="js/contact.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script> 
+    <script type="text/javascript" src="twitter/jquery.tweet.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="js/jquery.ui.map.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/ticker.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.js"></script>
+    <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+    <script type="text/javascript" src="js/supersized.shutter.js"></script>
+    <script type="text/javascript" src="js/jquery.BlackAndWhite.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>

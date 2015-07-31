@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>{{page.titre}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="SOUL & BEAUTY">
+        <meta name="author" content="SOUL & BEAUTY">
+	    
+<meta property= "og:title " content= "{{page.titre}} "/>
+<meta property= "og:type " content= "article "/>
+<meta property= "og:url " content= "http://soulnbeauty.be/"/>
+<meta property= "og:image " content= "http://soulnbeauty.be/images/sb_logo2.pnglogo3.png"/>
+<meta property= "og:description " content= "
+Soul&amp;Beauty; est une agence de marketing
+ethnique qui propose des services de conseil strat&eacute;gique, d&rsquo;&eacute;tudes, de communication et de marketing op&eacute;rationnel (animations commerciales, events&hellip;) &agrave; tous ceux qui jugent que leurs produits et/ou services ont un potentiel encore inexploit&eacute;.
+"/>
+<meta property= "og:site_name " content= "SOUL & BEAUTY "/>
+<!--<meta property= "fb:app_id " content= "VOTRE_ID_APPLICATION "/>-->
+	    
+	    
+	    
+    
+        <!-- Le styles -->
+        <style>
+		/* Preloader */
+		#preloader {
+			position:fixed;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			background-color:#fff; /* change if the mask should have another color then white */
+			z-index:999999; /* makes sure it stays on top */
+		}
+		
+		#status {
+			width:200px;
+			height:200px;
+			position:absolute;
+			left:50%; /* centers the loading animation horizontally one the screen */
+			top:50%; /* centers the loading animation vertically one the screen */
+			background-image:url(images/preloader2.gif); /* path to your loading animation */
+			background-repeat:no-repeat;
+			background-position:center;
+			margin:-100px 0 0 -100px; /* is width and height divided by two */
+		}
+		#status p{text-align:center;}
+		</style>
+                {% if page.titre=='PHOTOS' or page.titre=='VIDEOS' %}
+                     <link href="css/bootstrap.min2.css" rel="stylesheet">
+                     <link href="css/style2.css" rel="stylesheet">
+                      
+                {%else%}     
+                     <link href="css/bootstrap.min.css" rel="stylesheet">
+              {% endif %}
+           
+          <link href="css/font-awesome.min.css" rel="stylesheet">
+          <link href="css/prettyPhoto.css" rel="stylesheet">
+          <link href="css/supersized.css" rel="stylesheet">
+          <link href="css/supersized.shutter.css" rel="stylesheet">
+          <link href="css/style-video.css" rel="stylesheet">
+           <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+         
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.html">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.html">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.html">
+        <link rel="apple-touch-icon-precomposed" href="../../twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.html">
+        <link rel="shortcut icon" href="images/favicon.png"><!--favicon image-->
+    </head>
+
+	<body>
+    	<!-- Preloader -->
+        <div id="preloader">
+            <div id="status"><p>CHARGEMENT...</p></div>
+        </div>
+        
+    	<section id="home" class="clearfix" style='z-index=1'>
+        	<div class="header clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-5 col-sm-4">
+                          <a class="logo" href="/"><img alt="logo" src="images/logo3.png"  ></a>
+                        </div><!--/.col-md-4-->
+                        <div class="col-md-8">
+                        	<div class="menu-btn" data-target=".nav-collapse" data-toggle="collapse">
+                                <span class="fa fa-th"></span>
+                            </div>
+                            <ul class="navigation nav-collapse">
+                                <li><a href="#home" data-l-link='ACCUEIL' id='M-ACCUEIL' class='l-link'>ACCUEIL</a></li>
+                                <li><a href="#AGENCE" data-l-link='AGENCE' id='M-AGENCE' class='l-link'>L'AGENCE</a></li>
+                                <li><a href="#SERVICES" data-l-link='SERVICES' id='M-SERVICES' class='l-link'>LES SERVICES</a></li>
+                                <li><a href="#BOOK" data-l-link='BOOK' id='M-BOOK'  class='l-link'>LE BOOK</a></li>
+                                <li><a href="#NEWS" data-l-link='NEWS' id='M-NEWS' class='l-link'>LES NEWS</a></li>
+                                <li><a href="#PARTENAIRES" data-l-link='PARTENAIRES' id='M-PARTENAIRES' class='l-link'></a></li>
+                                <li><a href="#CONTACT" data-l-link='CONTACT' id='M-CONTACT' class='l-link'>CONTACTS</a></li>
+                            </ul><!--/.navigation-->
+                        </div><!--/.col-md-4-->
+                    </div><!--/.row-->
+                </div><!--/.container-->   
+            </div><!--/.header-->
+            
